@@ -1,23 +1,5 @@
-// Universal Search Functionality
+// Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
-  const searchInput = document.getElementById('universal-search');
-  if (searchInput) {
-    searchInput.addEventListener('input', function(e) {
-      const searchTerm = e.target.value.toLowerCase();
-      const searchableElements = document.querySelectorAll('h1, h2, h3, p');
-      
-      searchableElements.forEach(element => {
-        const text = element.textContent.toLowerCase();
-        if (text.includes(searchTerm)) {
-          element.style.backgroundColor = searchTerm ? 'rgba(51, 150, 188, 0.1)' : '';
-        } else {
-          element.style.backgroundColor = '';
-        }
-      });
-    });
-  }
-
-  // Mobile Menu Toggle
   const hamburgerMenu = document.querySelector('.hamburger-menu');
   const navItems = document.querySelector('.nav-items');
   
