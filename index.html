@@ -3,61 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>Allen Psychiatry | Mental Health Care Provo & Rural Utah County</title>
-    <meta name="description" content="Compassionate psychiatric care in Provo, UT serving urban and rural communities. ADHD, anxiety, depression, PTSD treatment with telehealth options. Call (385) 504-1334.">
-    <meta name="keywords" content="psychiatrist Provo, mental health Utah County, rural mental health, telehealth psychiatrist, ADHD treatment">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Allen Psychiatry | Mental Health Care Provo & Rural Utah County">
-    <meta property="og:description" content="Compassionate psychiatric care in Provo, UT serving urban and rural communities. ADHD, anxiety, depression, PTSD treatment with telehealth options.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://allenpsychiatry.net">
-    <meta property="og:image" content="assets/ap-new-color-logo.png">
-    
-    <!-- Schema.org Markup -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "MedicalBusiness",
-        "name": "Allen Psychiatry",
-        "description": "Compassionate psychiatric care in Provo, UT serving urban and rural communities",
-        "url": "https://allenpsychiatry.net",
-        "telephone": "(385) 504-1334",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "3311 North University Ave, Ste 275",
-            "addressLocality": "Provo",
-            "addressRegion": "UT",
-            "postalCode": "84604",
-            "addressCountry": "US"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "40.2338",
-            "longitude": "-111.6585"
-        },
-        "openingHours": "Mo-Fr 08:00-17:00",
-        "medicalSpecialty": "Psychiatry",
-        "availableService": [
-            "ADHD Testing & Treatment",
-            "Anxiety Treatment", 
-            "Depression Treatment",
-            "PTSD Treatment",
-            "Telehealth Services"
-        ]
-    }
-    </script>
-    
-    <!-- Fonts -->
+    <title>Allen Psychiatry - Mental Health Matters</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -65,12 +16,12 @@
         <div class="header-top">
             <div class="container">
                 <div class="contact-info">
-                    <span><i class="fas fa-phone"></i> (385) 504-1334</span>
-                    <span><i class="fas fa-map-marker-alt"></i> 3311 North University Ave, Ste 275, Provo, UT 84604</span>
+                    <div>(385) 504-1334</div>
+                    <div>3311 North University Ave, Ste 275, Provo, UT 84604</div>
                 </div>
                 <div class="header-actions">
                     <a href="https://pp-wfe-100.advancedmd.com/154986/account/logon">Patient Portal</a>
-                    <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn">Schedule Now</a>
+                    <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn-small">Schedule Now</a>
                 </div>
             </div>
         </div>
@@ -79,24 +30,29 @@
                 <div class="logo">
                     <a href="index.html">
                         <img src="assets/ap-new-color-logo.png" alt="Allen Psychiatry logo">
-                        <span>Allen Psychiatry</span>
                     </a>
                 </div>
-                <nav>
-                    <ul>
+                <nav class="main-nav">
+                    <ul class="nav-items">
                         <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="adhd.html">ADHD Treatment</a></li>
-                        <li><a href="anxiety.html">Anxiety Treatment</a></li>
-                        <li><a href="depression.html">Depression Treatment</a></li>
-                        <li><a href="ptsd.html">PTSD Treatment</a></li>
+                        <li class="dropdown">
+                            <a href="index.html#services">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="adhd.html">ADHD Testing & Treatment</a></li>
+                                <li><a href="anxiety.html">Anxiety Treatment</a></li>
+                                <li><a href="depression.html">Depression Treatment</a></li>
+                                <li><a href="ptsd.html">PTSD Treatment</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="provo.html">Provo Office</a></li>
+                        <li><a href="rural.html">Rural Services</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="telehealth.html">TeleHealth</a></li>
+                        <li><a href="https://pp-wfe-100.advancedmd.com/154986/account/logon">Patient Portal</a></li>
                     </ul>
                 </nav>
                 <div class="hamburger-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <i class="fa fa-bars"></i>
                 </div>
             </div>
         </div>
@@ -104,60 +60,77 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <img src="assets/index-hero.jpg" alt="Family playing in their backyard" class="hero-image">
         <div class="container">
-            <h1>Compassionate Mental Health Care for Provo & Rural Utah County</h1>
-            <p class="lead">Expert psychiatric care with a focus on accessibility, understanding, and evidence-based treatment. Serving both urban and rural communities with telehealth options.</p>
-            <div class="hero-cta">
+            <div class="hero-content">
+                <h1>Expert Psychiatric Care in Utah County</h1>
+                <p>Compassionate, evidence-based mental health services for a brighter tomorrow.</p>
                 <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn">Schedule an Appointment</a>
-                <a href="about.html" class="btn btn-outline">Learn About Dr. Allen</a>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="section">
+    <section id="services" class="page-content">
         <div class="container">
-            <h2>Our Services</h2>
-            <p class="lead">Comprehensive mental health services tailored to your individual needs, delivered with compassion and clinical excellence.</p>
-            
+            <div class="page-header">
+                <h1>Our Services</h1>
+                <p>Allen Psychiatry offers comprehensive mental health services tailored to your individual needs. Our experienced team provides evidence-based treatment in a supportive, confidential environment.</p>
+            </div>
+
             <div class="services-grid">
                 <div class="service-card">
-                    <img src="adhd.jpg" loading="lazy" alt="ADHD Treatment - Focused care for attention and impulse challenges">
-                    <h3>ADHD Testing & Treatment</h3>
-                    <p>Comprehensive evaluation and personalized treatment plans for adults with ADHD, helping you regain focus and control in your daily life.</p>
-                    <a href="adhd.html" class="btn">Learn More</a>
+                    <div class="service-img">
+                        <img src="assets/adhd2.jpg" alt="ADHD Treatment">
+                    </div>
+                    <div class="service-content">
+                        <h3>ADHD Testing & Treatment</h3>
+                        <p>Comprehensive evaluation and management of ADHD for adults, with personalized treatment plans to help you regain focus and control in your daily life.</p>
+                        <a href="adhd.html" class="btn">Learn More</a>
+                    </div>
                 </div>
 
                 <div class="service-card">
-                    <img src="anxiety.jpg" loading="lazy" alt="Anxiety Treatment - Calm and support for anxiety disorders">
-                    <h3>Anxiety Treatment</h3>
-                    <p>Evidence-based approaches to managing anxiety disorders, including medication management and therapeutic techniques to reduce symptoms.</p>
-                    <a href="anxiety.html" class="btn">Learn More</a>
+                    <div class="service-img">
+                        <img src="assets/anxiety2.jpg" alt="Anxiety Treatment">
+                    </div>
+                    <div class="service-content">
+                        <h3>Anxiety Treatment</h3>
+                        <p>Evidence-based approaches to managing anxiety, including medication management and therapeutic techniques to reduce symptoms and improve quality of life.</p>
+                        <a href="anxiety.html" class="btn">Learn More</a>
+                    </div>
                 </div>
 
                 <div class="service-card">
-                    <img src="depression.jpg" loading="lazy" alt="Depression Treatment - Compassionate support for depression">
-                    <h3>Depression Treatment</h3>
-                    <p>Personalized care for depression with a focus on restoring hope and improving overall well-being through effective, compassionate treatment.</p>
-                    <a href="depression.html" class="btn">Learn More</a>
+                    <div class="service-img">
+                        <img src="assets/depression.jpg" alt="Depression Treatment">
+                    </div>
+                    <div class="service-content">
+                        <h3>Depression Treatment</h3>
+                        <p>Personalized care for those experiencing depression, with a focus on restoring hope and improving overall well-being through effective, compassionate treatment.</p>
+                        <a href="depression.html" class="btn">Learn More</a>
+                    </div>
                 </div>
 
                 <div class="service-card">
-                    <img src="ptsd.jpg" loading="lazy" alt="PTSD Treatment - Trauma-informed care for PTSD">
-                    <h3>PTSD Treatment</h3>
-                    <p>Specialized care for trauma survivors, including medication management and evidence-based therapeutic approaches to help you reclaim your life.</p>
-                    <a href="ptsd.html" class="btn">Learn More</a>
+                    <div class="service-img">
+                        <img src="assets/ptsd.jpg" alt="PTSD Treatment">
+                    </div>
+                    <div class="service-content">
+                        <h3>PTSD Treatment</h3>
+                        <p>Specialized care for trauma survivors, including medication management and evidence-based therapeutic approaches to help you reclaim your life and find peace.</p>
+                        <a href="ptsd.html" class="btn">Learn More</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Take Your First Step?</h2>
-            <p>Mental health care is a journey, and we're here to walk alongside you every step of the way. Contact us today to schedule a consultation and begin your path to wellness.</p>
-            <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn">Schedule an Appointment</a>
+            <div class="cta-section">
+                <div class="cta-content">
+                    <h2>Ready to Take Your First Step?</h2>
+                    <p>Mental health care is a journey, and we're here to walk alongside you every step of the way. Contact us today to schedule a consultation and begin your path to wellness.</p>
+                    <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn">Schedule an Appointment</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -168,6 +141,7 @@
                 <div class="footer-col">
                     <h3>Allen Psychiatry</h3>
                     <p>Comprehensive psychiatric services in a warm, welcoming environment where patients feel heard and supported.</p>
+                    <p style="margin-top: 20px; font-style: italic">Mental Health Matters</p>
                 </div>
 
                 <div class="footer-col">
@@ -187,13 +161,14 @@
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
                         <li><a href="provo.html">Provo Office</a></li>
                         <li><a href="https://pp-wfe-100.advancedmd.com/154986/account/logon">Patient Portal</a></li>
                         <li><a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients">Schedule Appointment</a></li>
                     </ul>
                 </div>
 
-                <div class="footer-col">
+                <div class="footer-col footer-contact">
                     <h3>Contact Us</h3>
                     <p>
                         <strong>Address:</strong><br>
@@ -214,10 +189,14 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2025 Allen Psychiatry. All Rights Reserved.</p>
+                <p style="font-size: 0.85em; font-style: italic; margin-top: 10px; color: #888;"><strong>IMPORTANT!</strong> All information presented in this website is intended for informational purposes only and not for the purpose of rendering medical advice. Statements made on this website have not been evaluated by the Food and Drug Administration. The information contained herein is not intended to diagnose, treat, cure or prevent any disease.</p>
             </div>
         </div>
     </footer>
+    
+    <a href="#" id="back-to-top-btn"><i class="fa fa-arrow-up"></i></a>
 
-    <script src="script.js"></script>
+    <script src="navigation.js"></script>
+    <script src="telehealth-modal.js"></script>
 </body>
 </html> 

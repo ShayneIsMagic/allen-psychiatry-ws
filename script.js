@@ -475,47 +475,4 @@ style.textContent = `
         transition: transform 0.2s ease;
     }
 `;
-document.head.appendChild(style);
-
-// Mobile Navigation Toggle
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger-menu');
-    const nav = document.querySelector('nav ul');
-    
-    if (hamburger && nav) {
-        hamburger.addEventListener('click', function() {
-            nav.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        });
-    }
-    
-    // Close mobile menu when clicking on a link
-    const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            nav.classList.remove('active');
-            hamburger.classList.remove('active');
-        });
-    });
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!event.target.closest('nav') && !event.target.closest('.hamburger-menu')) {
-            nav.classList.remove('active');
-            hamburger.classList.remove('active');
-        }
-    });
-});
-
-// Add active class to current page in navigation
-document.addEventListener('DOMContentLoaded', function() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinks = document.querySelectorAll('nav a');
-    
-    navLinks.forEach(link => {
-        const linkPage = link.getAttribute('href');
-        if (linkPage === currentPage) {
-            link.classList.add('active');
-        }
-    });
-}); 
+document.head.appendChild(style); 

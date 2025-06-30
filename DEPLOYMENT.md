@@ -40,11 +40,32 @@ Fri Jun 20 15:28:40 MDT 2025
 - [ ] CTA sections are consistent across all pages
 
 ## Deployment Instructions
-1. Upload all files to staging server
-2. Test modal functionality on all pages
-3. Verify contact information is correct
-4. Test responsive design
-5. Approve for production deployment
+
+### For Cloudflare Pages Deployment:
+1. Connect your Git repository to Cloudflare Pages
+2. Set build settings:
+   - Build command: (leave empty - static site)
+   - Build output directory: `/` (root)
+   - Root directory: (leave empty)
+3. Set environment variables if needed
+4. Deploy and test all functionality
+
+### Pre-Deployment Checklist:
+1. ✅ All image paths corrected (moved to assets/ folder)
+2. ✅ Hero images working on all pages
+3. ✅ Modal functionality tested
+4. ✅ Contact information verified
+5. ✅ Responsive design tested
+6. ✅ Security headers configured (_headers file)
+7. ✅ Redirects configured (_redirects file)
+
+### Post-Deployment Testing:
+1. Test modal functionality on all pages
+2. Verify contact information is correct
+3. Test responsive design on mobile devices
+4. Verify all images load correctly
+5. Test patient portal links
+6. Check 404 page functionality
 
 ## Contact Information
 - Phone: (385) 504-1334
