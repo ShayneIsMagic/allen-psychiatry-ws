@@ -86,8 +86,8 @@ forms.forEach(form => {
 });
 
 // Add error class styling
-const style = document.createElement('style');
-style.textContent = `
+const errorStyle = document.createElement('style');
+errorStyle.textContent = `
     .error {
         border-color: #ff4444 !important;
     }
@@ -95,7 +95,7 @@ style.textContent = `
         box-shadow: 0 0 0 2px rgba(255, 68, 68, 0.2) !important;
     }
 `;
-document.head.appendChild(style);
+document.head.appendChild(errorStyle);
 
 // Enhanced JavaScript for Allen Psychiatry Website
 

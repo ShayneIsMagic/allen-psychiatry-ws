@@ -70,15 +70,6 @@ function initializeModal() {
     // Add modal to page
     document.body.insertAdjacentHTML('beforeend', modalHTML);
     
-    // Add click handlers to portal links
-    const portalLinks = document.querySelectorAll('a[href*="portal"]');
-    portalLinks.forEach((link) => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            showTelehealthModal();
-        });
-    });
-    
     // Add escape key functionality
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
