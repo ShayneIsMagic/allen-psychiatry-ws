@@ -1,5 +1,14 @@
 # Allen Psychiatry Website
 
+**GOLD COPY POLICY**
+
+- `index.html` is the authoritative gold copy for this repository.
+- All future changes to the repo must be based on the current version of `index.html`.
+- Do not overwrite or diverge from this file without explicit review.
+- Any sitewide changes should be reflected in `index.html` first and then propagated as needed.
+
+---
+
 A modern, responsive website for Allen Psychiatry, featuring comprehensive mental health services and information.
 
 ## Project Structure
