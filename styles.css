@@ -1580,9 +1580,9 @@ footer::before {
 
 .service-features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin: 60px 0;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
 }
 
 .feature {
@@ -1837,9 +1837,10 @@ footer::before {
     flex-wrap: wrap;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
     .service-features {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 }
 
