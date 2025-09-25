@@ -621,6 +621,16 @@ nav a.active {
     z-index: 1;
 }
 
+/* Specific positioning for anxiety page hero image */
+.service-hero img[src*="anxiety2.jpg"] {
+    object-position: center bottom;
+}
+
+/* Specific positioning for depression page hero image */
+.service-hero img[src*="depression.jpg"] {
+    object-position: center bottom;
+}
+
 .hero-content {
     position: relative;
     z-index: 3;
@@ -2198,7 +2208,7 @@ footer::before {
 
 /* Fix for tiny clinical callout headings */
 .clinical-callout h4 {
-    font-size: 1.6rem !important;
+    font-size: 2.2rem !important;
     font-weight: 600;
     margin-bottom: 20px;
     margin-top: 0;
@@ -2224,14 +2234,14 @@ footer::before {
 /* Responsive fixes for clinical callout headings */
 @media (max-width: 768px) {
     .clinical-callout h4 {
-        font-size: 1.4rem !important;
+        font-size: 1.8rem !important;
         margin-bottom: 15px;
     }
 }
 
 @media (max-width: 480px) {
     .clinical-callout h4 {
-        font-size: 1.3rem !important;
+        font-size: 1.5rem !important;
         margin-bottom: 12px;
     }
 }
