@@ -623,12 +623,12 @@ nav a.active {
 
 /* Specific positioning for anxiety page hero image */
 .service-hero img[src*="anxiety2.jpg"] {
-    object-position: center bottom;
+    object-position: center top;
 }
 
 /* Specific positioning for depression page hero image */
 .service-hero img[src*="depression.jpg"] {
-    object-position: center bottom;
+    object-position: center top;
 }
 
 .hero-content {
