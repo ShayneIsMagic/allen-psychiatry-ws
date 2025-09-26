@@ -38,8 +38,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle modal actions
     document.addEventListener('click', function(event) {
         console.log('Click detected on:', event.target);
-        if (event.target.hasAttribute('data-action')) {
-            const action = event.target.getAttribute('data-action');
+        
+        // Check if the clicked element or its parent has the data-action attribute
+        let targetElement = event.target;
+        let action = null;
+        
+        // Walk up the DOM tree to find the element with data-action
+        while (targetElement && targetElement !== document) {
+            if (targetElement.hasAttribute && targetElement.hasAttribute('data-action')) {
+                action = targetElement.getAttribute('data-action');
+                break;
+            }
+            targetElement = targetElement.parentElement;
+        }
+        
+        if (action) {
             console.log('Action detected:', action);
             if (action === 'close-modal') {
                 hideSmsPrivacyModal();
