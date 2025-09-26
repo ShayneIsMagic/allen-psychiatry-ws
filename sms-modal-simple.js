@@ -8,7 +8,8 @@ window.showSmsPrivacyModal = function() {
     console.log('Opening SMS Privacy Modal');
     const modal = document.getElementById('smsPrivacyModal');
     if (modal) {
-        modal.style.display = 'block';
+        modal.style.display = 'flex';
+        modal.classList.add('show');
         console.log('Modal displayed');
     } else {
         console.error('SMS Privacy Modal not found');
@@ -19,7 +20,10 @@ window.showSmsPrivacyModal = function() {
 window.hideSmsPrivacyModal = function() {
     const modal = document.getElementById('smsPrivacyModal');
     if (modal) {
-        modal.style.display = 'none';
+        modal.classList.remove('show');
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 300); // Wait for CSS transition
     }
 };
 
@@ -31,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('click', function(event) {
         const modal = document.getElementById('smsPrivacyModal');
         if (event.target === modal) {
-            modal.style.display = 'none';
+            hideSmsPrivacyModal();
         }
     });
     
