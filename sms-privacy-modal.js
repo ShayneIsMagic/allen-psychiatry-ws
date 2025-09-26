@@ -2,13 +2,22 @@
 
 // Global functions for modal handling
 window.showSmsPrivacyModal = function() {
+    console.log('showSmsPrivacyModal called');
     let modal = document.getElementById('smsPrivacyModal');
+    console.log('Modal found:', modal);
     if (!modal) {
+        console.log('Modal not found, creating it...');
         // If modal doesn't exist, create it
         createSmsPrivacyModal();
         modal = document.getElementById('smsPrivacyModal');
+        console.log('Modal created:', modal);
     }
-    modal.classList.add('show');
+    if (modal) {
+        modal.classList.add('show');
+        console.log('Modal show class added');
+    } else {
+        console.error('Modal still not found after creation attempt');
+    }
 };
 
 window.hideSmsPrivacyModal = function() {
