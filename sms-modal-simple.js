@@ -38,18 +38,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle modal actions
     document.addEventListener('click', function(event) {
         console.log('Click detected on:', event.target);
+        console.log('Target tagName:', event.target.tagName);
+        console.log('Target href:', event.target.href);
+        console.log('Target has data-action:', event.target.hasAttribute('data-action'));
         
         // Check if the clicked element or its parent has the data-action attribute
         let targetElement = event.target;
         let action = null;
+        let steps = 0;
         
         // Walk up the DOM tree to find the element with data-action
-        while (targetElement && targetElement !== document) {
+        while (targetElement && targetElement !== document && steps < 10) {
+            console.log('Checking element:', targetElement.tagName, 'has data-action:', targetElement.hasAttribute && targetElement.hasAttribute('data-action'));
             if (targetElement.hasAttribute && targetElement.hasAttribute('data-action')) {
                 action = targetElement.getAttribute('data-action');
+                console.log('Found action:', action, 'on element:', targetElement);
                 break;
             }
             targetElement = targetElement.parentElement;
+            steps++;
         }
         
         if (action) {
@@ -61,6 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Preventing default and showing modal');
                 showSmsPrivacyModal();
             }
+        } else {
+            console.log('No action found in click path');
         }
     });
     
