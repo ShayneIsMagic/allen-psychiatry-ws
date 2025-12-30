@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mainNav.style.display = 'block';
         mainNav.style.visibility = 'visible';
         mainNav.style.opacity = '1';
-        console.log('Forced main nav to display');
+        // Force main nav display
     }
     
     // Force display of content
@@ -126,14 +126,14 @@ document.addEventListener('DOMContentLoaded', function() {
         aboutContent.style.display = 'grid';
         aboutContent.style.visibility = 'visible';
         aboutContent.style.opacity = '1';
-        console.log('Forced about content to display');
+        // Force about content display
     }
     
     aboutInfo.forEach((info, index) => {
         info.style.display = 'block';
         info.style.visibility = 'visible';
         info.style.opacity = '1';
-        console.log(`Forced about-info ${index} to display`);
+                // Force about-info display
     });
     
     // Smooth scrolling for all anchor links
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate-in');
-                console.log('Element animated in:', entry.target.className);
+                // Element animated in
             }
         });
     }, observerOptions);
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const animateElements = document.querySelectorAll('.about-info, .service-card, .feature, .cta-content, .cta-section');
     animateElements.forEach(el => {
         observer.observe(el);
-        console.log('Observing element for animation:', el.className);
+        // Observing element for animation
     });
 
     // Special CTA animation observer
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     ctaContent.style.visibility = 'visible';
                 }
                 
-                console.log('CTA section animated in');
+                // CTA section animated in
             }
         });
     }, {
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const ctaSections = document.querySelectorAll('.cta-section');
     ctaSections.forEach(section => {
         ctaObserver.observe(section);
-        console.log('Observing CTA section for animation');
+        // Observing CTA section for animation
     });
 
     // Enhanced mobile navigation
@@ -434,7 +434,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    console.log('Allen Psychiatry enhanced JavaScript loaded successfully');
+    // Allen Psychiatry enhanced JavaScript loaded successfully
 });
 
 // Additional CSS animations for enhanced interactions
