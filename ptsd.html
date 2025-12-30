@@ -8,7 +8,7 @@
     <title>PTSD Treatment Provo UT | Dr. Todd Allen | Allen Psychiatry</title>
     <meta name="title" content="PTSD Treatment Provo UT | Dr. Todd Allen | Allen Psychiatry">
     <meta name="description" content="Expert PTSD treatment in Provo, UT. Dr. Todd Allen provides comprehensive trauma therapy, medication management, and support for Post-Traumatic Stress Disorder. Schedule your consultation today.">
-    <meta name="keywords" content="PTSD treatment Provo UT, trauma therapy Utah County, post-traumatic stress disorder, PTSD medication management, Dr. Todd Allen PTSD, trauma counseling Provo">
+    <meta name="keywords" content="PTSD treatment Provo, trauma therapy Orem, PTSD treatment Lehi, trauma therapy Spanish Fork, PTSD treatment American Fork, trauma therapy Springville, PTSD treatment Pleasant Grove, trauma therapy Payson, PTSD treatment Saratoga Springs, trauma therapy Eagle Mountain, PTSD treatment Utah County, post-traumatic stress disorder, PTSD medication management, mental health clinic near me, psychiatric services Utah County, PTSD treatment Sevier County, rural PTSD treatment Utah">
     <meta name="author" content="Dr. Todd Allen, Allen Psychiatry">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -29,6 +29,15 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="config.js"></script>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKYXFGGJSP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LKYXFGGJSP');
+    </script>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -74,13 +83,43 @@
             "name": "Post-Traumatic Stress Disorder (PTSD)",
             "description": "A mental health condition triggered by experiencing or witnessing a traumatic event, causing significant distress and interference with daily life"
         },
-        "areaServed": {
-            "@type": "State",
-            "name": "Utah"
-        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Provo",
+                "containedIn": {"@type": "State", "name": "Utah"}
+            },
+            {
+                "@type": "City",
+                "name": "Orem",
+                "containedIn": {"@type": "State", "name": "Utah"}
+            },
+            {
+                "@type": "City",
+                "name": "Lehi",
+                "containedIn": {"@type": "State", "name": "Utah"}
+            },
+            {
+                "@type": "State",
+                "name": "Utah"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Utah County"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Sevier County"
+            }
+        ],
         "serviceArea": {
-            "@type": "City",
-            "name": "Provo"
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 40.2659,
+                "longitude": -111.6477
+            },
+            "description": "Serving Provo, Orem, Lehi, Spanish Fork, American Fork, Springville, Pleasant Grove, Payson, and rural Utah communities"
         },
         "availableChannel": {
             "@type": "ServiceChannel",
@@ -165,6 +204,7 @@
                 <div class="header-actions">
                     <a href="https://pp-wfe-100.advancedmd.com/154986/account/logon" target="_blank">Patient Portal</a>
                     <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn-small" target="_blank">Schedule Now</a>
+                    <a href="#sms-privacy" data-action="show-sms-modal" onclick="showSmsPrivacyModal(); return false;" style="color: white; text-decoration: none; font-size: 0.9em; margin-left: 10px;">📱 SMS Policy</a>
                 </div>
             </div>
         </div>
@@ -317,6 +357,22 @@
                         <li><strong>Support and Education:</strong> Information about PTSD, treatment options, and coping strategies</li>
                         <li><strong>Collaboration:</strong> Working together to ensure your treatment plan meets your needs and preferences</li>
                     </ul>
+                    
+                    <!-- Service Area Section -->
+                    <div class="service-area-content" style="margin-top: 50px; padding: 30px; background: var(--off-white); border-radius: var(--border-radius);">
+                        <h2>PTSD Treatment Serving Provo and Utah County</h2>
+                        <p>Allen Psychiatry provides comprehensive PTSD treatment for adults throughout Utah County and beyond. Our Provo office is conveniently located near UVU and BYU, with easy access from I-15.</p>
+                        
+                        <h3>Communities We Serve:</h3>
+                        <p>We're proud to serve patients from <strong>Provo</strong>, <strong>Orem</strong>, <strong>Lehi</strong>, <strong>Spanish Fork</strong>, <strong>American Fork</strong>, <strong>Springville</strong>, <strong>Pleasant Grove</strong>, <strong>Payson</strong>, <strong>Saratoga Springs</strong>, <strong>Eagle Mountain</strong>, <strong>Lindon</strong>, <strong>Mapleton</strong>, <strong>Highland</strong>, <strong>Alpine</strong>, <strong>Salem</strong>, <strong>Vineyard</strong>, <strong>Cedar Hills</strong>, and surrounding communities. For patients in rural areas like <strong>Richfield</strong>, <strong>Monroe</strong>, <strong>Salina</strong>, <strong>Elsinore</strong>, and <strong>Koosharem</strong>, we offer convenient <a href="telehealth.html">telehealth appointments</a>.</p>
+                        
+                        <h3>Convenient Provo Location:</h3>
+                        <p><strong>Address:</strong> 3311 North University Ave, Suite 275, Provo, UT 84604<br>
+                        <strong>Phone:</strong> <a href="tel:+13855041334">(385) 504-1334</a><br>
+                        <strong>Parking:</strong> Free parking available on-site</p>
+                        
+                        <p>Whether you're looking for PTSD treatment in Provo, trauma therapy in Orem, or PTSD care in Lehi, Allen Psychiatry is here to help. <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" target="_blank">Schedule your appointment today</a>.</p>
+                    </div>
                 </div>
             </div>
         </section>

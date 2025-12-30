@@ -11,6 +11,16 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="config.js"></script>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKYXFGGJSP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LKYXFGGJSP');
+    </script>
+    
     <style>
         .service-features {
             display: grid;
@@ -80,6 +90,7 @@
                 <div class="header-actions">
                     <a href="https://pp-wfe-100.advancedmd.com/154986/account/logon" target="_blank">Patient Portal</a>
                     <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn-small" target="_blank">Schedule Now</a>
+                    <a href="#sms-privacy" data-action="show-sms-modal" onclick="showSmsPrivacyModal(); return false;" style="color: white; text-decoration: none; font-size: 0.9em; margin-left: 10px;">📱 SMS Policy</a>
                 </div>
             </div>
         </div>
@@ -131,6 +142,9 @@
         <div class="container">
             <h1>Mental Health Services for Rural Utah</h1>
             <p>Bringing compassionate psychiatric care to Utah's rural communities</p>
+            <div class="hero-cta" style="margin-top: 30px;">
+                <a href="#" class="btn" onclick="showAppointmentClarification(); return false;">Schedule Appointment</a>
+            </div>
         </div>
     </section>
 
@@ -306,5 +320,6 @@
     <script src="telehealth-modal.js"></script>
     <script src="patient-portal-modal.js"></script>
     <script src="sms-privacy-modal.js"></script>
+    <script src="appointment-clarification-modal.js"></script>
 </body>
 </html> 

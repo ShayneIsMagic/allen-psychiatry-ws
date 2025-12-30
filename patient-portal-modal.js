@@ -41,8 +41,20 @@ window.handlePatientPortalResponse = function(hasAppointment) {
         redirectToPatientPortal();
     } else {
         // User doesn't have appointment - show options
-        options.classList.add('show');
+        // Also allow closing the modal by clicking No again
+        if (options.classList.contains('show')) {
+            // If options are already showing, close the modal
+            hidePatientPortalModal();
+        } else {
+            // Show options
+            options.classList.add('show');
+        }
     }
+};
+
+// Allow closing modal when clicking "No" button
+window.closePatientPortalModal = function() {
+    hidePatientPortalModal();
 };
 
 // Initialize modal when DOM is ready
@@ -56,6 +68,7 @@ function initializePatientPortalModal() {
     const modalHTML = `
         <div class="patient-portal-modal" id="patientPortalModal">
             <div class="patient-portal-modal-content">
+                <button class="modal-close-btn" onclick="closePatientPortalModal()" aria-label="Close">&times;</button>
                 <h3>Patient Portal Access</h3>
                 <p>Do you have an appointment scheduled with Dr. Todd Allen?</p>
                 <div class="patient-portal-buttons">

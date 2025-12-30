@@ -9,6 +9,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="config.js"></script>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKYXFGGJSP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LKYXFGGJSP');
+    </script>
+    
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -23,6 +33,7 @@
                 <div class="header-actions">
                     <a href="https://pp-wfe-100.advancedmd.com/154986/account/logon" target="_blank">Patient Portal</a>
                     <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn-small" target="_blank">Schedule Now</a>
+                    <a href="#sms-privacy" data-action="show-sms-modal" onclick="showSmsPrivacyModal(); return false;" style="color: white; text-decoration: none; font-size: 0.9em; margin-left: 10px;">📱 SMS Policy</a>
                 </div>
             </div>
         </div>
@@ -146,6 +157,15 @@
                     </div>
                     <h3>Patient Care Commitment</h3>
                     <p>Dr. Allen is honored to support your mental health journey, providing a welcoming, non-judgmental space where you can feel heard, understood, and empowered to achieve lasting positive change.</p>
+                </div>
+            </div>
+
+            <!-- Schedule Appointment Section -->
+            <div class="schedule-appointment-section" style="text-align: center; padding: 60px 0; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); margin: 60px 0; border-radius: var(--border-radius);">
+                <div class="container">
+                    <h2 style="color: var(--light); margin-bottom: 20px;">Serving Utah County and Rural Utah</h2>
+                    <p style="color: var(--light); margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">Dr. Allen is committed to providing accessible mental health care throughout Utah County and rural communities.</p>
+                    <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn btn-secondary" target="_blank">Schedule Appointment with Dr. Allen</a>
                 </div>
             </div>
 

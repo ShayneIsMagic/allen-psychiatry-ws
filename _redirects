@@ -1,5 +1,26 @@
-# Handle 404 errors
-/*    /404.html   404
+# Clean URL redirects - Remove .html extension (301 Permanent Redirect)
+/adhd.html    /adhd    301
+/anxiety.html    /anxiety    301
+/depression.html    /depression    301
+/ptsd.html    /ptsd    301
+/provo.html    /provo    301
+/rural.html    /rural    301
+/telehealth.html    /telehealth    301
+/about.html    /about    301
+/index.html    /    301
 
-# Redirect any old paths if needed
-# /old-page    /new-page    301 
+# Serve pages without .html extension (200 OK)
+/adhd    /adhd.html    200
+/anxiety    /anxiety.html    200
+/depression    /depression.html    200
+/ptsd    /ptsd.html    200
+/provo    /provo.html    200
+/rural    /rural.html    200
+/telehealth    /telehealth.html    200
+/about    /about.html    200
+
+# Homepage
+/    /index.html    200
+
+# Handle 404 errors
+/*    /404.html    404 
