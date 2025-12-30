@@ -78,7 +78,7 @@ forms.forEach(form => {
         
         if (isValid) {
             // Here you would typically send the data to your server
-            console.log('Form data:', data);
+            // Form data submitted
             form.reset();
             alert('Thank you for your message. We will get back to you soon!');
         }
@@ -100,18 +100,11 @@ document.head.appendChild(errorStyle);
 // Enhanced JavaScript for Allen Psychiatry Website
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded - checking elements...');
-    
-    // Debug: Check if elements exist
+    // DOM elements check
     const mainNav = document.querySelector('.main-nav');
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const aboutContent = document.querySelector('.about-content');
     const aboutInfo = document.querySelectorAll('.about-info');
-    
-    console.log('Main nav found:', !!mainNav);
-    console.log('Hamburger menu found:', !!hamburgerMenu);
-    console.log('About content found:', !!aboutContent);
-    console.log('About info elements found:', aboutInfo.length);
     
     // Force display of navigation
     if (mainNav) {
