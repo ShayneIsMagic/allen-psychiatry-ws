@@ -8,12 +8,12 @@
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
-*.html
+/*.html
   Content-Type: text/html; charset=utf-8
   Cache-Control: public, max-age=3600
 
-*.css
+/*.css
   Cache-Control: public, max-age=31536000, immutable
 
-*.js
+/*.js
   Cache-Control: public, max-age=31536000, immutable 
