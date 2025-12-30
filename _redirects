@@ -1,30 +1,30 @@
 # Clean URL redirects - Remove .html extension (301 Permanent Redirect)
 # These redirect old .html URLs to clean URLs for SEO
-/adhd.html    /adhd    301
-/anxiety.html    /anxiety    301
-/depression.html    /depression    301
-/ptsd.html    /ptsd    301
-/provo.html    /provo    301
-/rural.html    /rural    301
-/telehealth.html    /telehealth    301
-/about.html    /about    301
-/index.html    /    301
+/adhd.html /adhd 301
+/anxiety.html /anxiety 301
+/depression.html /depression 301
+/ptsd.html /ptsd 301
+/provo.html /provo 301
+/rural.html /rural 301
+/telehealth.html /telehealth 301
+/about.html /about 301
+/index.html / 301
 
 # Serve pages without .html extension (200 OK - Internal Rewrite)
 # Cloudflare Pages automatically serves .html files, but we explicitly map clean URLs
-/adhd    /adhd.html    200
-/anxiety    /anxiety.html    200
-/depression    /depression.html    200
-/ptsd    /ptsd.html    200
-/provo    /provo.html    200
-/rural    /rural.html    200
-/telehealth    /telehealth.html    200
-/about    /about.html    200
+/adhd /adhd.html 200
+/anxiety /anxiety.html 200
+/depression /depression.html 200
+/ptsd /ptsd.html 200
+/provo /provo.html 200
+/rural /rural.html 200
+/telehealth /telehealth.html 200
+/about /about.html 200
 
 # Homepage - serve index.html at root
-/    /index.html    200
+/ /index.html 200
 
 # Handle 404 errors
 # Cloudflare Pages automatically serves 404.html for 404s
 # If you need explicit 404 handling, uncomment below (usually not needed)
-# /*    /404.html    404
+# /* /404.html 404
