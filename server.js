@@ -27,12 +27,32 @@ const server = http.createServer((req, res) => {
         ? path.join(__dirname, 'index.html')
         : path.join(__dirname, req.url);
     
+    // If URL has no extension, try adding .html
+    if (!path.extname(filePath) && req.url !== '/') {
+        const htmlPath = filePath + '.html';
+        if (fs.existsSync(htmlPath)) {
+            filePath = htmlPath;
+        }
+    }
+    
     // Remove query strings for file path resolution
     filePath = filePath.split('?')[0];
 
     // Get the file extension
-    const extname = path.extname(filePath);
-    let contentType = MIME_TYPES[extname] || 'application/octet-stream';
+    let extname = path.extname(filePath);
+    
+    // If no extension, check if file exists and treat as HTML
+    let contentType;
+    if (!extname) {
+        if (fs.existsSync(filePath)) {
+            extname = '.html';
+            contentType = 'text/html';
+        } else {
+            contentType = 'application/octet-stream';
+        }
+    } else {
+        contentType = MIME_TYPES[extname] || 'application/octet-stream';
+    }
 
     // Security: Prevent directory traversal
     const resolvedPath = path.resolve(filePath);

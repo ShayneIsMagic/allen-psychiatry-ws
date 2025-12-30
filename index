@@ -340,7 +340,7 @@
         <div class="header-top">
             <div class="container">
                 <div class="contact-info">
-                    <div><a href="tel:+13855041334" onclick="gtag(\'event\', \'phone_call_click\', {\'event_category\': \'Conversion\', \'event_label\': \'Phone Call - Header\', \'value\': 1});" style="color: inherit; text-decoration: none;">(385) 504-1334</a></div>
+                    <div>(385) 504-1334</div>
                     <div>3311 North University Ave, Ste 275, Provo, UT 84604</div>
                 </div>
                 <div class="header-actions">
@@ -363,16 +363,16 @@
                         <li class="dropdown">
                             <a href="/#services">Services</a>
                             <ul class="dropdown-menu">
-                                <li><a href="/adhd">ADHD Testing & Treatment</a></li>
-                                <li><a href="/anxiety">Anxiety Treatment</a></li>
-                                <li><a href="/depression">Depression Treatment</a></li>
-                                <li><a href="/ptsd">PTSD Treatment</a></li>
+                                <li><a href="adhd">ADHD Testing & Treatment</a></li>
+                                <li><a href="anxiety">Anxiety Treatment</a></li>
+                                <li><a href="depression">Depression Treatment</a></li>
+                                <li><a href="ptsd">PTSD Treatment</a></li>
                             </ul>
                         </li>
-                        <li><a href="/provo">Provo Office</a></li>
-                        <li><a href="/rural">Rural Services</a></li>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/telehealth">TeleHealth</a></li>
+                        <li><a href="provo">Provo Office</a></li>
+                        <li><a href="rural">Rural Services</a></li>
+                        <li><a href="about">About Us</a></li>
+                        <li><a href="telehealth">TeleHealth</a></li>
                         <li><a href="https://pp-wfe-100.advancedmd.com/154986/account/logon" target="_blank">Patient Portal</a></li>
                     </ul>
                 </nav>
@@ -411,7 +411,7 @@
                     <div class="service-content">
                         <h3>ADHD Testing & Treatment</h3>
                         <p>Comprehensive evaluation and management of ADHD for adults, with personalized treatment plans to help you regain focus and control in your daily life.</p>
-                        <a href="/adhd" class="btn">Learn More</a>
+                        <a href="adhd" class="btn">Learn More</a>
                     </div>
                 </div>
 
@@ -422,7 +422,7 @@
                     <div class="service-content">
                         <h3>Anxiety Treatment</h3>
                         <p>Evidence-based approaches to managing anxiety, including medication management and therapeutic techniques to reduce symptoms and improve quality of life.</p>
-                        <a href="/anxiety" class="btn">Learn More</a>
+                        <a href="anxiety" class="btn">Learn More</a>
                     </div>
                 </div>
 
@@ -433,7 +433,7 @@
                     <div class="service-content">
                         <h3>Depression Treatment</h3>
                         <p>Personalized care for those experiencing depression, with a focus on restoring hope and improving overall well-being through effective, compassionate treatment.</p>
-                        <a href="/depression" class="btn">Learn More</a>
+                        <a href="depression" class="btn">Learn More</a>
                     </div>
                 </div>
 
@@ -444,7 +444,7 @@
                     <div class="service-content">
                         <h3>PTSD Treatment</h3>
                         <p>Specialized care for trauma survivors, including medication management and evidence-based therapeutic approaches to help you reclaim your life and find peace.</p>
-                        <a href="/ptsd" class="btn">Learn More</a>
+                        <a href="ptsd" class="btn">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -544,12 +544,12 @@
                 <div class="footer-col">
                     <h3>Our Services</h3>
                     <ul class="footer-links">
-                        <li><a href="/adhd">ADHD Testing & Treatment</a></li>
-                        <li><a href="/anxiety">Anxiety Treatment</a></li>
-                        <li><a href="/depression">Depression Treatment</a></li>
-                        <li><a href="/ptsd">PTSD Treatment</a></li>
-                        <li><a href="/telehealth">TeleHealth Services</a></li>
-                        <li><a href="/rural">Rural Services</a></li>
+                        <li><a href="adhd">ADHD Testing & Treatment</a></li>
+                        <li><a href="anxiety">Anxiety Treatment</a></li>
+                        <li><a href="depression">Depression Treatment</a></li>
+                        <li><a href="ptsd">PTSD Treatment</a></li>
+                        <li><a href="telehealth">TeleHealth Services</a></li>
+                        <li><a href="rural">Rural Services</a></li>
                     </ul>
                 </div>
 
@@ -557,9 +557,9 @@
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="/">Home</a></li>
-                        <li><a href="/about">About Us</a></li>
+                        <li><a href="about">About Us</a></li>
                         <li><a href="/#services">Services</a></li>
-                        <li><a href="/provo">Provo Office</a></li>
+                        <li><a href="provo">Provo Office</a></li>
                         <li><a href="https://pp-wfe-100.advancedmd.com/154986/account/logon" target="_blank">Patient Portal</a></li>
                         <li><a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" target="_blank">Schedule Appointment</a></li>
                     </ul>
