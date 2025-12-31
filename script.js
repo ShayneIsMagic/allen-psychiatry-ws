@@ -1,20 +1,4 @@
-// Mobile menu toggle
-const hamburger = document.querySelector('.hamburger-menu');
-const nav = document.querySelector('.main-nav');
-const navItems = document.querySelector('.nav-items');
-
-hamburger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    hamburger.classList.toggle('active');
-});
-
-// Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
-        nav.classList.remove('active');
-        hamburger.classList.remove('active');
-    }
-});
+// Hamburger menu is handled in navigation.js - removed duplicate handler
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -417,15 +401,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Focus management for mobile menu
-    if (hamburgerMenu) {
-        hamburgerMenu.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                this.click();
-            }
-        });
-    }
+    // Focus management for mobile menu - handled in navigation.js
 
     // Service Area Toggle
     const serviceAreaToggle = document.getElementById('service-area-toggle');

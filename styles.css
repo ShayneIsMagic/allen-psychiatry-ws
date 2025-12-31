@@ -1980,12 +1980,7 @@ footer::before {
     margin-bottom: 20px;
 }
 
-/* Service content h3 should be blue (primary) - keep separate */
-.service-content h3 {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-    color: var(--primary);
-}
+/* Service content h3 - defined above, removed duplicate */
 
 /* ==========================================================================
    Provo & Location Page Styles
@@ -2683,12 +2678,7 @@ footer::before {
     margin-bottom: 20px;
 }
 
-/* Service content h3 should be blue (primary) - keep separate */
-.service-content h3 {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-    color: var(--primary);
-}
+/* Service content h3 - defined above, removed duplicate */
 
 /* ==========================================================================
    About Page Specific Styles
