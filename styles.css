@@ -681,6 +681,16 @@ nav a.active {
     background: linear-gradient(135deg, var(--off-white) 0%, var(--light) 100%);
 }
 
+/* Reduce bottom padding when page-content is immediately followed by CTA */
+.page-content:last-child {
+    padding-bottom: 10px;
+}
+
+/* Reduce bottom padding of page-content when followed by CTA (modern browsers) */
+.page-content:has(+ .cta-section) {
+    padding-bottom: 10px;
+}
+
 .page-content .container {
     max-width: 1000px;
 }
@@ -743,6 +753,8 @@ nav a.active {
     height: 100%;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: inherit;
 }
 
 .service-card:hover {
@@ -751,12 +763,14 @@ nav a.active {
 }
 
 .service-img {
-    object-fit: cover;
     height: 220px;
     background-color: var(--primary);
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 3.5rem;
+    position: relative;
+    overflow: hidden;
     color: var(--light);
     overflow: hidden;
     position: relative;
@@ -815,9 +829,9 @@ nav a.active {
 .cta-section {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: var(--light);
-    padding: 60px 0;
+    padding: 50px 0;
     text-align: center;
-    margin: 40px 0;
+    margin: 30px 0;
     position: relative;
     overflow: hidden;
     animation: gradientShift 10s ease-in-out infinite;
@@ -1449,6 +1463,88 @@ footer::before {
     z-index: 1;
 }
 
+/* Service Area Section */
+.service-area-section {
+    margin: 60px 0;
+    padding: 40px;
+    background: var(--off-white);
+    border-radius: var(--border-radius);
+}
+
+.service-area-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--secondary);
+    font-size: 2.2rem;
+}
+
+.service-area-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--clinical-text);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.service-area-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-area-column h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.service-area-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-area-column li {
+    margin-bottom: 8px;
+    color: var(--clinical-text);
+    line-height: 1.6;
+}
+
+.service-area-note {
+    margin-top: 20px;
+    font-size: 0.95em;
+    color: var(--mid-gray);
+    font-style: italic;
+}
+
+.service-area-cta {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--light-gray);
+}
+
+.service-area-cta-title {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: var(--clinical-text);
+}
+
+.service-area-cta p {
+    margin-bottom: 20px;
+    color: var(--clinical-text);
+    line-height: 1.7;
+}
+
+.service-area-cta .btn {
+    margin-top: 20px;
+}
+
 .footer-col h3 {
     color: var(--light);
     font-size: 1.4rem;
@@ -1667,6 +1763,11 @@ footer::before {
     background: var(--light);
 }
 
+/* Reduce bottom padding when service-details is immediately followed by CTA */
+.service-details:last-child {
+    padding-bottom: 10px;
+}
+
 /* Reduce spacing when service-details follows another section */
 .office-photos + .service-details,
 .service-details + .service-details {
@@ -1675,28 +1776,25 @@ footer::before {
 
 /* Reduce spacing when service-details is followed by CTA section */
 .service-details + .cta-section {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 /* Reduce bottom padding of service-details when followed by CTA (modern browsers) */
 .service-details:has(+ .cta-section) {
-    padding-bottom: 40px;
+    padding-bottom: 10px;
 }
 
 /* Fallback: Reduce bottom padding for last service-details (for older browsers) */
 .service-details:last-of-type {
-    padding-bottom: 40px;
+    padding-bottom: 10px;
 }
 
 /* Reduce spacing when page-content is followed by CTA section */
 .page-content + .cta-section {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
-/* Reduce bottom padding of page-content when followed by CTA (modern browsers) */
-.page-content:has(+ .cta-section) {
-    padding-bottom: 40px;
-}
+/* Note: Duplicate rule removed - using the rule at line 690 for .page-content:has(+ .cta-section) */
 
 .info-content {
     max-width: 800px;
@@ -2101,6 +2199,45 @@ footer::before {
     }
 }
 
+/* Tablet Breakpoint (769px - 992px) */
+@media (max-width: 992px) and (min-width: 769px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    
+    .container {
+        padding: 0 25px;
+    }
+    
+    /* Typography adjustments for tablets */
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .service-hero h1 {
+        font-size: 2.3rem;
+    }
+    
+    /* Service area section adjustments */
+    .service-area-section {
+        padding: 35px 25px !important;
+    }
+    
+    .service-area-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 25px !important;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-cta {
         flex-direction: column;
@@ -2132,7 +2269,7 @@ footer::before {
         position: relative;
     }
     
-    /* Add overlay with service name on mobile */
+    /* Add overlay with service name on mobile - get from data attribute or h3 */
     .service-img::after {
         content: attr(data-service-name);
         position: absolute;
@@ -2145,6 +2282,12 @@ footer::before {
         font-size: 1.3rem;
         font-weight: 600;
         text-align: center;
+        z-index: 2;
+    }
+    
+    /* Fallback: if no data attribute, show h3 text */
+    .service-card:not([data-service-name]) .service-img::after {
+        content: "";
     }
     
     .service-content {
@@ -2241,6 +2384,94 @@ footer::before {
         grid-template-columns: 1fr;
         gap: 30px;
         margin-bottom: 40px;
+    }
+    
+    /* Service Area Section - Mobile Adjustments */
+    .service-area-section {
+        margin: 40px 0 !important;
+        padding: 30px 20px !important;
+    }
+    
+    .service-area-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        margin-top: 30px !important;
+    }
+    
+    /* Info Grid - Mobile Adjustments */
+    .info-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Office Info Content - Mobile Adjustments */
+    .office-info-content .intro-text {
+        font-size: 1rem !important;
+        margin-bottom: 30px !important;
+    }
+    
+    /* Service Features - Mobile Adjustments */
+    .service-features {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        margin: 2rem 0 !important;
+    }
+    
+    .feature {
+        padding: 30px 20px !important;
+    }
+    
+    /* Service Details - Mobile Adjustments */
+    .service-details {
+        padding: 40px 0 !important;
+    }
+    
+    /* Office Photos - Mobile Adjustments */
+    .office-photos {
+        padding: 40px 0 !important;
+    }
+    
+    /* Photo Grid - Mobile Adjustments */
+    .photo-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    
+    /* About Intro - Mobile Adjustments */
+    .about-intro {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        margin: 0 -20px 40px !important;
+        padding: 40px 20px !important;
+    }
+    
+    /* About Grid - Mobile Adjustments */
+    .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        margin-bottom: 40px !important;
+    }
+    
+    .about-card {
+        padding: 30px 20px !important;
+    }
+    
+    /* Clinical Summary - Mobile Adjustments */
+    .clinical-summary {
+        padding: 20px !important;
+        margin: 20px 0 !important;
+    }
+    
+    /* Clinical Callout - Mobile Adjustments */
+    .clinical-callout {
+        padding: 20px !important;
+        margin: 20px 0 !important;
+    }
+    
+    /* Office Hours Section - Mobile Adjustments */
+    .office-hours-section,
+    .first-visit-section {
+        padding: 20px !important;
+        margin-bottom: 20px !important;
     }
 }
 
@@ -2442,6 +2673,36 @@ footer::before {
 
 .about-card p:last-child {
     margin-bottom: 0;
+}
+
+/* Schedule Appointment Section (About page) */
+.schedule-appointment-section {
+    text-align: center;
+    padding: 50px 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    margin: 40px 0;
+    border-radius: var(--border-radius);
+}
+
+.schedule-appointment-section h2 {
+    color: var(--light);
+    margin-bottom: 20px;
+}
+
+.schedule-appointment-section p {
+    color: var(--light);
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.schedule-appointment-section + .cta-section {
+    margin-top: 10px;
+}
+
+.schedule-appointment-section:has(+ .cta-section) {
+    margin-bottom: 10px;
 }
 
 /* About CTA Section */
