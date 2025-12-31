@@ -744,6 +744,14 @@ nav a.active {
     margin-bottom: 80px;
 }
 
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+}
+
 .service-card {
     background-color: var(--light);
     border-radius: var(--border-radius);
@@ -2314,51 +2322,51 @@ footer::before {
     
     /* Services Grid - Single Column on Mobile */
     .services-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        margin-bottom: 40px;
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        margin-bottom: 40px !important;
     }
     
-    /* Service Cards - Show Only Hero Image on Mobile */
+    /* Service Cards - Full Content on Mobile */
     .service-card {
-        display: block;
-        cursor: pointer;
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        margin: 0 !important;
+        max-width: 100% !important;
     }
     
     .service-img {
-        height: 250px;
-        width: 100%;
+        height: 200px !important;
+        width: 100% !important;
         position: relative;
+        background-color: transparent !important;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
     }
     
-    /* Add overlay with service name on mobile - get from data attribute or h3 */
+    /* Remove any overlay on mobile */
     .service-img::after {
-        content: attr(data-service-name);
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-        color: var(--light);
-        padding: 20px;
-        font-size: 1.3rem;
-        font-weight: 600;
-        text-align: center;
-        z-index: 2;
+        display: none !important;
     }
     
-    /* Fallback: if no data attribute, show h3 text */
-    .service-card:not([data-service-name]) .service-img::after {
-        content: "";
+    .service-img img,
+    .service-img picture {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
     
+    /* Show full content on mobile */
     .service-content {
-        display: none; /* Hide content on mobile, show only hero images */
-    }
-    
-    /* Make entire service card clickable on mobile */
-    .service-card {
-        text-decoration: none;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 25px 20px !important;
     }
     
     .service-card:active {
