@@ -1,0 +1,24 @@
+# Cloudflare Pages Redirects Configuration
+# Redirects .html URLs to clean URLs (301 Permanent Redirect)
+# This consolidates link equity and prevents duplicate content issues
+
+# Service Pages
+/adhd.html    /adhd    301
+/anxiety.html    /anxiety    301
+/depression.html    /depression    301
+/ptsd.html    /ptsd    301
+
+# Location Pages
+/provo.html    /provo    301
+/rural.html    /rural    301
+/telehealth.html    /telehealth    301
+
+# About Page
+/about.html    /about    301
+
+# Homepage
+/index.html    /    301
+
+# Handle 404 errors
+/*    /404.html    404
+
