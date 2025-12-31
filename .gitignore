@@ -39,4 +39,7 @@ build/
 lighthouse-report*.json
 
 # Staging directory (if not needed in production)
-# staging/
+staging/
+
+# Documentation archives (keep active docs, archive old ones)
+docs/archive/
