@@ -385,6 +385,10 @@ nav a.active {
     border-radius: var(--border-radius);
     background: var(--light);
     border: 1px solid rgba(0, 0, 0, 0.1);
+    /* Button reset styles */
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
 }
 
 .hamburger-menu i {
@@ -775,7 +779,7 @@ nav a.active {
 .service-content h3 {
     font-size: 1.6rem;
     margin-bottom: 20px;
-    color: var(--secondary);
+    color: var(--primary);
 }
 
 .service-content p {
@@ -2077,6 +2081,136 @@ footer::before {
     .photo-grid {
         grid-template-columns: 1fr;
     }
+    
+    /* Services Grid - Single Column on Mobile */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    
+    /* Service Cards - Show Only Hero Image on Mobile */
+    .service-card {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .service-img {
+        height: 250px;
+        width: 100%;
+        position: relative;
+    }
+    
+    /* Add overlay with service name on mobile */
+    .service-img::after {
+        content: attr(data-service-name);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        color: var(--light);
+        padding: 20px;
+        font-size: 1.3rem;
+        font-weight: 600;
+        text-align: center;
+    }
+    
+    .service-content {
+        display: none; /* Hide content on mobile, show only hero images */
+    }
+    
+    /* Make entire service card clickable on mobile */
+    .service-card {
+        text-decoration: none;
+    }
+    
+    .service-card:active {
+        transform: scale(0.98);
+    }
+    
+    /* Hero Section - Mobile Adjustments */
+    .hero {
+        padding: 80px 0;
+        min-height: 400px;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .service-hero {
+        padding: 80px 0;
+        min-height: 300px;
+    }
+    
+    .service-hero h1 {
+        font-size: 2rem;
+    }
+    
+    /* CTA Section - Mobile Adjustments */
+    .cta-section {
+        padding: 40px 20px;
+        margin: 30px 0;
+    }
+    
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-section p {
+        font-size: 1.1rem;
+    }
+    
+    /* Typography - Mobile Adjustments */
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    /* Page Content - Mobile Adjustments */
+    .page-content {
+        padding: 40px 0;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+    }
+    
+    /* Container - Mobile Adjustments */
+    .container {
+        padding: 0 20px;
+    }
+    
+    /* Footer - Mobile Adjustments */
+    footer {
+        padding: 40px 0 20px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
 }
 
 .hero h1,
@@ -2457,6 +2591,7 @@ footer::before {
    ========================================================================== */
 
 /* Fix for tiny clinical callout headings */
+.clinical-callout h2,
 .clinical-callout h4 {
     font-size: 2.2rem !important;
     font-weight: 600;
@@ -2483,6 +2618,7 @@ footer::before {
 
 /* Responsive fixes for clinical callout headings */
 @media (max-width: 768px) {
+    .clinical-callout h2,
     .clinical-callout h4 {
         font-size: 1.8rem !important;
         margin-bottom: 15px;
