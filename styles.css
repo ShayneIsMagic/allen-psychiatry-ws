@@ -2332,11 +2332,12 @@ footer::before {
         grid-template-columns: 1fr;
     }
     
-    /* Services Grid - Single Column on Mobile */
+    /* Services Grid - Single Column on Mobile - Force override */
     .services-grid {
         grid-template-columns: 1fr !important;
         gap: 30px !important;
         margin-bottom: 40px !important;
+        display: grid !important;
     }
     
     /* Service Cards - Full Content on Mobile */
