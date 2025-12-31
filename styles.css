@@ -76,6 +76,8 @@ a:hover {
     box-shadow: 0 4px 10px rgba(51, 150, 188, 0.2);
     position: relative;
     overflow: hidden;
+    min-height: 44px; /* Touch target minimum */
+    min-width: 44px; /* Touch target minimum */
 }
 
 .btn::before {
