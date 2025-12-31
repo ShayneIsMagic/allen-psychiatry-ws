@@ -191,34 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Observing CTA section for animation
     });
 
-    // Enhanced mobile navigation
-    const navItems = document.querySelectorAll('.nav-items li');
-
-    if (hamburgerMenu) {
-        hamburgerMenu.addEventListener('click', function() {
-            mainNav.classList.toggle('active');
-            this.classList.toggle('active');
-            
-            // Animate menu items
-            navItems.forEach((item, index) => {
-                if (mainNav.classList.contains('active')) {
-                    item.style.animationDelay = `${index * 0.1}s`;
-                    item.classList.add('slide-in');
-                } else {
-                    item.classList.remove('slide-in');
-                }
-            });
-        });
-    }
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!hamburgerMenu.contains(e.target) && !mainNav.contains(e.target)) {
-            mainNav.classList.remove('active');
-            hamburgerMenu.classList.remove('active');
-            navItems.forEach(item => item.classList.remove('slide-in'));
-        }
-    });
+    // Hamburger menu is handled in navigation.js - removed duplicate handler
 
     // Enhanced dropdown functionality
     const dropdowns = document.querySelectorAll('.dropdown');
