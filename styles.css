@@ -677,7 +677,7 @@ nav a.active {
 
 /* Main Content */
 .page-content {
-    padding: 60px 0;
+    padding: 60px 0 0 0;
     background: linear-gradient(135deg, var(--off-white) 0%, var(--light) 100%);
 }
 
@@ -784,7 +784,7 @@ nav a.active {
 }
 
 .service-content {
-    padding: 35px;
+    padding: 35px 35px 0 35px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -1759,13 +1759,13 @@ footer::before {
 
 /* Service Content Enhancements */
 .service-details {
-    padding: 60px 0;
+    padding: 60px 0 0 0;
     background: var(--light);
 }
 
 /* Reduce bottom padding when service-details is immediately followed by CTA */
 .service-details:last-child {
-    padding-bottom: 10px;
+    padding-bottom: 0;
 }
 
 /* Reduce spacing when service-details follows another section */
@@ -1786,7 +1786,7 @@ footer::before {
 
 /* Fallback: Reduce bottom padding for last service-details (for older browsers) */
 .service-details:last-of-type {
-    padding-bottom: 10px;
+    padding-bottom: 0;
 }
 
 /* Reduce spacing when page-content is followed by CTA section */
@@ -2329,7 +2329,7 @@ footer::before {
     /* CTA Section - Mobile Adjustments */
     .cta-section {
         padding: 40px 20px;
-        margin: 30px 0;
+        margin: 0;
     }
     
     .cta-section h2 {
