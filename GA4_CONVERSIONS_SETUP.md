@@ -29,7 +29,17 @@ Mark your existing GA4 events (`schedule_appointment_click` and `phone_call_clic
 1. In the **"Property"** column (middle column), click **"Events"**
 2. You'll see a list of all events that have been tracked on your site
 
-### **Step 3: Mark Events as Conversions**
+### **⚠️ IMPORTANT: Events Must Fire First!**
+
+**GA4 only shows events in the Events list AFTER they've been triggered at least once.**
+
+If you don't see `schedule_appointment_click` or `phone_call_click` in the list:
+1. **Test the events first** - See `TEST_GA4_EVENTS.md` for instructions
+2. **Use DebugView or Realtime** to verify events are firing
+3. **Wait 24-48 hours** for events to appear in the Events list
+4. **Then come back** to mark them as conversions
+
+### **Step 3: Mark Events as Conversions** (After Events Appear)
 1. **Find `schedule_appointment_click`** in the events list
 2. **Toggle the "Mark as conversion" switch** to **ON** (it will turn blue)
 3. **Find `phone_call_click`** in the events list
