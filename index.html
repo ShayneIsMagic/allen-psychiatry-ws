@@ -11,25 +11,59 @@
     <title>Allen Psychiatry | Compassionate Mental Health Care Provo & Rural Utah | Psychiatric Services</title>
     <meta name="description" content="Expert psychiatric services in Provo, Utah County & Sevier County. ADHD, anxiety, depression, PTSD treatment. Serving rural communities with telehealth. Board-certified psychiatrist. Call (385) 504-1334">
     <meta name="keywords" content="Allen Psychiatry, Allen Mental Health, Allen Psychiatric Services, Allen Mental Wellness, psychiatric services Provo, mental health care Utah County, psychiatrist Orem, mental health clinic near me, psychiatric services Lehi, mental health Spanish Fork, psychiatric care American Fork, mental wellness Springville, behavioral health Pleasant Grove, psychiatric services Payson, mental health Saratoga Springs, rural mental health Utah, telehealth psychiatry Utah, Sevier County psychiatric care, mental health treatment, psychiatric evaluation, mental wellness, behavioral health, holistic psychiatry, compassionate mental health care, mental health support, anxiety treatment, depression treatment, medication management, mental health counseling, psychiatric consultation, mental health professionals, local psychiatrist, Provo mental health, Orem mental health, Lehi mental health, Spanish Fork mental health, American Fork mental health, Springville mental health, Pleasant Grove mental health, Payson mental health, Saratoga Springs mental health, Eagle Mountain mental health, Lindon mental health, Mapleton mental health, Highland mental health, Alpine mental health, Salem mental health, Vineyard mental health, Cedar Hills mental health, Utah County psychiatric care, Sevier County psychiatric care">
+    <!-- Resource Hints for Performance -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="config.js"></script>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="assets/ap-new-color-logo.png" as="image" type="image/png">
+    <link rel="preload" href="assets/index-hero.jpg" as="image" type="image/jpeg">
+    <link rel="preload" href="styles.css" as="style">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/ap-new-color-logo.png">
     <link rel="apple-touch-icon" href="assets/ap-new-color-logo.png">
     <link rel="shortcut icon" href="assets/ap-new-color-logo.png">
     
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKYXFGGJSP"></script>
+    <!-- Critical CSS - Inline or Load Immediately -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Defer Non-Critical CSS - Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Defer Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></noscript>
+    
+    <script src="config.js"></script>
+    
+    <!-- Google Analytics 4 - Defer to Bottom -->
     <script>
+      // Defer GA loading
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-LKYXFGGJSP');
+      gtag('config', 'G-LKYXFGGJSP', {
+        'send_page_view': false
+      });
+      
+      // Load GA script after page load
+      window.addEventListener('load', function() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-LKYXFGGJSP';
+        document.head.appendChild(script);
+        
+        script.onload = function() {
+          gtag('event', 'page_view');
+        };
+      });
     </script>
     
     <!-- LocalBusiness Schema Markup for Google -->
@@ -359,7 +393,7 @@
             <div class="container">
                 <div class="logo">
                     <a href="/">
-                        <img src="assets/ap-new-color-logo.png" alt="Allen Psychiatry logo">
+                        <img src="assets/ap-new-color-logo.png" alt="Allen Psychiatry logo" width="200" height="60" loading="eager" fetchpriority="high">
                     </a>
                 </div>
                 <nav class="main-nav">
@@ -390,7 +424,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <img src="assets/index-hero.jpg" alt="Family playing in their backyard" class="hero-image">
+                        <img src="assets/index-hero.jpg" alt="Family playing in their backyard" class="hero-image" loading="eager" width="1920" height="1080" fetchpriority="high">
         <div class="container">
             <div class="hero-content">
                 <h1>Expert Psychiatric Care in Utah County</h1>
@@ -411,45 +445,45 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="assets/adhd2.jpg" alt="ADHD Treatment">
+                        <img src="assets/adhd2.jpg" alt="ADHD Treatment" loading="lazy" width="330" height="220">
                     </div>
                     <div class="service-content">
                         <h3>ADHD Testing & Treatment</h3>
                         <p>Comprehensive evaluation and management of ADHD for adults, with personalized treatment plans to help you regain focus and control in your daily life.</p>
-                        <a href="/adhd" class="btn">Learn More</a>
+                        <a href="/adhd" class="btn">Learn More About ADHD Treatment</a>
                     </div>
                 </div>
 
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="assets/anxiety2.jpg" alt="Anxiety Treatment">
+                        <img src="assets/anxiety2.jpg" alt="Anxiety Treatment" loading="lazy" width="330" height="220">
                     </div>
                     <div class="service-content">
                         <h3>Anxiety Treatment</h3>
                         <p>Evidence-based approaches to managing anxiety, including medication management and therapeutic techniques to reduce symptoms and improve quality of life.</p>
-                        <a href="/anxiety" class="btn">Learn More</a>
+                        <a href="/anxiety" class="btn">Learn More About Anxiety Treatment</a>
                     </div>
                 </div>
 
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="assets/depression.jpg" alt="Depression Treatment">
+                        <img src="assets/depression.jpg" alt="Depression Treatment" loading="lazy" width="330" height="220">
                     </div>
                     <div class="service-content">
                         <h3>Depression Treatment</h3>
                         <p>Personalized care for those experiencing depression, with a focus on restoring hope and improving overall well-being through effective, compassionate treatment.</p>
-                        <a href="/depression" class="btn">Learn More</a>
+                        <a href="/depression" class="btn">Learn More About Depression Treatment</a>
                     </div>
                 </div>
 
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="assets/ptsd.jpg" alt="PTSD Treatment">
+                        <img src="assets/ptsd.jpg" alt="PTSD Treatment" loading="lazy" width="330" height="220">
                     </div>
                     <div class="service-content">
                         <h3>PTSD Treatment</h3>
                         <p>Specialized care for trauma survivors, including medication management and evidence-based therapeutic approaches to help you reclaim your life and find peace.</p>
-                        <a href="/ptsd" class="btn">Learn More</a>
+                        <a href="/ptsd" class="btn">Learn More About PTSD Treatment</a>
                     </div>
                 </div>
             </div>
