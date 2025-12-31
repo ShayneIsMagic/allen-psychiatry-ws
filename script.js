@@ -10,9 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth',
                 block: 'start'
             });
-            // Close mobile menu after clicking a link
-            nav.classList.remove('active');
-            hamburger.classList.remove('active');
+            // Close mobile menu after clicking a link (handled by navigation.js)
         }
     });
 });
