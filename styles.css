@@ -1678,13 +1678,23 @@ footer::before {
     margin-top: 20px;
 }
 
+/* Reduce bottom padding of service-details when followed by CTA (modern browsers) */
+.service-details:has(+ .cta-section) {
+    padding-bottom: 40px;
+}
+
+/* Fallback: Reduce bottom padding for last service-details (for older browsers) */
+.service-details:last-of-type {
+    padding-bottom: 40px;
+}
+
 /* Reduce spacing when page-content is followed by CTA section */
 .page-content + .cta-section {
     margin-top: 20px;
 }
 
-/* Reduce bottom padding of service-details when followed by CTA */
-.service-details:last-of-type {
+/* Reduce bottom padding of page-content when followed by CTA (modern browsers) */
+.page-content:has(+ .cta-section) {
     padding-bottom: 40px;
 }
 
