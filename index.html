@@ -515,7 +515,14 @@
                 <h2>Serving Utah County & Rural Utah Communities</h2>
                 <p class="service-area-intro">Allen Psychiatry is committed to providing compassionate, personalized mental health care throughout Utah County and rural Utah communities. We recognize the vital importance of supporting the mental health needs of our rural communities and have a deep love and desire to serve them.</p>
                 
-                <div class="service-area-grid">
+                <div class="service-area-toggle-container">
+                    <button class="service-area-toggle-btn" id="service-area-toggle" aria-expanded="false" aria-controls="service-area-grid">
+                        <span class="toggle-text">See the areas we serve</span>
+                        <i class="fa fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div class="service-area-grid" id="service-area-grid" style="display: none;">
                     <div class="service-area-column">
                         <h3>Utah County Cities</h3>
                         <ul>
