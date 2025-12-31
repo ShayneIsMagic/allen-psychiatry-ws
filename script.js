@@ -223,15 +223,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Parallax effect for service hero sections
-    const serviceHero = document.querySelector('.service-hero');
-    if (serviceHero) {
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            serviceHero.style.transform = `translateY(${rate}px)`;
-        });
-    }
+    // Parallax effect removed - was causing text twitching in hero sections
+    // If parallax is needed in future, apply only to background image, not entire hero element
 
     // Enhanced CTA button interactions
     const ctaButtons = document.querySelectorAll('.cta-section .btn');
