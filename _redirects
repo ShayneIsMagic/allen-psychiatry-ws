@@ -2,7 +2,7 @@
 # Redirects .html URLs to clean URLs (301 Permanent Redirect)
 # This consolidates link equity and prevents duplicate content issues
 
-# Service Pages
+# Service Pages - Redirect .html to clean URLs
 /adhd.html    /adhd    301
 /anxiety.html    /anxiety    301
 /depression.html    /depression    301
@@ -19,6 +19,6 @@
 # Homepage
 /index.html    /    301
 
-# Handle 404 errors
-/*    /404.html    404
+# Clean URLs should serve .html files (Cloudflare Pages handles this automatically)
+# No redirect needed for clean URLs - they serve the .html files directly
 
