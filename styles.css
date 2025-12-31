@@ -764,7 +764,7 @@ nav a.active {
 
 .service-img {
     height: 220px;
-    background-color: var(--primary);
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -772,15 +772,15 @@ nav a.active {
     position: relative;
     overflow: hidden;
     color: var(--light);
-    overflow: hidden;
-    position: relative;
 }
 
 .service-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     transition: var(--transition);
+    display: block;
 }
 
 .service-content {
@@ -1963,12 +1963,18 @@ footer::before {
 .page-content h3,
 .service-details h3,
 .about-content h3,
-.info-content h3,
-.service-content h3 {
+.info-content h3 {
     font-size: 1.5rem;
     color: var(--secondary);
     font-weight: 600;
     margin-bottom: 20px;
+}
+
+/* Service content h3 should be blue (primary) - keep separate */
+.service-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: var(--primary);
 }
 
 /* ==========================================================================
@@ -2556,12 +2562,18 @@ footer::before {
 .page-content h3,
 .service-details h3,
 .about-content h3,
-.info-content h3,
-.service-content h3 {
+.info-content h3 {
     font-size: 1.5rem;
     color: var(--secondary);
     font-weight: 600;
     margin-bottom: 20px;
+}
+
+/* Service content h3 should be blue (primary) - keep separate */
+.service-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: var(--primary);
 }
 
 /* ==========================================================================
