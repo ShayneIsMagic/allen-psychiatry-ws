@@ -1673,6 +1673,21 @@ footer::before {
     padding-top: 40px;
 }
 
+/* Reduce spacing when service-details is followed by CTA section */
+.service-details + .cta-section {
+    margin-top: 20px;
+}
+
+/* Reduce spacing when page-content is followed by CTA section */
+.page-content + .cta-section {
+    margin-top: 20px;
+}
+
+/* Reduce bottom padding of service-details when followed by CTA */
+.service-details:last-of-type {
+    padding-bottom: 40px;
+}
+
 .info-content {
     max-width: 800px;
     margin: 0 auto;
