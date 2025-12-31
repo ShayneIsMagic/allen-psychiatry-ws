@@ -2442,7 +2442,30 @@ footer::before {
     
     /* Container - Mobile Adjustments */
     .container {
-        padding: 0 20px;
+        padding: 0 20px !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    
+    /* Services section - remove any extra padding/margin */
+    #services .container,
+    #services .page-content .container {
+        padding: 0 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+    
+    #services .page-content {
+        padding: 40px 0 !important;
+        margin: 0 !important;
+    }
+    
+    /* Force service cards to full width on mobile */
+    .services-grid .service-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
     }
     
     /* Footer - Mobile Adjustments */
