@@ -275,21 +275,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Service page specific enhancements
     if (document.querySelector('.service-hero')) {
-        // Add floating animation to service hero content (disabled for telehealth page)
-        const heroContent = document.querySelector('.service-hero .container');
-        // Skip animation on telehealth page - check if we're on telehealth page
-        const isTelehealthPage = window.location.pathname.includes('telehealth') || 
-                                 document.querySelector('body').classList.contains('telehealth') ||
-                                 document.querySelector('h1')?.textContent.includes('TeleHealth');
-        
-        if (heroContent && !isTelehealthPage) {
-            setInterval(() => {
-                heroContent.style.transform = 'translateY(-5px)';
-                setTimeout(() => {
-                    heroContent.style.transform = 'translateY(0)';
-                }, 1000);
-            }, 3000);
-        }
+        // Floating animation removed - was causing text twitching on all pages
 
         // Enhanced list item animations
         const listItems = document.querySelectorAll('.about-info ul li');
