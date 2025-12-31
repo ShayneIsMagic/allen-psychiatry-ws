@@ -11,6 +11,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 block: 'start'
             });
             // Close mobile menu after clicking a link (handled by navigation.js)
+            const nav = document.querySelector('.main-nav');
+            const hamburger = document.querySelector('.hamburger-menu');
+            if (nav) nav.classList.remove('active');
+            if (hamburger) hamburger.classList.remove('active');
         }
     });
 });
