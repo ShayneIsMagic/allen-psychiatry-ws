@@ -4,25 +4,25 @@ const path = require('path');
 
 const assetsDir = path.join(__dirname, 'assets');
 
-// Image optimization settings
+// Image optimization settings - AGGRESSIVE COMPRESSION
 const settings = {
   jpeg: {
-    quality: 80,
+    quality: 65,  // Reduced from 80 for better compression
     mozjpeg: true
   },
   webp: {
-    quality: 80
+    quality: 70  // Reduced from 80
   },
   avif: {
-    quality: 75
+    quality: 60  // Reduced from 75
   }
 };
 
 // Images to optimize with their specific settings
 const imagesToOptimize = [
-  // Critical - Hero images (larger, higher quality)
-  { file: 'index-hero.jpg', jpegQuality: 80, webpQuality: 80, avifQuality: 75 },
-  { file: 'adhd2.jpg', jpegQuality: 80, webpQuality: 80, avifQuality: 75 },
+  // Critical - Hero images (aggressive compression for web)
+  { file: 'index-hero.jpg', jpegQuality: 65, webpQuality: 70, avifQuality: 60, maxWidth: 1920 },
+  { file: 'adhd2.jpg', jpegQuality: 65, webpQuality: 70, avifQuality: 60, maxWidth: 1920 },
   { file: 'Provo Utah.jpg', jpegQuality: 80, webpQuality: 80, avifQuality: 75 },
   { file: 'Rural Sevier County Sunset.jpg', jpegQuality: 80, webpQuality: 80, avifQuality: 75 },
   { file: 'ptsd.jpg', jpegQuality: 80, webpQuality: 80, avifQuality: 75 },
@@ -112,19 +112,33 @@ async function optimizeImage(imageConfig) {
       image = sharp(inputPath);
     }
     
-    // 2. Create WebP version
+    // 2. Create WebP version - AGGRESSIVE COMPRESSION
     const webpPath = path.join(assetsDir, `${baseName}.webp`);
-    await image
-      .webp({ quality: imageConfig.webpQuality || 80 })
+    let webpImage = sharp(inputPath);
+    if (imageConfig.maxWidth && metadata.width > imageConfig.maxWidth) {
+      webpImage = webpImage.resize(imageConfig.maxWidth, null, {
+        withoutEnlargement: true,
+        fit: 'inside'
+      });
+    }
+    await webpImage
+      .webp({ quality: imageConfig.webpQuality || 70 })
       .toFile(webpPath);
     
     const webpSize = await getFileSize(webpPath);
     console.log(`  ✅ WebP created: ${formatBytes(webpSize)}`);
     
-    // 3. Create AVIF version
+    // 3. Create AVIF version - AGGRESSIVE COMPRESSION
     const avifPath = path.join(assetsDir, `${baseName}.avif`);
-    await image
-      .avif({ quality: imageConfig.avifQuality || 75 })
+    let avifImage = sharp(inputPath);
+    if (imageConfig.maxWidth && metadata.width > imageConfig.maxWidth) {
+      avifImage = avifImage.resize(imageConfig.maxWidth, null, {
+        withoutEnlargement: true,
+        fit: 'inside'
+      });
+    }
+    await avifImage
+      .avif({ quality: imageConfig.avifQuality || 60 })
       .toFile(avifPath);
     
     const avifSize = await getFileSize(avifPath);
