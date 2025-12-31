@@ -777,13 +777,22 @@ nav a.active {
 .service-img {
     height: 220px;
     background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3.5rem;
+    display: block;
     position: relative;
     overflow: hidden;
-    color: var(--light);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.service-img picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
 }
 
 .service-img img {
@@ -793,6 +802,9 @@ nav a.active {
     object-position: center;
     transition: var(--transition);
     display: block;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
 }
 
 .service-content {
