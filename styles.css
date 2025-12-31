@@ -2583,6 +2583,26 @@ footer::before {
         grid-template-columns: 1fr !important;
         gap: 20px !important;
         margin-top: 30px !important;
+        display: grid !important;
+    }
+    
+    .service-area-column {
+        margin-bottom: 25px;
+    }
+    
+    .service-area-column h3 {
+        font-size: 1.3rem !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .service-area-column ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    .service-area-column li {
+        padding: 8px 0;
+        font-size: 1rem;
     }
     
     /* Info Grid - Mobile Adjustments */
