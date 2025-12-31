@@ -688,7 +688,7 @@ nav a.active {
 
 /* Reduce bottom padding of page-content when followed by CTA (modern browsers) */
 .page-content:has(+ .cta-section) {
-    padding-bottom: 10px;
+    padding-bottom: 0;
 }
 
 .page-content .container {
@@ -831,7 +831,7 @@ nav a.active {
     color: var(--light);
     padding: 50px 0;
     text-align: center;
-    margin: 30px 0;
+    margin: 0;
     position: relative;
     overflow: hidden;
     animation: gradientShift 10s ease-in-out infinite;
@@ -1776,12 +1776,12 @@ footer::before {
 
 /* Reduce spacing when service-details is followed by CTA section */
 .service-details + .cta-section {
-    margin-top: 10px;
+    margin-top: 0;
 }
 
 /* Reduce bottom padding of service-details when followed by CTA (modern browsers) */
 .service-details:has(+ .cta-section) {
-    padding-bottom: 10px;
+    padding-bottom: 0;
 }
 
 /* Fallback: Reduce bottom padding for last service-details (for older browsers) */
@@ -1791,7 +1791,7 @@ footer::before {
 
 /* Reduce spacing when page-content is followed by CTA section */
 .page-content + .cta-section {
-    margin-top: 10px;
+    margin-top: 0;
 }
 
 /* Note: Duplicate rule removed - using the rule at line 690 for .page-content:has(+ .cta-section) */
