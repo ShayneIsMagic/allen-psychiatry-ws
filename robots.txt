@@ -1,17 +1,7 @@
-# robots.txt for Allen Psychiatry
-# https://allenpsychiatry.net
-
 User-agent: *
 Allow: /
-
-# Disallow staging/admin areas if they exist
 Disallow: /staging/
 Disallow: /admin/
 Disallow: /*.json$
 
-# Sitemap location
 Sitemap: https://allenpsychiatry.net/sitemap.xml
-
-# Crawl-delay (optional, remove if not needed)
-# Crawl-delay: 1
-
