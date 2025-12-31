@@ -748,12 +748,13 @@ nav a.active {
     margin-bottom: 80px;
 }
 
-/* Mobile: Single column for service cards */
+/* Tablet and Mobile: Single column for service cards - ONE PER ROW */
 @media (max-width: 992px) {
     .services-grid {
         grid-template-columns: 1fr !important;
-        gap: 30px;
-        margin-bottom: 40px;
+        gap: 30px !important;
+        margin-bottom: 40px !important;
+        display: grid !important;
     }
 }
 
@@ -2332,21 +2333,23 @@ footer::before {
         grid-template-columns: 1fr;
     }
     
-    /* Services Grid - Single Column on Mobile - Force override */
+    /* Services Grid - Single Column on Mobile - ONE CARD PER ROW */
     .services-grid {
         grid-template-columns: 1fr !important;
         gap: 30px !important;
         margin-bottom: 40px !important;
         display: grid !important;
+        width: 100% !important;
     }
     
-    /* Service Cards - Full Content on Mobile */
+    /* Service Cards - Full Content on Mobile - ONE PER ROW */
     .service-card {
         display: flex !important;
         flex-direction: column !important;
         width: 100% !important;
-        margin: 0 !important;
         max-width: 100% !important;
+        margin: 0 auto !important;
+        grid-column: 1 !important;
     }
     
     .service-img {
