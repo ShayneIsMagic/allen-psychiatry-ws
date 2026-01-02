@@ -26,14 +26,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const nav = document.querySelector('.main-nav');
 
     if (hamburger && nav) {
-        hamburger.addEventListener('click', function () {
+        hamburger.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
             nav.classList.toggle('active');
             hamburger.setAttribute('aria-expanded', nav.classList.contains('active'));
         });
 
         // Close menu when clicking outside
         document.addEventListener('click', function(e) {
-            if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+            if (nav.classList.contains('active') && !nav.contains(e.target) && !hamburger.contains(e.target)) {
                 nav.classList.remove('active');
                 hamburger.setAttribute('aria-expanded', 'false');
             }
@@ -45,6 +47,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 nav.classList.remove('active');
                 hamburger.setAttribute('aria-expanded', 'false');
             }
+        });
+
+        // Close menu when clicking a nav link
+        const navLinks = nav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
         });
     }
 

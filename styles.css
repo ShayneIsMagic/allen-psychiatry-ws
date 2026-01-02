@@ -242,6 +242,7 @@ header.scrolled .logo {
     align-items: center;
 }
 
+/* Contact info and header actions - only in header-top, never in header-main */
 .contact-info {
     display: flex;
     gap: 30px;
@@ -268,6 +269,12 @@ header.scrolled .logo {
     transform: translateY(-1px);
 }
 
+/* Ensure contact-info and header-actions only appear in header-top, never in header-main */
+.header-main .contact-info,
+.header-main .header-actions {
+    display: none !important;
+}
+
 .header-main {
     padding: 5px 0;
 }
@@ -276,7 +283,7 @@ header.scrolled .logo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 32px;
+    gap: 20px;
 }
 
 .logo {
