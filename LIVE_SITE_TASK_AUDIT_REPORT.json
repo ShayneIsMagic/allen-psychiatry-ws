@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-01-02T15:05:23.758Z",
+  "site": "https://allenpsychiatry.net",
+  "summary": {
+    "passed": 0,
+    "failed": 5,
+    "warnings": 0
+  },
+  "results": {
+    "failed": [
+      {
+        "page": "ADHD Treatment",
+        "task": "Reduce CTA spacing",
+        "issue": "Gap is 100px (should be < 60px)"
+      },
+      {
+        "page": "Anxiety Treatment",
+        "task": "Reduce CTA spacing",
+        "issue": "Gap is 100px (should be < 60px)"
+      },
+      {
+        "page": "Depression Treatment",
+        "task": "Reduce CTA spacing",
+        "issue": "Gap is 100px (should be < 60px)"
+      },
+      {
+        "page": "PTSD Treatment",
+        "task": "Reduce CTA spacing",
+        "issue": "Gap is 100px (should be < 60px)"
+      },
+      {
+        "page": "Telehealth Services",
+        "task": "Remove animation",
+        "issue": "Telehealth page still has animation"
+      }
+    ],
+    "warnings": []
+  }
+}
