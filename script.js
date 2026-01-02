@@ -150,11 +150,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Observe elements for animation
+    // Observe elements for animation - EXCLUDE hero content
     const animateElements = document.querySelectorAll('.about-info, .service-card, .feature, .cta-content, .cta-section');
     animateElements.forEach(el => {
-        observer.observe(el);
-        // Observing element for animation
+        // Skip if element is inside hero section
+        if (!el.closest('.hero') && !el.closest('.service-hero')) {
+            observer.observe(el);
+        }
     });
 
     // Special CTA animation observer
@@ -244,6 +246,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const revealElements = document.querySelectorAll('.about-info, .feature');
     const revealObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
+            // Skip hero content - no animations
+            if (entry.target.closest('.hero') || entry.target.closest('.service-hero')) {
+                return;
+            }
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';

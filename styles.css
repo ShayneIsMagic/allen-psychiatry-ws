@@ -651,12 +651,12 @@ nav a.active {
     }
 }
 
+/* Hero animation removed - keeping content still */
 @keyframes heroZoom {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+    /* Animation removed - not used */
 }
 
-/* Hero Section */
+/* Hero Section - NO ANIMATIONS, CONTENT STAYS STILL */
 .hero {
     color: var(--light);
     padding: 120px 0;
@@ -665,7 +665,23 @@ nav a.active {
     min-height: 600px;
     display: flex;
     align-items: center;
+    justify-content: center; /* Center content horizontally */
     background-color: var(--dark-gray); /* Fallback color */
+    /* No animations - content stays still */
+    animation: none !important;
+    transform: none !important;
+}
+
+/* Hero container - ensure proper centering */
+.hero .container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-image,
@@ -696,6 +712,11 @@ nav a.active {
     max-width: 800px; /* Increased max-width for better layout */
     text-align: center;
     margin: 0 auto;
+    width: 100%;
+    /* No animations - content stays still */
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
 }
 
 /* Service Hero Sections */
