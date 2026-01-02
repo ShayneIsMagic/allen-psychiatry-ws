@@ -91,11 +91,16 @@
 
     <main>
     <!-- Hero Section -->
-    <section class="hero hero-provo">
+    <section class="service-hero">
+        <picture>
+            <source srcset="assets/Provo Utah.avif" type="image/avif">
+            <source srcset="assets/Provo Utah.webp" type="image/webp">
+            <img src="assets/Provo Utah.jpg" alt="Provo, Utah office location" class="hero-image">
+        </picture>
         <div class="container">
             <h1>Provo Office</h1>
-            <p class="lead">Visit our Provo office for in-person psychiatric care in a welcoming, comfortable environment.</p>
-            <div class="hero-cta">
+            <p>Visit our Provo office for in-person psychiatric care in a welcoming, comfortable environment.</p>
+            <div class="hero-cta" style="margin-top: 30px;">
                 <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Provo', 'value': 1});">Schedule In-Person Visit</a>
             </div>
         </div>

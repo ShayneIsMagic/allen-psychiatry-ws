@@ -63,6 +63,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const dropdowns = document.querySelectorAll('.dropdown > a');
     dropdowns.forEach(dropdownLink => {
         dropdownLink.addEventListener('click', function(e) {
+            // Only prevent default if we're on the same page (to toggle dropdown)
+            // If href is /#services and we're not on homepage, navigate there
+            const href = this.getAttribute('href');
+            if (href && href === '/#services' && window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+                // Navigate to homepage services section
+                window.location.href = '/#services';
+                return;
+            }
+            // On homepage or same page, toggle dropdown
             e.preventDefault();
             const dropdown = this.parentElement;
             dropdown.classList.toggle('active');
