@@ -197,33 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Hamburger menu is handled in navigation.js - removed duplicate handler
 
-    // Enhanced dropdown functionality
-    const dropdowns = document.querySelectorAll('.dropdown');
-    dropdowns.forEach(dropdown => {
-        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-
-        dropdown.addEventListener('mouseenter', function() {
-            this.classList.add('open');
-            if (dropdownMenu) {
-                dropdownMenu.style.display = 'block';
-                setTimeout(() => {
-                    dropdownMenu.style.opacity = '1';
-                    dropdownMenu.style.transform = 'translateY(0)';
-                }, 10);
-            }
-        });
-
-        dropdown.addEventListener('mouseleave', function() {
-            this.classList.remove('open');
-            if (dropdownMenu) {
-                dropdownMenu.style.opacity = '0';
-                dropdownMenu.style.transform = 'translateY(-10px)';
-                setTimeout(() => {
-                    dropdownMenu.style.display = 'none';
-                }, 300);
-            }
-        });
-    });
+    // Dropdown functionality removed - now handled by click in navigation.js for hamburger menu
 
     // Parallax effect removed - was causing text twitching in hero sections
     // If parallax is needed in future, apply only to background image, not entire hero element

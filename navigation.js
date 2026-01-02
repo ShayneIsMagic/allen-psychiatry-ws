@@ -28,6 +28,33 @@ document.addEventListener('DOMContentLoaded', function () {
     if (hamburger && nav) {
         hamburger.addEventListener('click', function () {
             nav.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', nav.classList.contains('active'));
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+                nav.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close menu on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
         });
     }
+
+    // Dropdown menu toggle (for Services dropdown in hamburger menu)
+    const dropdowns = document.querySelectorAll('.dropdown > a');
+    dropdowns.forEach(dropdownLink => {
+        dropdownLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const dropdown = this.parentElement;
+            dropdown.classList.toggle('active');
+        });
+    });
 }); 

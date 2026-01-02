@@ -199,7 +199,7 @@ header {
     transition: all 0.3s ease;
 }
 
-/* When scrolled, hide header-top and navigation, keep logo and hamburger */
+/* When scrolled, hide header-top, keep logo and hamburger (menu always available via hamburger) */
 header.scrolled .header-top {
     max-height: 0;
     overflow: hidden;
@@ -207,10 +207,6 @@ header.scrolled .header-top {
     margin: 0;
     opacity: 0;
     transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
-}
-
-header.scrolled .main-nav {
-    display: none !important;
 }
 
 header.scrolled .header-main {
@@ -385,11 +381,6 @@ nav a.active {
     backdrop-filter: blur(10px);
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-    animation: fadeInUp 0.3s ease;
-}
-
 .dropdown-menu li {
     padding: 0;
 }
@@ -414,7 +405,9 @@ nav a.active {
 }
 
 .hamburger-menu {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     z-index: 1001;
     padding: 8px;
@@ -432,10 +425,27 @@ nav a.active {
     color: var(--primary);
 }
 
-/* Ensure main navigation is visible by default */
+/* Main navigation - hidden by default, shown when hamburger menu is active */
 .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background: var(--light);
+    padding: 80px 24px 24px;
+    transition: var(--transition);
+    box-shadow: -8px 0 25px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    border-radius: 0 0 0 var(--border-radius);
+    overflow-y: auto;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+}
+
+.main-nav.active {
+    right: 0;
 }
 
 .nav-items {
@@ -443,26 +453,30 @@ nav a.active {
     list-style: none;
     margin: 0;
     padding: 0;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
 }
 
 .nav-items li {
     position: relative;
+    width: 100%;
 }
 
 .nav-items a {
     display: flex;
     align-items: center;
-    padding: 10px 18px;
+    padding: 16px 20px;
     font-weight: 500;
-    border-radius: 50px;
+    border-radius: var(--border-radius);
     transition: var(--transition);
     color: var(--clinical-text);
     text-decoration: none;
     font-size: 0.95rem;
     position: relative;
-    overflow: hidden;
+    text-align: left;
+    width: 100%;
+    justify-content: flex-start;
 }
 
 .nav-items a::before {
@@ -486,54 +500,38 @@ nav a.active {
 .nav-items a:hover,
 .nav-items a.active {
     color: var(--light);
-    transform: translateY(-1px);
+    transform: none;
+}
+
+.dropdown-menu {
+    position: static;
+    display: none;
+    background: var(--light-gray);
+    box-shadow: none;
+    border-radius: var(--border-radius);
+    padding: 8px 0;
+    margin-top: 8px;
+    margin-left: 20px;
+    list-style: none;
+    border: none;
+}
+
+.dropdown.active .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    padding: 12px 20px;
+    color: var(--clinical-text);
+}
+
+.dropdown-menu a:hover {
+    background: var(--clinical-light-blue);
+    color: var(--primary);
 }
 
 /* Mobile Navigation Styles */
 @media (max-width: 768px) {
-    .main-nav {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        max-width: 320px;
-        height: 100vh;
-        background: var(--light);
-        padding: 80px 24px 24px;
-        transition: var(--transition);
-        box-shadow: -8px 0 25px rgba(0, 0, 0, 0.15);
-        z-index: 1000;
-        border-radius: 0 0 0 var(--border-radius);
-    }
-
-    .main-nav.active {
-        right: 0;
-    }
-
-    .nav-items {
-        flex-direction: column;
-        gap: 8px;
-        align-items: stretch;
-    }
-
-    .nav-items li {
-        width: 100%;
-    }
-
-    .nav-items a {
-        padding: 16px 20px;
-        border-radius: var(--border-radius);
-        text-align: left;
-        width: 100%;
-        justify-content: flex-start;
-    }
-
-    .hamburger-menu {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     .hamburger-menu i {
         font-size: 1.5rem;
         color: var(--primary);
@@ -563,12 +561,6 @@ nav a.active {
         width: 120px !important;
         height: auto !important;
         min-width: 120px !important;
-    }
-
-    /* Make hamburger menu use flexbox for footer content */
-    .main-nav {
-        display: flex !important;
-        flex-direction: column !important;
     }
 
     /* Add header-top content area at bottom of mobile menu */
@@ -613,51 +605,12 @@ nav a.active {
     }
 }
 
-/* Desktop Navigation - Ensure it's visible */
+/* Desktop Navigation - Use hamburger menu (same as mobile, just wider) */
 @media (min-width: 769px) {
     .main-nav {
-        display: flex !important;
-        align-items: center;
-    }
-
-    .nav-items {
-        display: flex !important;
-        flex-direction: row !important;
-        gap: 8px;
-    }
-
-    .hamburger-menu {
-        display: none !important;
-    }
-
-    /* When scrolled on desktop, hide nav and show hamburger */
-    header.scrolled .main-nav {
-        display: none !important;
-    }
-
-    header.scrolled .hamburger-menu {
-        display: flex !important;
-    }
-
-    .dropdown-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background: var(--light);
-        box-shadow: var(--box-shadow);
-        border-radius: var(--border-radius);
-        padding: 8px 0;
-        list-style: none;
-        z-index: 1000;
-        min-width: 240px;
-        border: 1px solid rgba(0, 0, 0, 0.05);
-        backdrop-filter: blur(10px);
-    }
-
-    .dropdown:hover .dropdown-menu {
-        display: block;
-        animation: fadeInUp 0.3s ease;
+        width: 400px;
+        max-width: 90%;
+        padding: 80px 32px 32px;
     }
 }
 
