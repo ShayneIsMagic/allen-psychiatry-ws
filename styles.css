@@ -505,24 +505,77 @@ nav a.active {
         color: var(--primary);
     }
 
-    /* Header Adjustments */
-    .header-top .container {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
+    /* Hide header-top on mobile - move content to hamburger menu */
+    .header-top {
+        display: none !important;
     }
-
-    .contact-info {
-        flex-direction: column;
-        gap: 8px;
+    
+    /* Reduce header-main padding and logo size on mobile */
+    .header-main {
+        padding: 8px 0 !important;
     }
 
     .header-main .container {
-        padding: 12px 20px;
+        padding: 8px 20px !important;
     }
 
+    /* Reduce logo size on mobile */
     .logo {
-        margin: 0 auto;
+        margin: 0 !important;
+        max-width: 120px !important;
+    }
+    
+    .logo img {
+        width: 120px !important;
+        height: auto !important;
+        min-width: 120px !important;
+    }
+    
+    /* Make hamburger menu use flexbox for footer content */
+    .main-nav {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    /* Add header-top content area at bottom of mobile menu */
+    .mobile-header-info {
+        margin-top: auto;
+        padding-top: 20px;
+        border-top: 1px solid var(--light-gray);
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+        color: var(--light);
+        padding: 20px;
+        margin-left: -24px;
+        margin-right: -24px;
+        margin-bottom: -24px;
+    }
+    
+    .mobile-header-info .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    
+    .mobile-header-info .contact-info a {
+        color: var(--light);
+        text-decoration: none;
+    }
+    
+    .mobile-header-info .header-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+    
+    .mobile-header-info .header-actions a {
+        color: var(--light);
+        text-align: center;
+        padding: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: var(--border-radius);
     }
 }
 
@@ -1611,20 +1664,128 @@ footer::before {
     transform: rotate(180deg);
 }
 
-/* Service Area Grid Animation */
-.service-area-grid {
-    animation: fadeIn 0.3s ease-in;
+/* Service Areas Modal - Hidden by default, shown with .show class */
+.service-areas-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.service-areas-modal.show {
+    display: flex; /* Show as flex when modal is active */
+    opacity: 1;
+    visibility: visible;
+}
+
+.service-areas-modal-content {
+    background: var(--light);
+    border-radius: var(--border-radius);
+    max-width: 1000px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.service-areas-modal.show .service-areas-modal-content {
+    transform: translateY(0);
+}
+
+/* Service area grid in modal - visible */
+.service-areas-modal .service-areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-areas-modal .modal-header {
+    padding: 30px 30px 20px;
+    border-bottom: 1px solid var(--light-gray);
+    text-align: center;
+}
+
+.service-areas-modal .modal-header h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.service-areas-modal .modal-body {
+    padding: 30px;
+}
+
+.service-areas-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.service-areas-buttons .btn {
+    min-width: 150px;
+}
+
+.service-area-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    background: var(--clinical-light-blue);
+    color: var(--primary);
+}
+
+.service-area-badge.telehealth-badge {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.service-area-badge.additional-badge {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.service-area-description {
+    color: var(--mid-gray);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.service-areas-cta {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--light-gray);
+}
+
+.service-areas-cta p {
+    margin-bottom: 20px;
+    color: var(--clinical-text);
+    line-height: 1.7;
+}
+
+/* Hide service-area-grid on page (only show in modal) */
+.service-area-section .service-area-grid {
+    display: none !important;
 }
 
 .footer-col h3 {
@@ -2494,34 +2655,39 @@ footer::before {
         padding: 12px !important;
     }
     
-    /* Header top adjustments */
+    /* Hide header-top on mobile - move to hamburger menu */
     .header-top {
-        padding: 12px 0 !important;
+        display: none !important;
     }
     
-    .contact-info {
-        font-size: 0.95rem;
+    /* Header main - reduce padding and logo size */
+    .header-main {
+        padding: 8px 0 !important;
     }
     
-    .contact-info a {
-        min-height: 44px !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
+    .header-main .container {
+        padding: 8px 20px !important;
     }
     
-    .header-actions {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 10px !important;
-        width: 100% !important;
-        align-items: stretch !important;
+    /* Reduce logo size on mobile */
+    .logo {
+        max-width: 120px !important;
+        margin: 0 !important;
     }
     
-    .header-actions a {
-        text-align: center !important;
-        width: 100% !important;
-        justify-content: center !important;
+    .logo img {
+        width: 120px !important;
+        height: auto !important;
+        min-width: 120px !important;
+    }
+    
+    /* Add header-top content to mobile menu */
+    .main-nav::after {
+        content: '';
+        display: block;
+        margin-top: auto;
+        padding-top: 20px;
+        border-top: 1px solid var(--light-gray);
     }
     
     /* Page Content - Mobile Adjustments */

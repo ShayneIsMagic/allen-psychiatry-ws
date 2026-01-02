@@ -439,6 +439,18 @@
                         <li><a href="/telehealth">TeleHealth</a></li>
                         <li><a href="https://pp-wfe-100.advancedmd.com/154986/account/logon" target="_blank">Patient Portal</a></li>
                     </ul>
+                    <!-- Mobile Header Info - shown at bottom of hamburger menu -->
+                    <div class="mobile-header-info">
+                        <div class="contact-info">
+                            <div><a href="tel:+13855041334" onclick="gtag('event', 'phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Mobile Menu', 'value': 1});">(385) 504-1334</a></div>
+                            <div>3311 North University Ave, Ste 275, Provo, UT 84604</div>
+                        </div>
+                        <div class="header-actions">
+                            <a href="https://pp-wfe-100.advancedmd.com/154986/account/logon" target="_blank">Patient Portal</a>
+                            <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Mobile Menu', 'value': 1});">Schedule Now</a>
+                            <a href="#sms-privacy" data-action="show-sms-modal" onclick="showSmsPrivacyModal(); return false;">📱 SMS Policy</a>
+                        </div>
+                    </div>
                 </nav>
                 <button class="hamburger-menu" aria-label="Toggle mobile menu" aria-expanded="false" type="button">
                     <i class="fa fa-bars" aria-hidden="true"></i>
@@ -540,76 +552,10 @@
                 <p class="service-area-intro">Allen Psychiatry is committed to providing compassionate, personalized mental health care throughout Utah County and rural Utah communities. We recognize the vital importance of supporting the mental health needs of our rural communities and have a deep love and desire to serve them.</p>
                 
                 <div class="service-area-toggle-container">
-                    <button class="service-area-toggle-btn" id="service-area-toggle" aria-expanded="false" aria-controls="service-area-grid">
+                    <button class="service-area-toggle-btn" onclick="showServiceAreasModal(); return false;" aria-label="View service areas">
                         <span class="toggle-text">See the areas we serve</span>
-                        <i class="fa fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                        <i class="fa fa-map-marker toggle-icon" aria-hidden="true"></i>
                     </button>
-                </div>
-                
-                <div class="service-area-grid" id="service-area-grid" style="display: none;">
-                    <div class="service-area-column">
-                        <h3>Utah County Cities</h3>
-                        <ul>
-                            <li>Provo</li>
-                            <li>Orem</li>
-                            <li>Lehi</li>
-                            <li>Spanish Fork</li>
-                            <li>American Fork</li>
-                            <li>Springville</li>
-                            <li>Pleasant Grove</li>
-                            <li>Payson</li>
-                            <li>Saratoga Springs</li>
-                            <li>Eagle Mountain</li>
-                            <li>Lindon</li>
-                            <li>Mapleton</li>
-                            <li>Highland</li>
-                            <li>Alpine</li>
-                            <li>Salem</li>
-                            <li>Vineyard</li>
-                            <li>Cedar Hills</li>
-                        </ul>
-                    </div>
-                    <div class="service-area-column">
-                        <h3>Sevier County & Rural Communities</h3>
-                        <ul>
-                            <li>Richfield</li>
-                            <li>Monroe</li>
-                            <li>Salina</li>
-                            <li>Elsinore</li>
-                            <li>Koosharem</li>
-                            <li>Sigurd</li>
-                            <li>Glenwood</li>
-                            <li>Aurora</li>
-                            <li>Redmond</li>
-                            <li>Central Valley</li>
-                            <li>Annabella</li>
-                            <li>Joseph</li>
-                        </ul>
-                        <p class="service-area-note">Telehealth appointments available for rural communities</p>
-                    </div>
-                    <div class="service-area-column">
-                        <h3>Additional Service Areas</h3>
-                        <ul>
-                            <li>Genola</li>
-                            <li>Elk Ridge</li>
-                            <li>Woodland Hills</li>
-                            <li>Goshen</li>
-                            <li>Cedar Fort</li>
-                            <li>Fairfield</li>
-                            <li>Benjamin</li>
-                            <li>West Mountain</li>
-                            <li>Spring Lake</li>
-                            <li>Elberta</li>
-                            <li>Lake Shore</li>
-                            <li>Palmyra</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="service-area-cta">
-                    <p class="service-area-cta-title"><strong>Looking for psychiatric services in your area?</strong></p>
-                    <p>Whether you're in Provo, Orem, Lehi, Spanish Fork, American Fork, Springville, or any rural Utah community, we're here to help. Our Provo office is easily accessible, and we offer telehealth appointments for your convenience.</p>
-                    <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Service Area', 'value': 1});">Schedule Your Appointment</a>
                 </div>
             </div>
 
@@ -785,5 +731,6 @@
     <script src="telehealth-modal.js"></script>
     <script src="patient-portal-modal.js"></script>
     <script src="sms-modal-simple.js"></script>
+    <script src="service-areas-modal.js"></script>
 </body>
 </html> 

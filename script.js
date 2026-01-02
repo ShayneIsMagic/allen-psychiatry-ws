@@ -357,33 +357,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Focus management for mobile menu - handled in navigation.js
 
-    // Service Area Toggle
-    const serviceAreaToggle = document.getElementById('service-area-toggle');
-    const serviceAreaGrid = document.getElementById('service-area-grid');
-    
-    if (serviceAreaToggle && serviceAreaGrid) {
-        serviceAreaToggle.addEventListener('click', function() {
-            const isExpanded = serviceAreaToggle.getAttribute('aria-expanded') === 'true';
-            const toggleIcon = serviceAreaToggle.querySelector('.toggle-icon');
-            const toggleText = serviceAreaToggle.querySelector('.toggle-text');
-            
-            if (isExpanded) {
-                // Collapse
-                serviceAreaGrid.style.display = 'none';
-                serviceAreaToggle.setAttribute('aria-expanded', 'false');
-                toggleText.textContent = 'See the areas we serve';
-                toggleIcon.classList.remove('fa-chevron-up');
-                toggleIcon.classList.add('fa-chevron-down');
-            } else {
-                // Expand
-                serviceAreaGrid.style.display = 'grid';
-                serviceAreaToggle.setAttribute('aria-expanded', 'true');
-                toggleText.textContent = 'Hide areas we serve';
-                toggleIcon.classList.remove('fa-chevron-down');
-                toggleIcon.classList.add('fa-chevron-up');
-            }
-        });
-    }
+    // Service Area Toggle - REMOVED: Now handled by service-areas-modal.js
+    // The button now opens a modal instead of toggling inline content
 
     // Allen Psychiatry enhanced JavaScript loaded successfully
 });
