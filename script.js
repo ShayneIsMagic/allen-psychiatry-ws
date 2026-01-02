@@ -26,32 +26,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Sticky header - hide header content on scroll, keep logo and hamburger
 const header = document.querySelector('header');
-let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll <= 50) {
         // At or near top - show full header
         header.classList.remove('scrolled');
-        header.classList.remove('scroll-up');
-        header.classList.remove('scroll-down');
-        return;
+    } else {
+        // Scrolled down - hide header content
+        header.classList.add('scrolled');
     }
-    
-    // Scrolled down - hide header content
-    header.classList.add('scrolled');
-    
-    if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
-        // Scroll Down
-        header.classList.remove('scroll-up');
-        header.classList.add('scroll-down');
-    } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-        // Scroll Up
-        header.classList.remove('scroll-down');
-        header.classList.add('scroll-up');
-    }
-    lastScroll = currentScroll;
 });
 
 // Form validation
@@ -61,7 +46,7 @@ forms.forEach(form => {
         e.preventDefault();
         const formData = new FormData(form);
         const data = Object.fromEntries(formData);
-        
+
         // Basic validation
         let isValid = true;
         form.querySelectorAll('input[required], textarea[required]').forEach(field => {
@@ -72,7 +57,7 @@ forms.forEach(form => {
                 field.classList.remove('error');
             }
         });
-        
+
         if (isValid) {
             // Here you would typically send the data to your server
             // Form data submitted
@@ -102,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const aboutContent = document.querySelector('.about-content');
     const aboutInfo = document.querySelectorAll('.about-info');
-    
+
     // Force display of navigation
     if (mainNav) {
         mainNav.style.display = 'block';
@@ -110,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mainNav.style.opacity = '1';
         // Force main nav display
     }
-    
+
     // Force display of content
     if (aboutContent) {
         aboutContent.style.display = 'grid';
@@ -118,14 +103,14 @@ document.addEventListener('DOMContentLoaded', function() {
         aboutContent.style.opacity = '1';
         // Force about content display
     }
-    
+
     aboutInfo.forEach((info, index) => {
         info.style.display = 'block';
         info.style.visibility = 'visible';
         info.style.opacity = '1';
                 // Force about-info display
     });
-    
+
     // Smooth scrolling for all anchor links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {
@@ -137,11 +122,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             const targetElement = document.querySelector(targetId);
-            
+
             if (targetElement) {
                 const headerHeight = document.querySelector('header').offsetHeight;
                 const targetPosition = targetElement.offsetTop - headerHeight;
-                
+
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
@@ -180,13 +165,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 const ctaSection = entry.target;
                 const ctaContent = ctaSection.querySelector('.cta-content');
-                
+
                 // Add animation classes
                 ctaSection.classList.add('animate-in');
                 if (ctaContent) {
                     ctaContent.classList.add('animate-in');
                 }
-                
+
                 // Force visibility
                 ctaSection.style.opacity = '1';
                 ctaSection.style.visibility = 'visible';
@@ -194,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     ctaContent.style.opacity = '1';
                     ctaContent.style.visibility = 'visible';
                 }
-                
+
                 // CTA section animated in
             }
         });
@@ -216,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const dropdowns = document.querySelectorAll('.dropdown');
     dropdowns.forEach(dropdown => {
         const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-        
+
         dropdown.addEventListener('mouseenter', function() {
             this.classList.add('open');
             if (dropdownMenu) {
@@ -227,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 10);
             }
         });
-        
+
         dropdown.addEventListener('mouseleave', function() {
             this.classList.remove('open');
             if (dropdownMenu) {
@@ -250,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'scale(1.05) translateY(-2px)';
             this.style.boxShadow = '0 8px 25px rgba(51, 150, 188, 0.4)';
         });
-        
+
         button.addEventListener('mouseleave', function() {
             this.style.transform = 'scale(1) translateY(0)';
             this.style.boxShadow = '0 4px 10px rgba(51, 150, 188, 0.2)';
@@ -288,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-2px) scale(1.05)';
         });
-        
+
         link.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)';
         });
@@ -304,7 +289,7 @@ document.addEventListener('DOMContentLoaded', function() {
             item.style.opacity = '0';
             item.style.transform = 'translateX(-20px)';
             item.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
-            
+
             const itemObserver = new IntersectionObserver(function(entries) {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -313,7 +298,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
             }, { threshold: 0.5 });
-            
+
             itemObserver.observe(item);
         });
     }
@@ -343,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function() {
         input.addEventListener('focus', function() {
             this.parentElement.classList.add('focused');
         });
-        
+
         input.addEventListener('blur', function() {
             if (!this.value) {
                 this.parentElement.classList.remove('focused');
@@ -427,4 +412,4 @@ style.textContent = `
         transition: transform 0.2s ease;
     }
 `;
-document.head.appendChild(style); 
+document.head.appendChild(style);

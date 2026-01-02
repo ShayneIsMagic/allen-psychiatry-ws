@@ -29,7 +29,7 @@ function initializeAppointmentClarificationModal() {
     if (document.getElementById('appointmentClarificationModal')) {
         return;
     }
-    
+
     // Create modal HTML
     const modalHTML = `
         <div class="appointment-clarification-modal" id="appointmentClarificationModal">
@@ -51,10 +51,10 @@ function initializeAppointmentClarificationModal() {
             </div>
         </div>
     `;
-    
+
     // Add modal to page
     document.body.insertAdjacentHTML('beforeend', modalHTML);
-    
+
     // Close modal when clicking outside
     const modal = document.getElementById('appointmentClarificationModal');
     modal.addEventListener('click', function(e) {
@@ -62,7 +62,7 @@ function initializeAppointmentClarificationModal() {
             hideAppointmentClarification();
         }
     });
-    
+
     // Close modal with escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
