@@ -4,7 +4,12 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        // Skip if href is just "#" (invalid selector)
+        if (href === '#') {
+            return;
+        }
+        const target = document.querySelector(href);
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
@@ -19,17 +24,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Sticky header
+// Sticky header - hide header content on scroll, keep logo and hamburger
 const header = document.querySelector('header');
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
-    if (currentScroll <= 0) {
+    if (currentScroll <= 50) {
+        // At or near top - show full header
+        header.classList.remove('scrolled');
         header.classList.remove('scroll-up');
+        header.classList.remove('scroll-down');
         return;
     }
+    
+    // Scrolled down - hide header content
+    header.classList.add('scrolled');
     
     if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
         // Scroll Down
@@ -121,6 +132,10 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
+            // Skip if href is just "#" (invalid selector)
+            if (targetId === '#') {
+                return;
+            }
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
