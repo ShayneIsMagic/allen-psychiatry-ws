@@ -97,16 +97,35 @@ function initializeScheduleModal() {
             // Show the modal
             showScheduleModal();
             
-            // Execute the original gtag tracking if it exists
+            // Execute the original gtag tracking if it exists (CSP-safe method, no eval)
             if (onclickAttr && typeof gtag !== 'undefined') {
                 try {
-                    // Extract and execute the gtag call
-                    const gtagMatch = onclickAttr.match(/gtag\([^)]+\)/);
+                    // Extract gtag parameters safely without eval
+                    // Format: gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': '...', 'value': 1})
+                    const gtagMatch = onclickAttr.match(/gtag\s*\(\s*['"]([^'"]+)['"]\s*,\s*['"]([^'"]+)['"]\s*,\s*({[^}]+})\s*\)/);
                     if (gtagMatch) {
-                        eval(gtagMatch[0]);
+                        const eventType = gtagMatch[1]; // 'event'
+                        const eventName = gtagMatch[2]; // 'schedule_appointment_click'
+                        const eventParamsStr = gtagMatch[3]; // '{'event_category': 'Conversion', ...}'
+                        
+                        // Parse the parameters object safely
+                        let eventParams = {};
+                        // Extract parameters manually to avoid eval/JSON.parse issues
+                        const categoryMatch = eventParamsStr.match(/'event_category'\s*:\s*'([^']+)'/);
+                        const labelMatch = eventParamsStr.match(/'event_label'\s*:\s*'([^']+)'/);
+                        const valueMatch = eventParamsStr.match(/'value'\s*:\s*(\d+)/);
+                        
+                        if (categoryMatch) eventParams.event_category = categoryMatch[1];
+                        if (labelMatch) eventParams.event_label = labelMatch[1];
+                        if (valueMatch) eventParams.value = parseInt(valueMatch[1], 10);
+                        
+                        // Call gtag directly (CSP-safe, no eval)
+                        if (eventType && eventName) {
+                            gtag(eventType, eventName, eventParams);
+                        }
                     }
                 } catch (err) {
-                    // Silently fail gtag execution
+                    // Silently fail gtag execution - don't break the modal
                 }
             }
             
