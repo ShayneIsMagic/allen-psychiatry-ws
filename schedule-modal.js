@@ -5,13 +5,7 @@ window.showScheduleModal = function() {
     const modal = document.getElementById('scheduleModal');
     if (modal) {
         modal.classList.add('show');
-        modal.style.display = 'flex';
-        modal.style.visibility = 'visible';
-        modal.style.opacity = '1';
-        modal.style.width = '100%';
-        modal.style.height = '100%';
-        modal.style.overflow = 'auto';
-        modal.style.pointerEvents = 'auto';
+        modal.style.cssText = 'display: flex !important; visibility: visible !important; opacity: 1 !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; overflow: auto !important; pointer-events: auto !important; z-index: 2000 !important;';
         document.body.style.overflow = 'hidden'; // Prevent background scrolling
     }
 };
@@ -21,13 +15,7 @@ window.hideScheduleModal = function() {
     const modal = document.getElementById('scheduleModal');
     if (modal) {
         modal.classList.remove('show');
-        modal.style.display = 'none';
-        modal.style.visibility = 'hidden';
-        modal.style.opacity = '0';
-        modal.style.width = '0';
-        modal.style.height = '0';
-        modal.style.overflow = 'hidden';
-        modal.style.pointerEvents = 'none';
+        modal.style.cssText = 'display: none !important; visibility: hidden !important; opacity: 0 !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 0 !important; height: 0 !important; overflow: hidden !important; pointer-events: none !important; z-index: 2000 !important;';
         document.body.style.overflow = ''; // Restore scrolling
     }
 };
@@ -48,9 +36,9 @@ function initializeScheduleModal() {
         return;
     }
     
-    // Create modal HTML
+    // Create modal HTML with inline styles to ensure it's hidden
     const modalHTML = `
-        <div class="schedule-modal" id="scheduleModal">
+        <div class="schedule-modal" id="scheduleModal" style="display: none !important; visibility: hidden !important; opacity: 0 !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 0 !important; height: 0 !important; overflow: hidden !important; pointer-events: none !important; z-index: 2000 !important;">
             <div class="schedule-modal-content">
                 <button class="modal-close-btn" onclick="hideScheduleModal()" aria-label="Close modal">&times;</button>
                 <h3>Allen Psychiatry Opens Second Provo Location!</h3>
@@ -82,21 +70,13 @@ function initializeScheduleModal() {
         </div>
     `;
     
-    // Add modal to page
+    // Add modal to page (at end of body, standard for modals)
     document.body.insertAdjacentHTML('beforeend', modalHTML);
     
-    // Explicitly ensure modal is hidden on creation with multiple methods
+    // Double-check it's hidden (redundant but ensures it)
     const modal = document.getElementById('scheduleModal');
     if (modal) {
-        modal.style.display = 'none';
-        modal.style.visibility = 'hidden';
-        modal.style.opacity = '0';
-        modal.style.position = 'fixed';
-        modal.style.top = '0';
-        modal.style.left = '0';
-        modal.style.width = '0';
-        modal.style.height = '0';
-        modal.style.overflow = 'hidden';
+        modal.style.cssText = 'display: none !important; visibility: hidden !important; opacity: 0 !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 0 !important; height: 0 !important; overflow: hidden !important; pointer-events: none !important; z-index: 2000 !important;';
     }
     
     // Use event delegation on document to catch ALL schedule link clicks
