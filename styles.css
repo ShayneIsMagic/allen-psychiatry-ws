@@ -520,21 +520,24 @@ nav a.active {
     transform: none;
 }
 
-.dropdown-menu {
-    position: static;
-    display: none;
-    background: var(--light-gray);
-    box-shadow: none;
-    border-radius: var(--border-radius);
-    padding: 8px 0;
-    margin-top: 8px;
-    margin-left: 20px;
-    list-style: none;
-    border: none;
-}
+/* Mobile dropdown styles - only apply on mobile */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        display: none;
+        background: var(--light-gray);
+        box-shadow: none;
+        border-radius: var(--border-radius);
+        padding: 8px 0;
+        margin-top: 8px;
+        margin-left: 20px;
+        list-style: none;
+        border: none;
+    }
 
-.dropdown.active .dropdown-menu {
-    display: block;
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
 }
 
 .dropdown-menu a {
