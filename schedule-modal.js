@@ -79,40 +79,40 @@ function initializeScheduleModal() {
         modal.style.display = 'none';
     }
     
-    // Add click handlers to schedule appointment links/buttons
-    const scheduleLinks = document.querySelectorAll('a[href*="onlinescheduling"]');
-    scheduleLinks.forEach((link) => {
-        // Only modify links that have the onclick with schedule_appointment_click
-        if (link.getAttribute('onclick') && link.getAttribute('onclick').includes('schedule_appointment_click')) {
-            // Store original onclick
-            const originalOnclick = link.getAttribute('onclick');
+    // Use event delegation on document to catch ALL schedule link clicks
+    // This works even if links are added dynamically
+    document.addEventListener('click', function(e) {
+        const link = e.target.closest('a[href*="onlinescheduling"]');
+        if (!link) return;
+        
+        // Check if this link should show the modal
+        const onclickAttr = link.getAttribute('onclick');
+        const shouldShowModal = onclickAttr && onclickAttr.includes('schedule_appointment_click');
+        
+        if (shouldShowModal) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
             
-            // Remove the original onclick to prevent direct navigation
-            link.removeAttribute('onclick');
+            // Show the modal
+            showScheduleModal();
             
-            // Add new click handler
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                
-                // Show the modal
-                showScheduleModal();
-                
-                // Execute the original gtag tracking if it exists
-                if (originalOnclick && typeof gtag !== 'undefined') {
-                    try {
-                        // Extract and execute the gtag call
-                        const gtagMatch = originalOnclick.match(/gtag\([^)]+\)/);
-                        if (gtagMatch) {
-                            eval(gtagMatch[0]);
-                        }
-                    } catch (err) {
-                        console.log('Error executing gtag:', err);
+            // Execute the original gtag tracking if it exists
+            if (onclickAttr && typeof gtag !== 'undefined') {
+                try {
+                    // Extract and execute the gtag call
+                    const gtagMatch = onclickAttr.match(/gtag\([^)]+\)/);
+                    if (gtagMatch) {
+                        eval(gtagMatch[0]);
                     }
+                } catch (err) {
+                    // Silently fail gtag execution
                 }
-            });
+            }
+            
+            return false;
         }
-    });
+    }, true); // Use capture phase to catch before other handlers
     
     // Close modal when clicking outside
     const modal = document.getElementById('scheduleModal');
@@ -132,11 +132,29 @@ function initializeScheduleModal() {
     });
 }
 
-// Try to initialize immediately if DOM is already loaded
+// Wait for full page load to ensure all scripts have run
+function waitForPageLoad() {
+    if (document.readyState === 'complete') {
+        // Use setTimeout to ensure this runs after all other scripts
+        setTimeout(initializeScheduleModal, 100);
+    } else {
+        window.addEventListener('load', function() {
+            setTimeout(initializeScheduleModal, 100);
+        });
+    }
+}
+
+// Start waiting for page load
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeScheduleModal);
+    window.addEventListener('load', function() {
+        setTimeout(initializeScheduleModal, 100);
+    });
+} else if (document.readyState === 'interactive') {
+    window.addEventListener('load', function() {
+        setTimeout(initializeScheduleModal, 100);
+    });
 } else {
-    // DOM is already loaded
-    initializeScheduleModal();
+    // Already loaded
+    setTimeout(initializeScheduleModal, 100);
 }
 
