@@ -388,6 +388,16 @@ nav a.active {
     backdrop-filter: blur(10px);
 }
 
+/* Show dropdown on hover for desktop */
+@media (min-width: 769px) {
+    .dropdown:hover .dropdown-menu,
+    .dropdown.active .dropdown-menu,
+    .dropdown.open .dropdown-menu {
+        display: block;
+        animation: fadeInUp 0.3s ease;
+    }
+}
+
 .dropdown-menu li {
     padding: 0;
 }
