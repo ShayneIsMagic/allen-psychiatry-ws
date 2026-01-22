@@ -6,6 +6,12 @@ window.showScheduleModal = function() {
     if (modal) {
         modal.classList.add('show');
         modal.style.display = 'flex';
+        modal.style.visibility = 'visible';
+        modal.style.opacity = '1';
+        modal.style.width = '100%';
+        modal.style.height = '100%';
+        modal.style.overflow = 'auto';
+        modal.style.pointerEvents = 'auto';
         document.body.style.overflow = 'hidden'; // Prevent background scrolling
     }
 };
@@ -16,6 +22,12 @@ window.hideScheduleModal = function() {
     if (modal) {
         modal.classList.remove('show');
         modal.style.display = 'none';
+        modal.style.visibility = 'hidden';
+        modal.style.opacity = '0';
+        modal.style.width = '0';
+        modal.style.height = '0';
+        modal.style.overflow = 'hidden';
+        modal.style.pointerEvents = 'none';
         document.body.style.overflow = ''; // Restore scrolling
     }
 };
@@ -73,10 +85,18 @@ function initializeScheduleModal() {
     // Add modal to page
     document.body.insertAdjacentHTML('beforeend', modalHTML);
     
-    // Explicitly ensure modal is hidden on creation
+    // Explicitly ensure modal is hidden on creation with multiple methods
     const modal = document.getElementById('scheduleModal');
     if (modal) {
         modal.style.display = 'none';
+        modal.style.visibility = 'hidden';
+        modal.style.opacity = '0';
+        modal.style.position = 'fixed';
+        modal.style.top = '0';
+        modal.style.left = '0';
+        modal.style.width = '0';
+        modal.style.height = '0';
+        modal.style.overflow = 'hidden';
     }
     
     // Use event delegation on document to catch ALL schedule link clicks
