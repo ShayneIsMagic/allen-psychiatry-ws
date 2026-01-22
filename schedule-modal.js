@@ -5,6 +5,7 @@ window.showScheduleModal = function() {
     const modal = document.getElementById('scheduleModal');
     if (modal) {
         modal.classList.add('show');
+        modal.style.display = 'flex';
         document.body.style.overflow = 'hidden'; // Prevent background scrolling
     }
 };
@@ -14,6 +15,7 @@ window.hideScheduleModal = function() {
     const modal = document.getElementById('scheduleModal');
     if (modal) {
         modal.classList.remove('show');
+        modal.style.display = 'none';
         document.body.style.overflow = ''; // Restore scrolling
     }
 };
@@ -70,6 +72,12 @@ function initializeScheduleModal() {
     
     // Add modal to page
     document.body.insertAdjacentHTML('beforeend', modalHTML);
+    
+    // Explicitly ensure modal is hidden on creation
+    const modal = document.getElementById('scheduleModal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
     
     // Add click handlers to schedule appointment links/buttons
     const scheduleLinks = document.querySelectorAll('a[href*="onlinescheduling"]');
