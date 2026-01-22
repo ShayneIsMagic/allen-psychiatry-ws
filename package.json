@@ -15,7 +15,10 @@
   "license": "UNLICENSED",
   "private": true,
   "devDependencies": {
+    "chrome-launcher": "^1.2.1",
+    "chrome-remote-interface": "^0.33.3",
     "eslint": "^9.39.2",
+    "lighthouse": "^13.0.1",
     "puppeteer": "^24.34.0",
     "sharp": "^0.34.5"
   }

@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-01-02T14:58:25.765Z",
+  "url": "http://localhost:3001",
+  "cookies": [
+    {
+      "name": "_ga_LKYXFGGJSP",
+      "domain": "localhost",
+      "path": "/",
+      "expires": 1801925903.82998,
+      "httpOnly": false,
+      "secure": false,
+      "category": "Analytics/Tracking",
+      "necessary": false
+    },
+    {
+      "name": "_ga",
+      "domain": "localhost",
+      "path": "/",
+      "expires": 1801925903.830451,
+      "httpOnly": false,
+      "secure": false,
+      "category": "Analytics/Tracking",
+      "necessary": false
+    }
+  ],
+  "summary": {
+    "total": 2,
+    "tracking": 2,
+    "functional": 0,
+    "unknown": 0
+  },
+  "recommendations": [
+    {
+      "priority": "High",
+      "issue": "Tracking cookies detected",
+      "solution": "Implement cookie consent banner and only load GA4 after user consent",
+      "impact": "Privacy compliance (GDPR/CCPA)"
+    },
+    {
+      "priority": "Medium",
+      "issue": "Insecure cookies detected",
+      "solution": "Set Secure flag for all cookies on HTTPS site",
+      "impact": "Security"
+    }
+  ]
+}
