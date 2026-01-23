@@ -19,6 +19,14 @@ window.hideAppointmentClarification = function() {
 
 window.proceedToScheduling = function() {
     hideAppointmentClarification();
+    // Track the conversion event
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'schedule_appointment_click', {
+            'event_category': 'Conversion',
+            'event_label': 'Schedule Button - Appointment Clarification Modal',
+            'value': 1
+        });
+    }
     // Direct to scheduling system
     window.open('https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients', '_blank');
 };
@@ -81,6 +89,7 @@ if (document.readyState === 'loading') {
     // DOM is already loaded
     initializeAppointmentClarificationModal();
 }
+
 
 
 
