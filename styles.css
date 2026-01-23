@@ -390,11 +390,27 @@ nav a.active {
 
 /* Show dropdown on hover for desktop */
 @media (min-width: 769px) {
-    .dropdown:hover .dropdown-menu,
-    .dropdown.active .dropdown-menu,
-    .dropdown.open .dropdown-menu {
-        display: block;
+    /* Desktop nav - show dropdown on hover */
+    .main-nav .dropdown:hover .dropdown-menu,
+    .main-nav .dropdown.active .dropdown-menu,
+    .main-nav .dropdown.open .dropdown-menu {
+        display: block !important;
         animation: fadeInUp 0.3s ease;
+    }
+    
+    /* Ensure dropdown menu is positioned correctly on desktop */
+    .main-nav .dropdown-menu {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        background: var(--light) !important;
+        box-shadow: var(--box-shadow) !important;
+        border-radius: var(--border-radius) !important;
+        padding: 10px 0 !important;
+        margin-top: 5px !important;
+        min-width: 240px !important;
+        border: 1px solid rgba(0, 0, 0, 0.05) !important;
+        z-index: 1000 !important;
     }
 }
 
@@ -442,7 +458,7 @@ nav a.active {
     color: var(--primary);
 }
 
-/* Main navigation - hidden by default, shown when hamburger menu is active */
+/* Main navigation - hidden by default on mobile, visible on desktop */
 .main-nav {
     position: fixed;
     top: 0;
@@ -463,6 +479,50 @@ nav a.active {
 
 .main-nav.active {
     right: 0;
+}
+
+/* Desktop: Show nav inline in header, not as hamburger menu */
+@media (min-width: 769px) {
+    .main-nav {
+        position: static !important;
+        right: auto !important;
+        width: auto !important;
+        max-width: none !important;
+        height: auto !important;
+        background: transparent !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        overflow-y: visible !important;
+        display: block !important;
+        flex-direction: row !important;
+    }
+    
+    .hamburger-menu {
+        display: none !important;
+    }
+    
+    /* Desktop nav items should be horizontal */
+    .main-nav .nav-items {
+        flex-direction: row !important;
+        gap: 5px !important;
+    }
+    
+    /* Desktop nav items should be inline */
+    .main-nav .nav-items li {
+        width: auto !important;
+    }
+    
+    /* Hide mobile header info on desktop */
+    .main-nav .mobile-header-info {
+        display: none !important;
+    }
+    
+    /* Desktop nav links should use desktop styling */
+    .main-nav .nav-items a {
+        padding: 10px 18px !important;
+        border-radius: 50px !important;
+    }
 }
 
 .nav-items {
@@ -644,12 +704,28 @@ nav a.active {
     }
 }
 
-/* Desktop Navigation - Use hamburger menu (same as mobile, just wider) */
+/* Desktop Navigation - Show inline in header */
 @media (min-width: 769px) {
-    .main-nav {
-        width: 400px;
-        max-width: 90%;
-        padding: 80px 32px 32px;
+    /* Nav is already styled above to be inline */
+    /* Keep hamburger menu hidden on desktop */
+    .hamburger-menu {
+        display: none !important;
+    }
+    
+    /* Nav items should be horizontal on desktop */
+    .main-nav:not(.active) .nav-items {
+        flex-direction: row;
+        gap: 5px;
+    }
+    
+    /* Nav items should be inline on desktop */
+    .main-nav:not(.active) .nav-items li {
+        width: auto;
+    }
+    
+    /* Hide mobile header info on desktop */
+    .main-nav:not(.active) .mobile-header-info {
+        display: none;
     }
 }
 
