@@ -520,31 +520,42 @@ nav a.active {
     transform: none;
 }
 
-/* Dropdown menu styles - responsive */
-.dropdown-menu {
-    position: static;
-    display: none;
-    background: var(--light-gray);
-    box-shadow: none;
-    border-radius: var(--border-radius);
-    padding: 8px 0;
-    margin-top: 8px;
-    margin-left: 20px;
-    list-style: none;
-    border: none;
+/* Dropdown menu styles - mobile (inside hamburger menu) */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        display: none;
+        background: var(--light-gray);
+        box-shadow: none;
+        border-radius: var(--border-radius);
+        padding: 8px 0;
+        margin-top: 8px;
+        margin-left: 20px;
+        list-style: none;
+        border: none;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
 }
 
-/* Show dropdown on hover when menu is open (desktop) or on click (mobile) */
+/* Show dropdown on hover when menu is open (desktop) */
 @media (min-width: 769px) {
     .main-nav.active .dropdown:hover .dropdown-menu,
     .main-nav.active .dropdown.active .dropdown-menu {
         display: block;
     }
-}
-
-@media (max-width: 768px) {
-    .dropdown.active .dropdown-menu {
-        display: block;
+    
+    /* Ensure dropdown menu uses mobile styling inside hamburger menu on desktop too */
+    .main-nav.active .dropdown-menu {
+        position: static;
+        background: var(--light-gray);
+        box-shadow: none;
+        padding: 8px 0;
+        margin-top: 8px;
+        margin-left: 20px;
+        border: none;
     }
 }
 
