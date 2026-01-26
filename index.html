@@ -74,20 +74,17 @@
     
     <script src="config.js"></script>
     
-    <!-- Google Analytics 4 - Defer to Bottom (Best Practice for Performance) -->
+    <!-- Google Analytics 4 - Defer to Bottom -->
     <script>
-      // Defer GA loading for better page performance
+      // Defer GA loading
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-LKYXFGGJSP', {
-        'send_page_view': false,
-        'page_title': document.title,
-        'page_location': window.location.href,
-        'page_path': window.location.pathname
+        'send_page_view': false
       });
       
-      // Load GA script after page load to prevent render blocking
+      // Load GA script after page load
       window.addEventListener('load', function() {
         var script = document.createElement('script');
         script.async = true;
@@ -95,11 +92,7 @@
         document.head.appendChild(script);
         
         script.onload = function() {
-          gtag('event', 'page_view', {
-            'page_title': document.title,
-            'page_location': window.location.href,
-            'page_path': window.location.pathname
-          });
+          gtag('event', 'page_view');
         };
       });
     </script>
