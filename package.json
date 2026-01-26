@@ -4,7 +4,12 @@
   "description": "Allen Psychiatry Website",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "node scripts/dev/quick-site-test.js",
+    "test:full": "node scripts/dev/comprehensive-site-test.js",
+    "test:local": "SITE_URL=http://localhost:3000 node scripts/dev/quick-site-test.js",
+    "lint": "npx eslint *.js scripts/**/*.js",
+    "lint:fix": "npx eslint *.js scripts/**/*.js --fix"
   },
   "keywords": [
     "psychiatry",
