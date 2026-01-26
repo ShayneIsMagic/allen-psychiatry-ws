@@ -277,6 +277,9 @@ header.scrolled .logo {
 
 .header-main {
     padding: 5px 0;
+    overflow: visible; /* Ensure dropdowns aren't clipped */
+    position: relative; /* Create stacking context */
+    z-index: 100; /* Ensure header is above content but below dropdowns */
 }
 
 .header-main .container {
@@ -284,6 +287,8 @@ header.scrolled .logo {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    overflow: visible; /* Ensure dropdowns aren't clipped */
+    position: relative; /* Create stacking context for dropdowns */
 }
 
 .logo {
