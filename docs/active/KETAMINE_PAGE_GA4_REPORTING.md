@@ -58,26 +58,26 @@ https://analytics.google.com/analytics/web/?utm_source=OGB&utm_medium=app&authus
   - `Phone Call - Header` (header phone number)
   - `Phone Call - Inline Text` (in content)
   - `Phone Call - Insurance` (insurance section)
-  - `Phone Call - Ketamine CTA` (main CTA)
+  - `Phone Call - Ketamine CTA` (main CTA section)
   - `Phone Call - Ketamine CTA Section` (bottom section)
-  - `Phone Call - Footer` (footer)
-- **Location:** Multiple phone number links
+  - `Phone Call - Footer` (footer phone number)
+- **Location:** Multiple phone links throughout the page
 - **Value:** 1 (each click)
 
 **3. `email_click`**
 - **Event Labels:**
-  - `Email - Footer` (footer email)
+  - `Email - Footer` (footer email address)
 - **Location:** Footer email link
 - **Value:** 1 (each click)
 
-**Direct Link:**
+**Direct Link to Events:**
 https://analytics.google.com/analytics/web/?utm_source=OGB&utm_medium=app&authuser=0#/a357957755p492555456/reports/explorer?params=_u..nav%3Dmaui&collectionId=engagement&ruid=engagement-events,engagement,events&r=engagement-events
 
 **How to Find:**
 1. Go to Reports → Engagement → Events
-2. Filter by event name (e.g., `schedule_appointment_click`)
-3. Click on the event to see breakdown by page
-4. Look for `/ketamine-therapy` in the page path dimension
+2. Search for event names: `schedule_appointment_click`, `phone_call_click`, `email_click`
+3. Click on an event to see breakdown by `event_label`
+4. Filter by page path `/ketamine-therapy` to see only this page's events
 
 ---
 
@@ -86,9 +86,10 @@ https://analytics.google.com/analytics/web/?utm_source=OGB&utm_medium=app&authus
 **Location:** Reports → Realtime
 
 **What You'll See:**
-- **Active users on page:** Shows if someone is currently viewing the page
+- **Active users** currently on the page
 - **Page path:** `/ketamine-therapy`
-- **Events:** Shows events firing in real-time
+- **Page title:** "Ketamine Therapy Utah | PTSD & Trauma Treatment | Treatment-Resistant Depression | Allen Psychiatry"
+- **Events firing in real-time**
 
 **Direct Link:**
 https://analytics.google.com/analytics/web/?utm_source=OGB&utm_medium=app&authuser=0#/a357957755p492555456/realtime/overview
@@ -96,75 +97,110 @@ https://analytics.google.com/analytics/web/?utm_source=OGB&utm_medium=app&authus
 **How to Find:**
 1. Go to Reports → Realtime
 2. Scroll to "Pages and screens" section
-3. Look for `/ketamine-therapy`
-4. See active users and recent events
+3. Look for `/ketamine-therapy` in the list
+4. See active users and events firing
 
 ---
 
 ### **4. Traffic Acquisition Report**
 
-**Location:** Reports → Life cycle → Acquisition → Traffic acquisition
+**Location:** Reports → Acquisition → Traffic acquisition
 
 **What You'll See:**
-- **Source/Medium:** Where traffic came from (Google, direct, etc.)
-- **Sessions:** Total sessions that included this page
-- **Users:** Unique visitors
-- **Page views:** Total views of this page
+- **Source/Medium:** Where visitors came from (Google, direct, etc.)
+- **Campaign:** If any campaigns are running
+- **Page path:** `/ketamine-therapy` in the breakdown
+
+**Direct Link:**
+https://analytics.google.com/analytics/web/?utm_source=OGB&utm_medium=app&authuser=0#/a357957755p492555456/reports/explorer?params=_u..nav%3Dmaui&collectionId=life-cycle&ruid=lifecycle-traffic-acquisition-v2,business-objectives,generate-leads&r=lifecycle-traffic-acquisition-v2
 
 **How to Find:**
-1. Go to Reports → Life cycle → Acquisition → Traffic acquisition
+1. Go to Reports → Acquisition → Traffic acquisition
 2. Add secondary dimension: "Page path"
-3. Filter by `/ketamine-therapy`
-4. See which sources drive traffic to this page
+3. Filter for `/ketamine-therapy`
+4. See traffic sources for this specific page
 
 ---
 
 ### **5. Conversion Events Report**
 
-**Location:** Admin → Events (if marked as conversions)
+**Location:** Reports → Engagement → Conversions
 
 **What You'll See:**
-- **Event name:** `schedule_appointment_click`, `phone_call_click`, `email_click`
-- **Event count:** Total number of times each event fired
-- **Page path:** `/ketamine-therapy` (in event details)
+- **Event Name:** `schedule_appointment_click`, `phone_call_click`, `email_click`
+- **Event Count:** Total conversions from this page
+- **Event Labels:** Breakdown by button/link location
+- **Page Path:** Filter by `/ketamine-therapy` to see this page's conversions
 
 **Direct Link:**
-https://analytics.google.com/analytics/web/?utm_source=OGB&utm_medium=app&authuser=0#/a357957755p492555456/admin/events
+https://analytics.google.com/analytics/web/?utm_source=OGB&utm_medium=app&authuser=0#/a357957755p492555456/reports/explorer?params=_u..nav%3Dmaui&collectionId=engagement&ruid=engagement-conversions,engagement,conversions&r=engagement-conversions
 
 **How to Find:**
-1. Go to Admin → Events
-2. Switch to "All events" tab
-3. Find your conversion events
-4. Click on event to see page breakdown
+1. Go to Reports → Engagement → Conversions
+2. Select date range (Last 7 days, Last 30 days, etc.)
+3. See conversion events
+4. Add secondary dimension: "Page path" and filter for `/ketamine-therapy`
 
 ---
 
-## 🎯 **KEY METRICS TO TRACK**
+## 🔍 **DETAILED EVENT BREAKDOWN**
 
-### **Page Performance:**
-- **Page views:** How many times the page was viewed
-- **Unique page views:** How many unique sessions viewed the page
-- **Average time on page:** How long visitors stay
-- **Bounce rate:** Percentage who leave without interaction
-- **Exit rate:** Percentage who leave from this page
+### **Schedule Appointment Clicks on Ketamine Page**
 
-### **Conversion Performance:**
-- **Schedule clicks:** Total `schedule_appointment_click` events
-- **Phone clicks:** Total `phone_call_click` events
-- **Email clicks:** Total `email_click` events
-- **Conversion rate:** (Clicks / Page views) × 100
+**Total Event Labels:** 5 different locations
 
-### **Traffic Sources:**
-- **Organic search:** Google search traffic
-- **Direct:** Direct visits (typed URL)
-- **Referral:** Links from other sites
-- **Social:** Social media traffic
+1. **`Schedule Button - Ketamine`** (Header)
+   - Location: Top-right "Schedule Now" button
+   - Count: Tracks header button clicks
+
+2. **`Schedule Link - Inline Text`** (Content)
+   - Location: First paragraph, "schedule an appointment online" link
+   - Count: Tracks inline text link clicks
+
+3. **`Schedule Button - Ketamine CTA`** (Main CTA)
+   - Location: Large CTA section with white button
+   - Count: Tracks main CTA button clicks
+
+4. **`Schedule Button - Ketamine CTA Section`** (Bottom CTA)
+   - Location: Bottom section "Talk to Dr. Allen" CTA
+   - Count: Tracks bottom CTA button clicks
+
+5. **`Schedule Button - Footer`** (Footer)
+   - Location: Footer "Schedule Appointment" link
+   - Count: Tracks footer link clicks
+
+**To See Breakdown:**
+1. Go to Events report
+2. Click on `schedule_appointment_click`
+3. Add secondary dimension: "Event label"
+4. Filter by page path `/ketamine-therapy`
+5. See which buttons get the most clicks
+
+---
+
+### **Phone Call Clicks on Ketamine Page**
+
+**Total Event Labels:** 6 different locations
+
+1. **`Phone Call - Header`** (Header)
+2. **`Phone Call - Inline Text`** (Content)
+3. **`Phone Call - Insurance`** (Insurance section)
+4. **`Phone Call - Ketamine CTA`** (Main CTA)
+5. **`Phone Call - Ketamine CTA Section`** (Bottom CTA)
+6. **`Phone Call - Footer`** (Footer)
+
+**To See Breakdown:**
+1. Go to Events report
+2. Click on `phone_call_click`
+3. Add secondary dimension: "Event label"
+4. Filter by page path `/ketamine-therapy`
+5. See which phone links get the most clicks
 
 ---
 
 ## 📈 **HOW TO CREATE A CUSTOM REPORT**
 
-### **Create a Report for This Page:**
+### **Create Report for Ketamine Page Only:**
 
 1. **Go to:** Explore → Blank
 2. **Add Dimensions:**
@@ -175,107 +211,31 @@ https://analytics.google.com/analytics/web/?utm_source=OGB&utm_medium=app&authus
 3. **Add Metrics:**
    - Event count
    - Users
-   - Sessions
+   - Conversions
 4. **Add Filter:**
    - Page path = `/ketamine-therapy`
 5. **Save Report:** Name it "Ketamine Therapy Page Performance"
 
 ---
 
-## 🔍 **SEARCHING FOR THIS PAGE IN GA4**
+## 🎯 **KEY METRICS TO TRACK**
 
-### **Quick Search Methods:**
+### **Page Performance:**
+- **Page Views:** How many times the page was viewed
+- **Unique Users:** How many different people visited
+- **Average Time on Page:** How long visitors stay
+- **Bounce Rate:** Percentage who leave without clicking anything
 
-**1. In Pages Report:**
-- Search for: `ketamine`
-- Or filter by: `page_path = /ketamine-therapy`
+### **Conversion Performance:**
+- **Total Schedule Clicks:** All `schedule_appointment_click` events
+- **Total Phone Clicks:** All `phone_call_click` events
+- **Total Email Clicks:** All `email_click` events
+- **Conversion Rate:** (Conversions / Page Views) × 100
 
-**2. In Events Report:**
-- Filter by event name
-- Add secondary dimension: "Page path"
-- Filter by `/ketamine-therapy`
-
-**3. In Realtime:**
-- Look in "Pages and screens" section
-- Search for `/ketamine-therapy`
-
----
-
-## 📊 **EXAMPLE REPORT VIEWS**
-
-### **Page Views Report:**
-```
-Page path: /ketamine-therapy
-Page title: Ketamine Therapy Utah | PTSD & Trauma Treatment...
-Views: 150
-Users: 120
-Avg. time on page: 2:45
-Bounce rate: 45%
-```
-
-### **Events Report (Filtered by Page):**
-```
-Event: schedule_appointment_click
-Page: /ketamine-therapy
-Count: 25
-Event labels:
-  - Schedule Button - Ketamine CTA: 12
-  - Schedule Link - Inline Text: 8
-  - Schedule Button - Ketamine: 5
-```
-
-### **Conversion Report:**
-```
-Page: /ketamine-therapy
-Total conversions: 35
-  - schedule_appointment_click: 25
-  - phone_call_click: 8
-  - email_click: 2
-Conversion rate: 16.7% (35 / 210 page views)
-```
-
----
-
-## 🎯 **WHAT TO MONITOR**
-
-### **Weekly:**
-- Page views
-- Conversion events (schedule, phone, email clicks)
-- Traffic sources
-
-### **Monthly:**
-- Conversion rate trends
-- Bounce rate changes
-- Average time on page
-- Top traffic sources
-
-### **Quarterly:**
-- Overall page performance
-- Conversion optimization opportunities
-- Content effectiveness
-
----
-
-## 🚨 **TROUBLESHOOTING**
-
-### **If Page Doesn't Appear:**
-
-1. **Check Date Range:**
-   - Ensure date range includes when page was visited
-   - Real-time shows last 30 minutes only
-
-2. **Check Filters:**
-   - Remove any filters that might exclude the page
-   - Check if property is correct
-
-3. **Verify Tracking:**
-   - Visit the page yourself
-   - Check browser console for GA4 requests
-   - Wait 1-2 minutes, then check real-time
-
-4. **Check Page Path:**
-   - Ensure you're searching for `/ketamine-therapy` (with leading slash)
-   - Not `ketamine-therapy` or `ketamine-therapy.html`
+### **Button/Link Performance:**
+- **Which CTA works best:** Compare event labels
+- **Header vs Footer:** See which location gets more clicks
+- **Inline vs Button:** See which format performs better
 
 ---
 
@@ -295,4 +255,3 @@ Conversion rate: 16.7% (35 / 210 page views)
 4. Traffic acquisition (where visitors come from)
 
 **All tracking is working and data should appear within 1-2 minutes of page visits.**
-
