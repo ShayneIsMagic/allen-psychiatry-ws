@@ -197,6 +197,7 @@ header {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
+    overflow: visible; /* CRITICAL: Allow dropdowns to extend beyond header */
 }
 
 /* When scrolled, hide header-top, keep logo and hamburger (menu always available via hamburger) */
