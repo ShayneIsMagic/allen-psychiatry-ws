@@ -19,6 +19,10 @@
 # Homepage
 /index.html    /    301
 
+# Fix repository path URLs (redirect staging/preview URLs to production)
+/allen-psychiatry-ws/*    /    301
+/allen-psychiatry-ws/index.html    /    301
+
 # Clean URLs should serve .html files (Cloudflare Pages handles this automatically)
 # No redirect needed for clean URLs - they serve the .html files directly
 
