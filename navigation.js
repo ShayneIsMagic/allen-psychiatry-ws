@@ -59,12 +59,22 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Dropdown menu toggle (for Services dropdown in hamburger menu)
+    // Dropdown menu toggle (for Services dropdown - mobile only)
     const dropdowns = document.querySelectorAll('.dropdown > a');
     dropdowns.forEach(dropdownLink => {
         dropdownLink.addEventListener('click', function(e) {
-            // Only prevent default if we're on the same page (to toggle dropdown)
-            // If href is /#services and we're not on homepage, navigate there
+            // Only handle click on mobile (when hamburger menu is open)
+            // On desktop, hover should work, so don't interfere
+            const isMobile = window.innerWidth <= 768;
+            const nav = document.querySelector('.main-nav');
+            const isMenuOpen = nav && nav.classList.contains('active');
+            
+            if (!isMobile && !isMenuOpen) {
+                // Desktop with menu closed - let hover work, don't prevent default
+                return;
+            }
+            
+            // Mobile or menu open - handle click
             const href = this.getAttribute('href');
             if (href && href === '/#services' && window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
                 // Navigate to homepage services section

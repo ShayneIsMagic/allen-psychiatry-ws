@@ -600,8 +600,15 @@ nav a.active {
     }
 }
 
-/* Show dropdown on hover when menu is open (desktop) */
+/* Desktop: Dropdown should work on hover when nav is visible (not in hamburger mode) */
 @media (min-width: 769px) {
+    /* When nav is NOT active (normal desktop state), dropdown works on hover */
+    .main-nav:not(.active) .dropdown:hover .dropdown-menu {
+        display: block !important;
+        animation: fadeInUp 0.3s ease;
+    }
+    
+    /* When nav IS active (hamburger menu opened on desktop), use click behavior */
     .main-nav.active .dropdown:hover .dropdown-menu,
     .main-nav.active .dropdown.active .dropdown-menu {
         display: block;
