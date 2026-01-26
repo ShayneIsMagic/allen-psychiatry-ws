@@ -61,10 +61,62 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Dropdown menu toggle (for Services dropdown - mobile only)
     const dropdowns = document.querySelectorAll('.dropdown > a');
+    let hoverTimeout = null;
+    
     dropdowns.forEach(dropdownLink => {
+        const dropdown = dropdownLink.parentElement;
+        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+        
+        // Desktop hover with delay
+        if (dropdownMenu) {
+            // Mouse enters dropdown link
+            dropdownLink.addEventListener('mouseenter', function() {
+                const isMobile = window.innerWidth <= 768;
+                const nav = document.querySelector('.main-nav');
+                const isMenuOpen = nav && nav.classList.contains('active');
+                
+                if (!isMobile && !isMenuOpen) {
+                    // Clear any hide timeout
+                    if (hoverTimeout) {
+                        clearTimeout(hoverTimeout);
+                        hoverTimeout = null;
+                    }
+                    // Show dropdown immediately
+                    dropdownMenu.style.display = 'block';
+                    dropdownMenu.style.visibility = 'visible';
+                    dropdownMenu.style.opacity = '1';
+                }
+            });
+            
+            // Mouse leaves dropdown area
+            dropdown.addEventListener('mouseleave', function() {
+                const isMobile = window.innerWidth <= 768;
+                const nav = document.querySelector('.main-nav');
+                const isMenuOpen = nav && nav.classList.contains('active');
+                
+                if (!isMobile && !isMenuOpen) {
+                    // Add delay before hiding (300ms gives time to move to menu)
+                    hoverTimeout = setTimeout(function() {
+                        dropdownMenu.style.display = 'none';
+                        hoverTimeout = null;
+                    }, 300);
+                }
+            });
+            
+            // Mouse enters dropdown menu - keep it visible
+            dropdownMenu.addEventListener('mouseenter', function() {
+                if (hoverTimeout) {
+                    clearTimeout(hoverTimeout);
+                    hoverTimeout = null;
+                }
+                this.style.display = 'block';
+                this.style.visibility = 'visible';
+                this.style.opacity = '1';
+            });
+        }
+        
+        // Click handler (mobile only)
         dropdownLink.addEventListener('click', function(e) {
-            // Only handle click on mobile (when hamburger menu is open)
-            // On desktop, hover should work, so don't interfere
             const isMobile = window.innerWidth <= 768;
             const nav = document.querySelector('.main-nav');
             const isMenuOpen = nav && nav.classList.contains('active');
@@ -83,7 +135,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             // On homepage or same page, toggle dropdown
             e.preventDefault();
-            const dropdown = this.parentElement;
             dropdown.classList.toggle('active');
         });
     });

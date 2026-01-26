@@ -421,32 +421,33 @@ nav a.active {
         opacity: 1 !important;
     }
     
-    /* Ensure dropdown menu is positioned correctly on desktop - with overlap padding */
+    /* Ensure dropdown menu is positioned correctly on desktop - extends upward to eliminate gap */
     .main-nav:not(.active) .dropdown-menu {
         position: absolute !important;
-        top: 100% !important; /* Directly below link */
+        top: calc(100% - 5px) !important; /* Overlap by 5px to eliminate gap */
         left: 0 !important;
         background: var(--light) !important;
         box-shadow: var(--box-shadow) !important;
         border-radius: var(--border-radius) !important;
-        padding: 15px 0 10px 0 !important; /* Extra top padding creates invisible hover area */
-        margin-top: -10px !important; /* Negative margin creates overlap with link */
+        padding: 12px 0 10px 0 !important; /* Top padding creates hover area */
+        margin-top: 0 !important;
         min-width: 240px !important;
         border: 1px solid rgba(0, 0, 0, 0.05) !important;
         z-index: 10000 !important;
         pointer-events: auto !important;
     }
     
-    /* CRITICAL: Create invisible hover bridge using first child pseudo-element */
+    /* CRITICAL: Create invisible hover bridge at top of dropdown menu */
     .main-nav:not(.active) .dropdown-menu::before {
         content: '';
         position: absolute;
-        top: -10px; /* Overlap upward */
+        top: -5px; /* Extend upward to bridge gap */
         left: 0;
         right: 0;
-        height: 10px;
+        height: 5px;
         background: transparent;
         pointer-events: auto;
+        z-index: 10001;
     }
     
     /* Ensure dropdown container doesn't clip */
