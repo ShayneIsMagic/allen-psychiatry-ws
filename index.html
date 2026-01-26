@@ -61,10 +61,10 @@
     <link rel="apple-touch-icon" href="assets/ap-new-color-logo.png">
     <link rel="shortcut icon" href="assets/ap-new-color-logo.png">
     
-    <!-- Critical CSS - Inline or Load Immediately -->
+    <!-- Critical CSS - Load immediately (small file, minimal render blocking) -->
     <link rel="stylesheet" href="styles.css">
     
-    <!-- Defer Non-Critical CSS - Google Fonts -->
+    <!-- Defer Non-Critical CSS - Google Fonts (font-display: swap already in URL) -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"></noscript>
     
@@ -74,25 +74,40 @@
     
     <script src="config.js"></script>
     
-    <!-- Google Analytics 4 - Defer to Bottom -->
+    <!-- Google Analytics 4 - Defer to Bottom with Consent Mode -->
     <script>
-      // Defer GA loading
+      // Defer GA loading and configure consent mode for third-party cookies
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-LKYXFGGJSP', {
-        'send_page_view': false
+      
+      // Configure consent mode (handles third-party cookie restrictions)
+      gtag('consent', 'default', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'denied',
+        'wait_for_update': 500
       });
       
-      // Load GA script after page load
+      gtag('config', 'G-LKYXFGGJSP', {
+        'send_page_view': false,
+        'cookie_flags': 'SameSite=None;Secure' // Enable cross-site cookies if needed
+      });
+      
+      // Load GA script after page load to prevent render blocking
       window.addEventListener('load', function() {
         var script = document.createElement('script');
         script.async = true;
         script.src = 'https://www.googletagmanager.com/gtag/js?id=G-LKYXFGGJSP';
+        script.crossOrigin = 'anonymous'; // Help with CORS
         document.head.appendChild(script);
         
         script.onload = function() {
           gtag('event', 'page_view');
+        };
+        
+        script.onerror = function() {
+          // Silently fail - don't break page if GA fails to load
+          console.warn('Google Analytics failed to load');
         };
       });
     </script>
@@ -749,12 +764,14 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
-    <script src="navigation.js"></script>
-    <script src="telehealth-modal.js"></script>
-    <script src="patient-portal-modal.js"></script>
-    <script src="sms-modal-simple.js"></script>
-    <script src="service-areas-modal.js"></script>
+    <!-- Defer non-critical scripts to improve page load performance -->
+    <script src="script.js" defer></script>
+    <script src="navigation.js" defer></script>
+    <script src="telehealth-modal.js" defer></script>
+    <script src="patient-portal-modal.js" defer></script>
+    <script src="sms-modal-simple.js" defer></script>
+    <script src="service-areas-modal.js" defer></script>
     <script src="schedule-modal.js?v=20250115" defer></script>
+    <script src="email-click-handler.js" defer></script>
 </body>
 </html> 
