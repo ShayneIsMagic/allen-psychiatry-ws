@@ -386,6 +386,7 @@ nav a.active {
     min-width: 240px;
     border: 1px solid rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(10px);
+    margin-top: 5px; /* Small gap to prevent hover loss */
 }
 
 /* Show dropdown on hover for desktop */
@@ -396,6 +397,11 @@ nav a.active {
     .main-nav .dropdown.open .dropdown-menu {
         display: block !important;
         animation: fadeInUp 0.3s ease;
+    }
+    
+    /* Ensure dropdown stays visible when hovering over it */
+    .main-nav .dropdown:hover .dropdown-menu:hover {
+        display: block !important;
     }
     
     /* Ensure dropdown menu is positioned correctly on desktop */
@@ -411,6 +417,17 @@ nav a.active {
         min-width: 240px !important;
         border: 1px solid rgba(0, 0, 0, 0.05) !important;
         z-index: 1000 !important;
+    }
+    
+    /* Fill the gap between link and dropdown to maintain hover */
+    .main-nav .dropdown::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: transparent;
     }
 }
 
