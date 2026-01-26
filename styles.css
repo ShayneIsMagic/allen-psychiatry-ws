@@ -397,7 +397,7 @@ nav a.active {
 
 /* Show dropdown on hover for desktop */
 @media (min-width: 769px) {
-    .main-nav:not(.active) .dropdown:hover .dropdown-menu {
+    .dropdown:hover .dropdown-menu {
         display: block;
     }
 }
@@ -2362,14 +2362,9 @@ footer::before {
 }
 }
 
-    .dropdown-menu {
+.dropdown-menu {
     transform-origin: top;
     transition: var(--transition);
-}
-
-.dropdown.open .dropdown-menu {
-        display: block;
-    animation: fadeInUp 0.3s ease;
 }
 
 /* About Info Enhancements */
