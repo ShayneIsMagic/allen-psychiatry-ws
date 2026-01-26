@@ -74,42 +74,13 @@
     
     <script src="config.js"></script>
     
-    <!-- Google Analytics 4 - Defer to Bottom with Consent Mode -->
+    <!-- Google Analytics 4 - Standard Implementation with Async Loading -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKYXFGGJSP"></script>
     <script>
-      // Defer GA loading and configure consent mode for third-party cookies
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      
-      // Configure consent mode (handles third-party cookie restrictions)
-      gtag('consent', 'default', {
-        'analytics_storage': 'granted',
-        'ad_storage': 'denied',
-        'wait_for_update': 500
-      });
-      
-      gtag('config', 'G-LKYXFGGJSP', {
-        'send_page_view': false,
-        'cookie_flags': 'SameSite=None;Secure' // Enable cross-site cookies if needed
-      });
-      
-      // Load GA script after page load to prevent render blocking
-      window.addEventListener('load', function() {
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-LKYXFGGJSP';
-        script.crossOrigin = 'anonymous'; // Help with CORS
-        document.head.appendChild(script);
-        
-        script.onload = function() {
-          gtag('event', 'page_view');
-        };
-        
-        script.onerror = function() {
-          // Silently fail - don't break page if GA fails to load
-          console.warn('Google Analytics failed to load');
-        };
-      });
+      gtag('config', 'G-LKYXFGGJSP');
     </script>
     
     <!-- LocalBusiness Schema Markup for Google -->
