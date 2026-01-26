@@ -8,7 +8,31 @@
 
 ## 📊 **HOW IT APPEARS IN GA4**
 
-### **1. Page Views Report**
+### **1. All Pages and Screens Report (Business Objectives)** ✅ **CONFIRMED WORKING**
+
+**Location:** Reports → Business Objectives → All pages and screens
+
+**What You'll See:**
+- **Page path:** `/ketamine-therapy`
+- **Page title:** "Ketamine Therapy Utah | PTSD & Trauma Treatment | Treatment-Resistant Depression | Allen Psychiatry"
+- **Views:** Total number of times the page was viewed
+- **Users:** Number of unique visitors
+- **Average time on page**
+- **Bounce rate**
+- **Engagement metrics**
+
+**Direct Link (This is where you found it!):**
+https://analytics.google.com/analytics/web/?utm_source=OGB&utm_medium=app&authuser=0#/a357957755p492555456/reports/explorer?params=_u..nav%3Dmaui&collectionId=business-objectives&ruid=all-pages-and-screens,business-objectives,examine-user-behavior&r=all-pages-and-screens
+
+**How to Find:**
+1. Go to Reports → Business Objectives → All pages and screens
+2. Search for "ketamine" or "/ketamine-therapy"
+3. Click on the page to see detailed metrics
+4. **This report shows all pages with their performance metrics**
+
+---
+
+### **2. Page Views Report (Engagement Collection)**
 
 **Location:** Reports → Engagement → Pages and screens
 
@@ -30,7 +54,7 @@ https://analytics.google.com/analytics/web/?utm_source=OGB&utm_medium=app&authus
 
 ---
 
-### **2. Events Report**
+### **3. Events Report**
 
 **Location:** Reports → Engagement → Events
 
@@ -81,7 +105,7 @@ https://analytics.google.com/analytics/web/?utm_source=OGB&utm_medium=app&authus
 
 ---
 
-### **3. Real-Time Report**
+### **4. Real-Time Report**
 
 **Location:** Reports → Realtime
 
@@ -102,7 +126,7 @@ https://analytics.google.com/analytics/web/?utm_source=OGB&utm_medium=app&authus
 
 ---
 
-### **4. Traffic Acquisition Report**
+### **5. Traffic Acquisition Report**
 
 **Location:** Reports → Acquisition → Traffic acquisition
 
@@ -122,7 +146,7 @@ https://analytics.google.com/analytics/web/?utm_source=OGB&utm_medium=app&authus
 
 ---
 
-### **5. Conversion Events Report**
+### **6. Conversion Events Report**
 
 **Location:** Reports → Engagement → Conversions
 
@@ -249,9 +273,10 @@ https://analytics.google.com/analytics/web/?utm_source=OGB&utm_medium=app&authus
 - **Multiple event labels:** Different labels for different button/link locations
 
 **Key Reports:**
-1. Pages and screens (page views)
-2. Events (conversion tracking)
-3. Realtime (current activity)
-4. Traffic acquisition (where visitors come from)
+1. **All pages and screens** (Business Objectives) ✅ **Where you found it!**
+2. Pages and screens (Engagement collection)
+3. Events (conversion tracking)
+4. Realtime (current activity)
+5. Traffic acquisition (where visitors come from)
 
 **All tracking is working and data should appear within 1-2 minutes of page visits.**
