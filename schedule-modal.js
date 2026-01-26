@@ -133,8 +133,7 @@ function initializeScheduleModal() {
         }
     }, true); // Use capture phase to catch before other handlers
     
-    // Close modal when clicking outside
-    const modal = document.getElementById('scheduleModal');
+    // Close modal when clicking outside (reuse modal variable from above)
     if (modal) {
         modal.addEventListener('click', function(e) {
             if (e.target === modal) {
