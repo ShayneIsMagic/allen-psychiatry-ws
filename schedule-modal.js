@@ -60,6 +60,11 @@ function initializeScheduleModal() {
                     </div>
                     <p>To schedule an appointment at your preferred location, call or text us at <a href="tel:385-504-1334" style="color: var(--primary); font-weight: 600;">385-504-1334</a>.</p>
                     <p>Visit us online at <a href="https://allenpsychiatry.net" style="color: var(--primary); font-weight: 600;">allenpsychiatry.net</a></p>
+                    <div style="margin-top: 20px; padding: 15px; background: #f0f8ff; border-radius: 8px; border-left: 4px solid var(--primary);">
+                        <p style="margin: 0 0 10px 0; font-weight: 600; color: var(--primary);">Insurance Information</p>
+                        <p style="margin: 0 0 10px 0; font-size: 0.95em;">We accept Select Health, EMI, DMBA, PEHP, and Blue Cross/Blue Shield. Coverage varies by plan.</p>
+                        <a href="#" onclick="hideScheduleModal(); setTimeout(() => { if (typeof showInsuranceModal === 'function') showInsuranceModal(); }, 300); return false;" style="color: var(--primary); font-weight: 600; text-decoration: underline; font-size: 0.95em;">View accepted insurance plans and verify coverage →</a>
+                    </div>
                     <p style="margin-top: 20px; font-weight: 600; color: var(--primary);">We look forward to seeing you!</p>
                 </div>
                 <div class="schedule-modal-footer">

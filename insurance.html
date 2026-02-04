@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Todd Allen DNP PMHNP-BC | Psychiatrist Provo Utah</title>
-    <meta name="description" content="Meet Dr. Todd Allen, DNP, PMHNP-BC. Board-certified psychiatric nurse practitioner serving Utah County & rural communities. Accepting new patients. ADHD specialist. Compassionate care.">
-    <meta name="keywords" content="Allen Psychiatry, Allen Mental Health, Dr. Todd Allen, board-certified psychiatrist Provo, psychiatrist Utah County, mental health professional, psychiatric services Provo, mental health care Utah, compassionate mental health care, personalized psychiatric care, mental health treatment, psychiatric evaluation, mental wellness, behavioral health, Provo mental health, Orem mental health, Lehi mental health, Spanish Fork mental health, American Fork mental health, Springville mental health, Pleasant Grove mental health, Payson mental health, Saratoga Springs mental health, Eagle Mountain mental health, Utah County psychiatric care, Sevier County psychiatric care, rural mental health Utah">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Allen Psychiatry accepts Select Health, EMI, DMBA, PEHP, and Blue Cross/Blue Shield insurance plans. Verify your coverage and learn about payment options.">
+    <meta name="keywords" content="Allen Psychiatry, Allen Mental Health, insurance accepted, Select Health psychiatrist, EMI Health psychiatrist, DMBA psychiatrist, PEHP psychiatrist, Blue Cross Blue Shield psychiatrist Utah, insurance coverage, mental health insurance, psychiatric services insurance">
+    <title>Insurance Accepted | Allen Psychiatry Provo Utah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="config.js"></script>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/ap-new-color-logo.png">
+    <link rel="apple-touch-icon" href="assets/ap-new-color-logo.png">
+    <link rel="shortcut icon" href="assets/ap-new-color-logo.png">
+    
     <!-- Google Analytics 4 with Consent Mode v2 -->
-    <!-- This ensures GDPR/CCPA compliance while maintaining 100% tracking -->
     <script>
-      // Initialize dataLayer and gtag function
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      
-      // Set default consent state to 'denied' (GDPR/CCPA compliant)
-      // GA4 will still track all users, but in anonymized mode until consent is granted
       gtag('consent', 'default', {
         'analytics_storage': 'denied',
         'ad_storage': 'denied'
       });
-      
-      // Configure GA4 (will track in anonymized mode until consent granted)
       gtag('config', 'G-LKYXFGGJSP', {
         'anonymize_ip': true
       });
-      
-      // Load GA script
       var script = document.createElement('script');
       script.async = true;
       script.src = 'https://www.googletagmanager.com/gtag/js?id=G-LKYXFGGJSP';
       document.head.appendChild(script);
-      
-      // Check for existing consent cookie and update consent mode if found
       (function() {
         var cookies = document.cookie.split(';');
         for (var i = 0; i < cookies.length; i++) {
@@ -46,27 +41,18 @@
           if (cookie.indexOf('cookie_consent=') === 0) {
             var consentValue = cookie.substring('cookie_consent='.length);
             if (consentValue === 'accepted') {
-              // User previously accepted - grant consent
               gtag('consent', 'update', {
                 'analytics_storage': 'granted',
                 'ad_storage': 'granted'
               });
             }
-            // If declined, consent remains denied (already set as default)
             break;
           }
         }
       })();
     </script>
-    
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/ap-new-color-logo.png">
-    <link rel="apple-touch-icon" href="assets/ap-new-color-logo.png">
-    <link rel="shortcut icon" href="assets/ap-new-color-logo.png">
-  </head>
-  <body>
+</head>
+<body>
     <!-- Header -->
     <header>
         <div class="header-top">
@@ -77,7 +63,7 @@
                 </div>
                 <div class="header-actions">
                     <a href="https://pp-wfe-100.advancedmd.com/154986/account/logon" target="_blank">Patient Portal</a>
-                    <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn-small" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - About', 'value': 1});">Schedule Now</a>
+                    <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn-small" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Header', 'value': 1});">Schedule Now</a>
                     <a href="#sms-privacy" data-action="show-sms-modal" onclick="showSmsPrivacyModal(); return false;" style="color: white; text-decoration: none; font-size: 0.9em; margin-left: 10px;">📱 SMS Policy</a>
                 </div>
             </div>
@@ -107,7 +93,7 @@
                         </li>
                         <li><a href="/provo">Provo Offices</a></li>
                         <li><a href="/rural">Rural Services</a></li>
-                        <li><a href="/about" class="active">About Us</a></li>
+                        <li><a href="/about">About Us</a></li>
                         <li><a href="/telehealth">TeleHealth</a></li>
                         <li><a href="https://pp-wfe-100.advancedmd.com/154986/account/logon" target="_blank">Patient Portal</a></li>
                     </ul>
@@ -119,139 +105,115 @@
         </div>
     </header>
 
+    <div class="breadcrumbs">
+        <div class="container">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><span>Insurance Accepted</span></li>
+            </ul>
+        </div>
+    </div>
+
     <main>
     <!-- Hero Section -->
-    <section class="hero hero-about">
+    <section class="service-hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Meet Dr. Todd Allen</h1>
-                <p>Board Certified Psychiatric Mental Health Nurse Practitioner<br>Serving Provo, Utah County, and Rural Utah</p>
+            <h1>Insurance Accepted</h1>
+            <p>We accept most major insurance plans. Verify your coverage and learn about payment options.</p>
+        </div>
+    </section>
+
+    <!-- Insurance Information Section -->
+    <section class="service-details">
+        <div class="container">
+            <div class="insurance-content">
+                <h2>Accepted Insurance Plans</h2>
+                <p class="intro-text">Allen Psychiatry is committed to making mental health care accessible. We accept the following insurance plans:</p>
+                
+                <div class="insurance-list" style="margin-top: 30px; padding: 30px; background: #f8f9fa; border-radius: var(--border-radius);">
+                    <ul style="list-style: none; padding-left: 0; margin: 0;">
+                        <li style="margin-bottom: 15px; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid var(--primary);">
+                            <i class="fa fa-check-circle" style="color: var(--primary); margin-right: 15px; font-size: 1.2em;"></i>
+                            <strong style="font-size: 1.1em;">Select Health</strong>
+                        </li>
+                        <li style="margin-bottom: 15px; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid var(--primary);">
+                            <i class="fa fa-check-circle" style="color: var(--primary); margin-right: 15px; font-size: 1.2em;"></i>
+                            <strong style="font-size: 1.1em;">EMI</strong>
+                        </li>
+                        <li style="margin-bottom: 15px; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid var(--primary);">
+                            <i class="fa fa-check-circle" style="color: var(--primary); margin-right: 15px; font-size: 1.2em;"></i>
+                            <strong style="font-size: 1.1em;">DMBA</strong>
+                        </li>
+                        <li style="margin-bottom: 15px; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid var(--primary);">
+                            <i class="fa fa-check-circle" style="color: var(--primary); margin-right: 15px; font-size: 1.2em;"></i>
+                            <strong style="font-size: 1.1em;">PEHP</strong>
+                        </li>
+                        <li style="margin-bottom: 15px; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid var(--primary);">
+                            <i class="fa fa-check-circle" style="color: var(--primary); margin-right: 15px; font-size: 1.2em;"></i>
+                            <strong style="font-size: 1.1em;">Blue Cross/Blue Shield</strong>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="insurance-verification" style="margin-top: 40px; padding: 30px; background: #e8f4f8; border-radius: var(--border-radius); border-left: 4px solid var(--primary);">
+                    <h3 style="color: var(--primary); margin-top: 0;">Verify Your Coverage</h3>
+                    <p>Coverage varies by plan and individual policy. We recommend:</p>
+                    <ul>
+                        <li><strong>Contact your insurance provider</strong> to verify that Allen Psychiatry is in-network for your specific plan</li>
+                        <li><strong>Check your benefits</strong> to understand your copay, deductible, and coverage limits</li>
+                        <li><strong>Call our office</strong> at <a href="tel:385-504-1334" onclick="gtag('event', 'phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Insurance Verification', 'value': 1});" style="color: var(--primary); font-weight: 600;">(385) 504-1334</a> to discuss payment options and insurance questions</li>
+                    </ul>
+                </div>
+
+                <div class="payment-options" style="margin-top: 40px;">
+                    <h3>Payment Options</h3>
+                    <p>In addition to insurance, we also accept:</p>
+                    <ul>
+                        <li>Cash payments</li>
+                        <li>Credit card payments</li>
+                        <li>Debit card payments</li>
+                    </ul>
+                    <p style="margin-top: 20px; font-size: 0.95em; color: var(--mid-gray);">If you have questions about payment options or need to discuss a payment plan, please contact our office. We're here to help make mental health care accessible.</p>
+                </div>
+
+                <div class="insurance-faq" style="margin-top: 40px; padding: 30px; background: #f8f9fa; border-radius: var(--border-radius);">
+                    <h3>Frequently Asked Questions</h3>
+                    
+                    <div class="faq-item" style="margin-bottom: 25px;">
+                        <h4 style="color: var(--primary); margin-bottom: 10px;">Do you accept my insurance plan?</h4>
+                        <p>We accept Select Health, EMI, DMBA, PEHP, and Blue Cross/Blue Shield. However, coverage can vary based on your specific plan. We recommend contacting your insurance provider directly to verify that Allen Psychiatry is in-network for your plan.</p>
+                    </div>
+
+                    <div class="faq-item" style="margin-bottom: 25px;">
+                        <h4 style="color: var(--primary); margin-bottom: 10px;">What if my insurance isn't listed?</h4>
+                        <p>If your insurance plan isn't listed, please call our office at <a href="tel:385-504-1334" onclick="gtag('event', 'phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Insurance FAQ', 'value': 1});" style="color: var(--primary); font-weight: 600;">(385) 504-1334</a>. We may still be able to work with your insurance provider, or we can discuss other payment options.</p>
+                    </div>
+
+                    <div class="faq-item" style="margin-bottom: 25px;">
+                        <h4 style="color: var(--primary); margin-bottom: 10px;">What should I bring to my first appointment?</h4>
+                        <p>Please bring your insurance card, a photo ID, a list of current medications, and any pre-visit paperwork that was sent to you.</p>
+                    </div>
+
+                    <div class="faq-item" style="margin-bottom: 25px;">
+                        <h4 style="color: var(--primary); margin-bottom: 10px;">Do you offer payment plans?</h4>
+                        <p>Yes, we understand that mental health care is important and want to make it accessible. Please contact our office to discuss payment plan options that work for you.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="page-content">
+    <!-- CTA Section -->
+    <section class="cta-section">
         <div class="container">
-            <!-- Doctor Introduction -->
-            <div class="about-intro">
-                <div class="about-image-large">
-                    <picture>
-                        <source srcset="assets/Dr%20Todd%20Allen.avif" type="image/avif">
-                        <source srcset="assets/Dr%20Todd%20Allen.webp" type="image/webp">
-                        <img src="assets/Dr%20Todd%20Allen.jpg" alt="Dr. Todd Allen, DNP, PMHNP-BC, board-certified psychiatric nurse practitioner at Allen Psychiatry in Provo, Utah">
-                    </picture>
-                </div>
-                <div class="about-intro-text">
-                    <h2>Dr. Todd Allen, DNP, PMHNP-BC</h2>
-                    <p class="lead">A dedicated mental health professional committed to providing compassionate, evidence-based care to individuals and families across Utah County and rural communities.</p>
-                    <div class="credentials">
-                        <div class="credential-item">
-                            <i class="fa fa-graduation-cap"></i>
-                            <span>Doctor of Nursing Practice</span>
-                        </div>
-                        <div class="credential-item">
-                            <i class="fa fa-certificate"></i>
-                            <span>Board Certified PMHNP-BC</span>
-                        </div>
-                        <div class="credential-item">
-                            <i class="fa fa-map-marker"></i>
-                            <span>Serving Utah County & Rural Utah</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="cta-content">
+                <h2>Ready to Schedule an Appointment?</h2>
+                <p>If you have questions about insurance coverage or payment options, we're here to help. Contact us today to verify your coverage and schedule your appointment.</p>
+                <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Insurance Page', 'value': 1});">Schedule an Appointment</a>
+                <a href="tel:385-504-1334" class="btn btn-outline" style="margin-left: 15px;" onclick="gtag('event', 'phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Insurance CTA', 'value': 1});">Call (385) 504-1334</a>
             </div>
-
-            <!-- Key Information Grid -->
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="card-icon">
-                        <i class="fa fa-user-md"></i>
-                    </div>
-                    <h3>Professional Background</h3>
-                    <p>Dr. Todd Allen, DNP, is a Board Certified Psychiatric Mental Health Nurse Practitioner (PMHNP-BC) serving Provo, UT, and the broader Utah County area, including rural communities that often face limited access to specialized mental health care. With his Doctor of Nursing Practice specializing in psychiatry, Dr. Allen brings advanced clinical expertise to individuals ages 14 to 55, with a primary focus on ADHD treatment in adolescents and adults. He also provides comprehensive care for depression, anxiety, PTSD, and the list goes on.</p>
-                </div>
-
-                <div class="about-card">
-                    <div class="card-icon">
-                        <i class="fa fa-flask"></i>
-                    </div>
-                    <h3>Research & Academic Contributions</h3>
-                    <p>Dr. Allen has published research in peer-reviewed journals and continues to contribute to the advancement of psychiatric care through his sleep-study research and collaboration with the Boeson research team, developing innovative approaches in mental health treatment.</p>
-                </div>
-
-                <div class="about-card">
-                    <div class="card-icon">
-                        <i class="fa fa-heart"></i>
-                    </div>
-                    <h3>Treatment Philosophy</h3>
-                    <p>He emphasizes strong therapeutic partnerships with each client, believing that authentic compassion and active listening form the foundation of effective mental health care, especially for those managing ADHD and related conditions.</p>
-                    <p>Dr. Allen integrates the latest evidence-based practices in ADHD treatment while staying current with emerging developments in psychiatric care, ensuring his patients receive comprehensive, holistic treatment options tailored to their unique needs.</p>
-                </div>
-
-                <div class="about-card">
-                    <div class="card-icon">
-                        <i class="fa fa-users"></i>
-                    </div>
-                    <h3>Community Focus & Understanding</h3>
-                    <p>Throughout his distinguished career, Dr. Allen has observed the far-reaching effects of mental health conditions on individuals, families, and communities across Utah County, particularly in underserved rural areas where specialized mental health care, including ADHD treatment, is difficult, inconvenient, with long distances needing to be traveled or often unavailable.</p>
-                </div>
-
-                <div class="about-card">
-                    <div class="card-icon">
-                        <i class="fa fa-home"></i>
-                    </div>
-                    <h3>Community Advocacy & Personal Connection</h3>
-                    <p>Beyond his clinical expertise, he understands the persistent stigma surrounding mental health treatment. He is passionate about educating communities on the vital importance of mental health care and how transformative quality treatment can be for individuals and families. Having grown up in rural communities himself, Dr. Allen holds deep respect for the resilience, hard work, and strong values found in these areas, and he is committed to bringing specialized ADHD care to those who may have previously lacked access to such services.</p>
-                </div>
-
-                <div class="about-card">
-                    <div class="card-icon">
-                        <i class="fa fa-handshake-o"></i>
-                    </div>
-                    <h3>Patient Care Commitment</h3>
-                    <p>Dr. Allen is honored to support your mental health journey, providing a welcoming, non-judgmental space where you can feel heard, understood, and empowered to achieve lasting positive change.</p>
-                </div>
-            </div>
-
-            <!-- Schedule Appointment Section -->
-            <div class="schedule-appointment-section">
-                <div class="container">
-                    <h2 style="color: var(--light); margin-bottom: 20px;">Serving Utah County and Rural Utah</h2>
-                    <p style="color: var(--light); margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">Dr. Allen is committed to providing accessible mental health care throughout Utah County and rural communities.</p>
-                    <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn btn-secondary" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - About', 'value': 1});">Schedule Appointment with Dr. Allen</a>
-                </div>
-            </div>
-
-            <!-- Call to Action -->
-            <section class="cta-section">
-                <div class="container">
-                    <div class="cta-content">
-                        <h2>Ready to Take Your First Step?</h2>
-                        <p>If you're ready to begin your journey toward mental wellness with Dr. Todd Allen, we're here to help. Schedule a consultation to learn more about how we can support you.</p>
-                        <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - About', 'value': 1});">Schedule an Appointment</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- For Healthcare Providers Section -->
-            <section class="healthcare-providers page-content">
-                <div class="container">
-                    <h2>For Healthcare Providers & Community Organizations</h2>
-                    <p>Allen Psychiatry welcomes referrals from primary care physicians, therapists, counselors, and community organizations throughout Utah County and rural Utah.</p>
-                    <h3>Why Refer to Allen Psychiatry?</h3>
-                    <ul>
-                        <li>Board-certified psychiatric care</li>
-                        <li>Same-week appointments available</li>
-                        <li>Comprehensive evaluation and treatment</li>
-                        <li>Telehealth options for rural patients</li>
-                        <li>Collaborative care approach</li>
-                    </ul>
-                    <h3>Referral Process</h3>
-                    <p>To refer a patient, please call our office at <a href="tel:+13855041334">(385) 504-1334</a> or have your patient schedule directly through our online portal.</p>
-                </div>
-            </section>
         </div>
+    </section>
     </main>
 
     <!-- Footer -->
@@ -317,21 +279,24 @@
             </div>
         </div>
     </footer>
-        <script src="navigation.js"></script>
+
+    <a href="#" id="back-to-top-btn"><i class="fa fa-arrow-up"></i></a>
+
+    <script src="navigation.js"></script>
     <script src="telehealth-modal.js"></script>
     <script src="patient-portal-modal.js"></script>
     <script src="sms-modal-simple.js"></script>
     <script src="schedule-modal.js?v=20250115" defer></script>
     <script src="insurance-modal.js" defer></script>
     
-    <!-- Cookie Consent Banner with Google Consent Mode v2 -->
+    <!-- Cookie Consent Banner -->
     <div id="cookie-consent-banner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #1a1a1a; color: #ffffff; padding: 20px; box-shadow: 0 -2px 10px rgba(0,0,0,0.3); z-index: 10000; font-family: 'Roboto', sans-serif;">
         <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
             <div style="flex: 1; min-width: 250px;">
                 <p style="margin: 0 0 10px 0; font-size: 16px; font-weight: 500;">We use cookies to improve your experience and analyze site usage.</p>
                 <p style="margin: 0; font-size: 14px; opacity: 0.9;">
                     By clicking "Accept All", you consent to our use of cookies for analytics. 
-                    <a href="#privacy-policy" onclick="document.getElementById('cookie-consent-banner').style.display='none'; var el = document.getElementById('privacy-policy'); if(el) el.scrollIntoView({behavior:'smooth'});" style="color: #4CAF50; text-decoration: underline;">Learn more</a>
+                    <a href="#privacy-policy" onclick="document.getElementById('cookie-consent-banner').style.display='none';" style="color: #4CAF50; text-decoration: underline;">Learn more</a>
                 </p>
             </div>
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
@@ -439,4 +404,6 @@
     }
     </style>
 </body>
-</html> 
+</html>
+
+

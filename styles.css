@@ -1931,6 +1931,206 @@ nav a.active {
     }
 }
 
+/* Insurance Modal Styles */
+.insurance-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.insurance-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.insurance-modal-content {
+    background: var(--light);
+    border-radius: var(--border-radius);
+    max-width: 700px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.insurance-modal.show .insurance-modal-content {
+    transform: translateY(0);
+}
+
+.insurance-modal h3 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin: 0 0 20px 0;
+    padding: 30px 30px 0;
+    text-align: center;
+}
+
+.insurance-modal-body {
+    padding: 20px 30px;
+}
+
+.insurance-modal-body p {
+    color: var(--clinical-text);
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.insurance-list-modal {
+    margin: 25px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.insurance-carriers {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.insurance-carriers li {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+}
+
+.insurance-carriers li i {
+    color: var(--primary);
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+.insurance-carriers li strong {
+    font-size: 1.1em;
+    color: var(--clinical-text);
+}
+
+.insurance-verification-box {
+    margin: 25px 0;
+    padding: 20px;
+    background: #e8f4f8;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+}
+
+.insurance-verification-box p {
+    margin-bottom: 10px;
+}
+
+.insurance-verification-box ul {
+    margin: 15px 0 0 20px;
+    padding-left: 0;
+}
+
+.insurance-verification-box ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: var(--clinical-text);
+}
+
+.payment-options-box {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-size: 0.95em;
+}
+
+.insurance-modal-footer {
+    padding: 20px 30px 30px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    background: var(--light);
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.insurance-modal-footer .btn {
+    min-width: 150px;
+}
+
+@media (max-width: 768px) {
+    .insurance-modal-content {
+        width: 95%;
+        max-width: 95%;
+    }
+
+    .insurance-modal h3 {
+        font-size: 1.5rem;
+        padding: 25px 20px 15px;
+    }
+
+    .insurance-modal-body {
+        padding: 15px 20px;
+    }
+
+    .insurance-modal-body p {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+
+    .insurance-list-modal {
+        padding: 15px;
+        margin: 20px 0;
+    }
+
+    .insurance-carriers li {
+        padding: 10px 12px;
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+    }
+
+    .insurance-verification-box {
+        padding: 15px;
+        margin: 20px 0;
+    }
+
+    .insurance-verification-box ul {
+        margin-left: 15px;
+    }
+
+    .insurance-verification-box ul li {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .payment-options-box {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .insurance-modal-footer {
+        padding: 15px 20px 20px;
+        flex-direction: column;
+    }
+
+    .insurance-modal-footer .btn {
+        width: 100%;
+        min-width: auto;
+        margin: 5px 0;
+    }
+}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
