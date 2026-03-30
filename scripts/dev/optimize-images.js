@@ -4,55 +4,58 @@ const path = require('path');
 
 const assetsDir = path.join(__dirname, 'assets');
 
-// Image optimization settings - AGGRESSIVE COMPRESSION
+// Image optimization settings - BALANCED (Quality + Performance)
 const settings = {
   jpeg: {
-    quality: 65,  // Reduced from 80 for better compression
+    quality: 80,  // High quality, good compression
     mozjpeg: true
   },
   webp: {
-    quality: 70  // Reduced from 80
+    quality: 85  // High quality, excellent compression
   },
   avif: {
-    quality: 60  // Reduced from 75
+    quality: 75  // High quality, best compression
   }
 };
 
-// Images to optimize with their specific settings
+  // Images to optimize with their specific settings - QUALITY PRESERVED
 const imagesToOptimize = [
-  // Critical - Hero images (aggressive compression for web)
-  { file: 'index-hero.jpg', jpegQuality: 65, webpQuality: 70, avifQuality: 60, maxWidth: 1920 },
-  { file: 'adhd2.jpg', jpegQuality: 65, webpQuality: 70, avifQuality: 60, maxWidth: 1920 },
-  { file: 'Provo Utah.jpg', jpegQuality: 80, webpQuality: 80, avifQuality: 75 },
-  { file: 'Rural Sevier County Sunset.jpg', jpegQuality: 80, webpQuality: 80, avifQuality: 75 },
-  { file: 'ptsd.jpg', jpegQuality: 80, webpQuality: 80, avifQuality: 75 },
-  { file: 'telehealth snowy-winter-landscape.jpg', jpegQuality: 80, webpQuality: 80, avifQuality: 75 },
+  // Critical - Hero images (high quality, optimized for web)
+  { file: 'index-hero.jpg', jpegQuality: 80, webpQuality: 85, avifQuality: 75, maxWidth: 1920 },
+  { file: 'adhd2.jpg', jpegQuality: 80, webpQuality: 85, avifQuality: 75, maxWidth: 1920 },
+  { file: 'adhd.jpg', jpegQuality: 80, webpQuality: 85, avifQuality: 75, maxWidth: 1920 },
   
-  // Service images (medium quality)
-  { file: 'anxiety2.jpg', jpegQuality: 85, webpQuality: 85, avifQuality: 80 },
-  { file: 'depression.jpg', jpegQuality: 85, webpQuality: 85, avifQuality: 80 },
-  { file: 'anxiety.jpg', jpegQuality: 85, webpQuality: 85, avifQuality: 80 },
+  // Service page hero images (high quality)
+  { file: 'Provo Utah.jpg', jpegQuality: 82, webpQuality: 85, avifQuality: 75 },
+  { file: 'Rural Sevier County Sunset.jpg', jpegQuality: 82, webpQuality: 85, avifQuality: 75 },
+  { file: 'ptsd.jpg', jpegQuality: 82, webpQuality: 85, avifQuality: 75 },
+  { file: 'telehealth snowy-winter-landscape.jpg', jpegQuality: 82, webpQuality: 85, avifQuality: 75 },
   
-  // Office photos
-  { file: 'Provo Office 1.jpg', jpegQuality: 80, webpQuality: 80, avifQuality: 75 },
-  { file: 'Provo Office 2.jpg', jpegQuality: 80, webpQuality: 80, avifQuality: 75 },
-  { file: 'Provo Office 3.jpg', jpegQuality: 80, webpQuality: 80, avifQuality: 75 },
+  // Service images (high quality for detail)
+  { file: 'anxiety2.jpg', jpegQuality: 85, webpQuality: 88, avifQuality: 80 },
+  { file: 'depression.jpg', jpegQuality: 85, webpQuality: 88, avifQuality: 80 },
+  { file: 'anxiety.jpg', jpegQuality: 85, webpQuality: 88, avifQuality: 80 },
   
-  // Doctor photos
-  { file: 'Dr Todd Allen.jpg', jpegQuality: 80, webpQuality: 80, avifQuality: 75 },
-  { file: 'todd-allen.jpg', jpegQuality: 80, webpQuality: 80, avifQuality: 75 },
+  // Office photos (high quality for professional appearance)
+  { file: 'Provo Office 1.jpg', jpegQuality: 82, webpQuality: 85, avifQuality: 75 },
+  { file: 'Provo Office 2.jpg', jpegQuality: 82, webpQuality: 85, avifQuality: 75 },
+  { file: 'Provo Office 3.jpg', jpegQuality: 82, webpQuality: 85, avifQuality: 75 },
   
-  // Other images
-  { file: 'adhd.jpg', jpegQuality: 80, webpQuality: 80, avifQuality: 75 },
-  { file: 'shutterstock_1853535748.jpg', jpegQuality: 80, webpQuality: 80, avifQuality: 75 },
-  { file: 'shutterstock_2265984319.jpg', jpegQuality: 80, webpQuality: 80, avifQuality: 75 },
-  { file: 'Downtown_Provo.jpg', jpegQuality: 80, webpQuality: 80, avifQuality: 75 },
+  // Doctor photos (high quality for professional appearance)
+  { file: 'Dr Todd Allen.jpg', jpegQuality: 85, webpQuality: 88, avifQuality: 80 },
+  { file: 'todd-allen.jpg', jpegQuality: 85, webpQuality: 88, avifQuality: 80 },
+  { file: 'Dr Todd Allen (2).jpg', jpegQuality: 85, webpQuality: 88, avifQuality: 80 },
+  
+  // Other images (high quality)
+  { file: 'shutterstock_1853535748.jpg', jpegQuality: 82, webpQuality: 85, avifQuality: 75 },
+  { file: 'shutterstock_2265984319.jpg', jpegQuality: 82, webpQuality: 85, avifQuality: 75 },
+  { file: 'Downtown_Provo.jpg', jpegQuality: 82, webpQuality: 85, avifQuality: 75 },
 ];
 
-// PNG images to optimize
+// PNG images to optimize (logos need high quality)
 const pngImages = [
-  { file: 'ap-new-color-logo.png', jpegQuality: 90, webpQuality: 90, avifQuality: 85 },
-  { file: 'AP_logo_color.png', jpegQuality: 90, webpQuality: 90, avifQuality: 85 },
+  { file: 'ap-new-color-logo.png', jpegQuality: 95, webpQuality: 95, avifQuality: 90 },
+  { file: 'AP_logo_color.png', jpegQuality: 95, webpQuality: 95, avifQuality: 90 },
   { file: 'Allen P Logo.jpg', jpegQuality: 90, webpQuality: 90, avifQuality: 85 },
 ];
 
@@ -112,7 +115,7 @@ async function optimizeImage(imageConfig) {
       image = sharp(inputPath);
     }
     
-    // 2. Create WebP version - AGGRESSIVE COMPRESSION
+    // 2. Create WebP version - HIGH QUALITY
     const webpPath = path.join(assetsDir, `${baseName}.webp`);
     let webpImage = sharp(inputPath);
     if (imageConfig.maxWidth && metadata.width > imageConfig.maxWidth) {
@@ -122,13 +125,13 @@ async function optimizeImage(imageConfig) {
       });
     }
     await webpImage
-      .webp({ quality: imageConfig.webpQuality || 70 })
+      .webp({ quality: imageConfig.webpQuality || 85 })
       .toFile(webpPath);
     
     const webpSize = await getFileSize(webpPath);
     console.log(`  ✅ WebP created: ${formatBytes(webpSize)}`);
     
-    // 3. Create AVIF version - AGGRESSIVE COMPRESSION
+    // 3. Create AVIF version - HIGH QUALITY
     const avifPath = path.join(assetsDir, `${baseName}.avif`);
     let avifImage = sharp(inputPath);
     if (imageConfig.maxWidth && metadata.width > imageConfig.maxWidth) {
@@ -138,7 +141,7 @@ async function optimizeImage(imageConfig) {
       });
     }
     await avifImage
-      .avif({ quality: imageConfig.avifQuality || 60 })
+      .avif({ quality: imageConfig.avifQuality || 75 })
       .toFile(avifPath);
     
     const avifSize = await getFileSize(avifPath);
