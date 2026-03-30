@@ -79,7 +79,7 @@ function initializeInsuranceModal() {
                         <ul>
                             <li><strong>Contact your insurance provider</strong> to verify that Allen Psychiatry is in-network for your specific plan</li>
                             <li><strong>Check your benefits</strong> to understand your copay, deductible, and coverage limits</li>
-                            <li><strong>Call our office</strong> at <a href="tel:385-504-1334" onclick="gtag('event', 'phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Insurance Modal', 'value': 1});" style="color: var(--primary); font-weight: 600;">(385) 504-1334</a> to discuss payment options and insurance questions</li>
+                            <li><strong>Call our office</strong> at <a href="tel:385-504-1334" onclick="trackApEvent('phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Insurance Modal', 'value': 1});" style="color: var(--primary); font-weight: 600;">(385) 504-1334</a> to discuss payment options and insurance questions</li>
                         </ul>
                     </div>
                     
@@ -88,8 +88,8 @@ function initializeInsuranceModal() {
                     </div>
                 </div>
                 <div class="insurance-modal-footer">
-                    <button class="btn" onclick="proceedToScheduleFromInsurance(); gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Insurance Modal', 'value': 1});">Continue to Schedule</button>
-                    <a href="tel:385-504-1334" class="btn btn-outline" onclick="gtag('event', 'phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Insurance Modal Footer', 'value': 1});">Call (385) 504-1334</a>
+                    <button class="btn" onclick="proceedToScheduleFromInsurance(); trackApEvent('schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Insurance Modal', 'value': 1});">Continue to Schedule</button>
+                    <a href="tel:385-504-1334" class="btn btn-outline" onclick="trackApEvent('phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Insurance Modal Footer', 'value': 1});">Call (385) 504-1334</a>
                     <button class="btn btn-outline" onclick="hideInsuranceModal()">Close</button>
                 </div>
             </div>

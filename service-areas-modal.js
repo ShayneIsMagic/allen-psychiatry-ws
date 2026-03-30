@@ -115,9 +115,9 @@ function initializeServiceAreasModal() {
                     <p><strong>Looking for psychiatric services in your area?</strong></p>
                     <p>Whether you're in Provo, Orem, Lehi, Spanish Fork, American Fork, Springville, or any rural Utah community, we're here to help. Our Provo office is easily accessible, and we offer telehealth appointments for your convenience.</p>
                     <div class="service-areas-buttons">
-                        <a href="/provo" class="btn btn-secondary" onclick="hideServiceAreasModal(); gtag('event', 'service_area_click', {'event_category': 'Navigation', 'event_label': 'Provo Office - Service Areas Modal', 'value': 1});">Visit Provo Office</a>
-                        <a href="/telehealth" class="btn btn-secondary" onclick="hideServiceAreasModal(); gtag('event', 'service_area_click', {'event_category': 'Navigation', 'event_label': 'Telehealth - Service Areas Modal', 'value': 1});">Learn About Telehealth</a>
-                        <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn" target="_blank" onclick="hideServiceAreasModal(); gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Service Areas Modal', 'value': 1});">Schedule Appointment</a>
+                        <a href="/provo" class="btn btn-secondary" onclick="hideServiceAreasModal(); trackApEvent( 'service_area_click', {'event_category': 'Navigation', 'event_label': 'Provo Office - Service Areas Modal', 'value': 1});">Visit Provo Office</a>
+                        <a href="/telehealth" class="btn btn-secondary" onclick="hideServiceAreasModal(); trackApEvent( 'service_area_click', {'event_category': 'Navigation', 'event_label': 'Telehealth - Service Areas Modal', 'value': 1});">Learn About Telehealth</a>
+                        <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn" target="_blank" onclick="hideServiceAreasModal(); trackApEvent( 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Service Areas Modal', 'value': 1});">Schedule Appointment</a>
                     </div>
                 </div>
             </div>

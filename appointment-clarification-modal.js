@@ -20,8 +20,8 @@ window.hideAppointmentClarification = function() {
 window.proceedToScheduling = function() {
     hideAppointmentClarification();
     // Track the conversion event
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'schedule_appointment_click', {
+    if (typeof trackApEvent === 'function') {
+        trackApEvent('schedule_appointment_click', {
             'event_category': 'Conversion',
             'event_label': 'Schedule Button - Appointment Clarification Modal',
             'value': 1

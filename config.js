@@ -34,6 +34,13 @@ const ANALYTICS_CONFIG = {
     }
 };
 
+if (typeof window !== 'undefined' && ANALYTICS_CONFIG.ga4) {
+    window.AP_GTAG_SEND_TO = [
+        ANALYTICS_CONFIG.ga4.measurementId,
+        ANALYTICS_CONFIG.ga4.googleTagId
+    ].filter(Boolean);
+}
+
 const ALLEN_PSYCHIATRY_CONFIG = {
     // Patient Portal Configuration
     patientPortal: {

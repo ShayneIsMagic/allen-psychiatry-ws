@@ -41,6 +41,7 @@
       gtag('config', 'G-LKYXFGGJSP');
       gtag('config', 'GT-PBGV8JJ9');
     </script>
+    <script src="analytics-events.js"></script>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -82,12 +83,12 @@
         <div class="header-top">
             <div class="container">
                 <div class="contact-info">
-                    <div><a href="tel:+13855041334" onclick="gtag('event', 'phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Header', 'value': 1});" style="color: inherit; text-decoration: none;">(385) 504-1334</a></div>
+                    <div><a href="tel:+13855041334" onclick="trackApEvent('phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Header', 'value': 1});" style="color: inherit; text-decoration: none;">(385) 504-1334</a></div>
                     <div>3311 North University Ave, Ste 275, Provo, UT 84604</div>
                 </div>
                 <div class="header-actions">
                     <a href="https://pp-wfe-100.advancedmd.com/154986/account/logon" target="_blank">Patient Portal</a>
-                    <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn-small" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Ketamine', 'value': 1});">Schedule Now</a>
+                    <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn-small" target="_blank" onclick="trackApEvent('schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Ketamine', 'value': 1});">Schedule Now</a>
                     <a href="#sms-privacy" data-action="show-sms-modal" onclick="showSmsPrivacyModal(); return false;" style="color: white; text-decoration: none; font-size: 0.9em; margin-left: 10px;">📱 SMS Policy</a>
                 </div>
             </div>
@@ -163,7 +164,7 @@
                         <p>Ketamine therapy is a treatment option that has been studied for treatment-resistant depression, PTSD, and anxiety disorders when traditional treatments haven't provided sufficient relief. This page provides brief educational information to help you understand this treatment option.</p>
                     </div>
 
-                    <p>If you're considering ketamine therapy, please <strong>talk to Dr. Allen</strong> to discuss whether this treatment approach might be appropriate for your situation. Call <strong><a href="tel:+13855041334" onclick="gtag('event', 'phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Inline Text', 'value': 1});" style="color: inherit; text-decoration: none;">(385) 504-1334</a></strong> or <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Link - Inline Text', 'value': 1});">schedule an appointment online</a> to speak with Dr. Allen about ketamine treatment.</p>
+                    <p>If you're considering ketamine therapy, please <strong>talk to Dr. Allen</strong> to discuss whether this treatment approach might be appropriate for your situation. Call <strong><a href="tel:+13855041334" onclick="trackApEvent('phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Inline Text', 'value': 1});" style="color: inherit; text-decoration: none;">(385) 504-1334</a></strong> or <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" target="_blank" onclick="trackApEvent('schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Link - Inline Text', 'value': 1});">schedule an appointment online</a> to speak with Dr. Allen about ketamine treatment.</p>
 
                     <h3>What Is Ketamine Therapy?</h3>
                     <p>Ketamine therapy works differently from traditional antidepressants by targeting the brain's glutamate system rather than serotonin or norepinephrine pathways. Research shows varying levels of evidence across conditions:</p>
@@ -202,7 +203,7 @@
                     <p>Common side effects during treatment may include mild dissociation, dizziness, nausea, blurred vision, or temporary changes in blood pressure. These typically subside within hours after treatment.</p>
 
                     <h3>Insurance & Financial Considerations</h3>
-                    <p>Coverage for ketamine therapy varies by insurance plan. Some Utah insurance plans cover ketamine therapy for certain diagnoses, while others may require prior authorization or may not provide coverage. We recommend contacting your insurance provider and calling our office at <a href="tel:385-504-1334" onclick="gtag('event', 'phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Insurance', 'value': 1});" style="color: var(--primary); font-weight: 600;">(385) 504-1334</a> to discuss payment options and insurance questions.</p>
+                    <p>Coverage for ketamine therapy varies by insurance plan. Some Utah insurance plans cover ketamine therapy for certain diagnoses, while others may require prior authorization or may not provide coverage. We recommend contacting your insurance provider and calling our office at <a href="tel:385-504-1334" onclick="trackApEvent('phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Insurance', 'value': 1});" style="color: var(--primary); font-weight: 600;">(385) 504-1334</a> to discuss payment options and insurance questions.</p>
 
                     <h2>Research & Resources</h2>
                     <p>Research evidence varies by condition. <strong>PTSD/Trauma shows the strongest evidence, Depression shows well-established evidence, and Anxiety shows emerging evidence.</strong> Treatment may be particularly successful when multiple conditions are present. Individual results vary, and Dr. Allen will help you understand how this research applies to your specific situation.</p>
@@ -244,8 +245,8 @@
                         <h3 style="color: white; margin-top: 0;">Talk to Dr. Allen if You Are Considering Ketamine Treatment</h3>
                         <p style="color: white; margin-bottom: 20px;">Ketamine therapy is one of many treatment options available. Dr. Allen can help you understand whether ketamine therapy or other approaches might be appropriate for your unique situation. <strong>Schedule a consultation to discuss your options.</strong></p>
                         <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
-                            <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn" style="background: white; color: var(--primary);" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Ketamine CTA', 'value': 1});">Schedule a Consultation</a>
-                            <a href="tel:385-504-1334" class="btn" style="background: transparent; border: 2px solid white; color: white;" onclick="gtag('event', 'phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Ketamine CTA', 'value': 1});">Call (385) 504-1334</a>
+                            <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn" style="background: white; color: var(--primary);" target="_blank" onclick="trackApEvent('schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Ketamine CTA', 'value': 1});">Schedule a Consultation</a>
+                            <a href="tel:385-504-1334" class="btn" style="background: transparent; border: 2px solid white; color: white;" onclick="trackApEvent('phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Ketamine CTA', 'value': 1});">Call (385) 504-1334</a>
                         </div>
                     </div>
 
@@ -269,8 +270,8 @@
                     <h2>Talk to Dr. Allen if You Are Considering Ketamine Treatment</h2>
                     <p>If you're considering ketamine therapy, <strong>talk to Dr. Allen</strong> during a consultation. He can help you understand all available treatment options and determine what might be right for your unique situation. <strong>We are currently accepting new patients.</strong></p>
                     <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin-top: 20px;">
-                        <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Ketamine CTA Section', 'value': 1});">Schedule a Consultation</a>
-                        <a href="tel:385-504-1334" class="btn btn-outline" onclick="gtag('event', 'phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Ketamine CTA Section', 'value': 1});">Call (385) 504-1334</a>
+                        <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn" target="_blank" onclick="trackApEvent('schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Ketamine CTA Section', 'value': 1});">Schedule a Consultation</a>
+                        <a href="tel:385-504-1334" class="btn btn-outline" onclick="trackApEvent('phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Ketamine CTA Section', 'value': 1});">Call (385) 504-1334</a>
                     </div>
                 </div>
             </div>
@@ -308,7 +309,7 @@
                         <li><a href="/#services">Services</a></li>
                         <li><a href="/provo">Provo Offices</a></li>
                         <li><a href="https://pp-wfe-100.advancedmd.com/154986/account/logon" target="_blank">Patient Portal</a></li>
-                        <li><a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Footer', 'value': 1});">Schedule Appointment</a></li>
+                        <li><a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" target="_blank" onclick="trackApEvent('schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Footer', 'value': 1});">Schedule Appointment</a></li>
                     </ul>
                 </div>
 
@@ -322,11 +323,11 @@
                     </p>
                     <p>
                         <strong>Phone:</strong><br>
-                        <a href="tel:+13855041334" onclick="gtag('event', 'phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Footer', 'value': 1});" style="color: inherit; text-decoration: none;">(385) 504-1334</a>
+                        <a href="tel:+13855041334" onclick="trackApEvent('phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Footer', 'value': 1});" style="color: inherit; text-decoration: none;">(385) 504-1334</a>
                     </p>
                     <p>
                         <strong>Email:</strong><br>
-                        <a href="mailto:info@allenpsychiatry.net" onclick="gtag('event', 'email_click', {'event_category': 'Conversion', 'event_label': 'Email - Footer', 'value': 1});" style="color: inherit; text-decoration: none;">info@allenpsychiatry.net</a>
+                        <a href="mailto:info@allenpsychiatry.net" onclick="trackApEvent('email_click', {'event_category': 'Conversion', 'event_label': 'Email - Footer', 'value': 1});" style="color: inherit; text-decoration: none;">info@allenpsychiatry.net</a>
                     </p>
                 </div>
             </div>

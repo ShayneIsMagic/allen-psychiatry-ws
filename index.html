@@ -82,10 +82,9 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       
-      // Set default consent state to 'denied' (GDPR/CCPA compliant)
-      // GA4 will still track all users, but in anonymized mode until consent is granted
+      // Analytics on by default so events and engagement reach GA4; Decline sets both denied
       gtag('consent', 'default', {
-        'analytics_storage': 'denied',
+        'analytics_storage': 'granted',
         'ad_storage': 'denied'
       });
       
@@ -108,7 +107,7 @@
         script.onload = function() {
           // Send page_view with all required parameters
           // This will be tracked (anonymized if no consent, full if consent granted)
-          gtag('event', 'page_view', {
+          trackApEvent('page_view', {
             'page_title': document.title,
             'page_location': window.location.href,
             'page_path': window.location.pathname
@@ -118,7 +117,7 @@
         // Fallback: Send page_view even if script fails to load
         script.onerror = function() {
           // Still try to send page_view via dataLayer
-          gtag('event', 'page_view', {
+          trackApEvent('page_view', {
             'page_title': document.title,
             'page_location': window.location.href,
             'page_path': window.location.pathname
@@ -134,18 +133,22 @@
           if (cookie.indexOf('cookie_consent=') === 0) {
             var consentValue = cookie.substring('cookie_consent='.length);
             if (consentValue === 'accepted') {
-              // User previously accepted - grant consent
               gtag('consent', 'update', {
                 'analytics_storage': 'granted',
                 'ad_storage': 'granted'
               });
+            } else if (consentValue === 'declined') {
+              gtag('consent', 'update', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied'
+              });
             }
-            // If declined, consent remains denied (already set as default)
             break;
           }
         }
       })();
     </script>
+    <script src="analytics-events.js"></script>
     
     <!-- LocalBusiness Schema Markup for Google -->
     <script type="application/ld+json">
@@ -460,12 +463,12 @@
         <div class="header-top">
             <div class="container">
                 <div class="contact-info">
-                    <div><a href="tel:+13855041334" onclick="gtag('event', 'phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Header', 'value': 1});" style="color: inherit; text-decoration: none;">(385) 504-1334</a></div>
+                    <div><a href="tel:+13855041334" onclick="trackApEvent('phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Header', 'value': 1});" style="color: inherit; text-decoration: none;">(385) 504-1334</a></div>
                     <div>3311 North University Ave, Ste 275, Provo, UT 84604</div>
                 </div>
                 <div class="header-actions">
                     <a href="https://pp-wfe-100.advancedmd.com/154986/account/logon" target="_blank">Patient Portal</a>
-                    <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn-small" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Header', 'value': 1});">Schedule Now</a>
+                    <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn-small" target="_blank" onclick="trackApEvent('schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Header', 'value': 1});">Schedule Now</a>
                     <a href="#sms-privacy" data-action="show-sms-modal" onclick="showSmsPrivacyModal(); return false;" style="color: white; text-decoration: none; font-size: 0.9em; margin-left: 10px;">📱 SMS Policy</a>
                 </div>
             </div>
@@ -502,12 +505,12 @@
                     <!-- Mobile Header Info - shown at bottom of hamburger menu -->
                     <div class="mobile-header-info">
                         <div class="contact-info">
-                            <div><a href="tel:+13855041334" onclick="gtag('event', 'phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Mobile Menu', 'value': 1});">(385) 504-1334</a></div>
+                            <div><a href="tel:+13855041334" onclick="trackApEvent('phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Mobile Menu', 'value': 1});">(385) 504-1334</a></div>
                             <div>3311 North University Ave, Ste 275, Provo, UT 84604</div>
                         </div>
                         <div class="header-actions">
                             <a href="https://pp-wfe-100.advancedmd.com/154986/account/logon" target="_blank">Patient Portal</a>
-                            <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Mobile Menu', 'value': 1});">Schedule Now</a>
+                            <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" target="_blank" onclick="trackApEvent('schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Mobile Menu', 'value': 1});">Schedule Now</a>
                             <a href="#sms-privacy" data-action="show-sms-modal" onclick="showSmsPrivacyModal(); return false;">📱 SMS Policy</a>
                         </div>
                     </div>
@@ -532,7 +535,7 @@
                 <h1>Psychiatry &amp; Mental Health Care in Provo, Orem &amp; Rural Utah</h1>
                 <p style="font-size: 1.2em; font-weight: 600; color: var(--primary); margin-bottom: 15px;">✓ Accepting New Patients</p>
                 <p>Compassionate, evidence-based mental health services. Telehealth available for rural communities.</p>
-                <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Hero', 'value': 1});">Schedule an Appointment</a>
+                <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn" target="_blank" onclick="trackApEvent('schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Hero', 'value': 1});">Schedule an Appointment</a>
             </div>
         </div>
     </section>
@@ -640,7 +643,7 @@
             <div class="cta-content">
                 <h2>Ready to Take Your First Step?</h2>
                 <p>Mental health care is a journey, and we're here to walk alongside you every step of the way. Contact us today to schedule a consultation and begin your path to wellness.</p>
-                <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Homepage CTA', 'value': 1});">Schedule an Appointment</a>
+                <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn" target="_blank" onclick="trackApEvent('schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Homepage CTA', 'value': 1});">Schedule an Appointment</a>
             </div>
         </div>
     </section>
@@ -678,7 +681,7 @@
                         <li><a href="/provo">Provo Offices</a></li>
                         <li><a href="/insurance">Insurance Accepted</a></li>
                         <li><a href="https://pp-wfe-100.advancedmd.com/154986/account/logon" target="_blank">Patient Portal</a></li>
-                        <li><a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Footer', 'value': 1});">Schedule Appointment</a></li>
+                        <li><a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" target="_blank" onclick="trackApEvent('schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Footer', 'value': 1});">Schedule Appointment</a></li>
                     </ul>
                 </div>
 
@@ -692,11 +695,11 @@
                     </p>
                     <p>
                         <strong>Phone:</strong><br>
-                        <a href="tel:+13855041334" onclick="gtag('event', 'phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Footer', 'value': 1});" style="color: inherit; text-decoration: none;">(385) 504-1334</a>
+                        <a href="tel:+13855041334" onclick="trackApEvent('phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Footer', 'value': 1});" style="color: inherit; text-decoration: none;">(385) 504-1334</a>
                     </p>
                     <p>
                         <strong>Email:</strong><br>
-                        <a href="mailto:info@allenpsychiatry.net" onclick="if(typeof gtag!=='undefined'){gtag('event','email_click',{'event_category':'Conversion','event_label':'Email - Footer','value':1});}return true;" style="color: inherit; text-decoration: none;">info@allenpsychiatry.net</a>
+                        <a href="mailto:info@allenpsychiatry.net" onclick="if(typeof trackApEvent==='function'){trackApEvent('email_click',{'event_category':'Conversion','event_label':'Email - Footer','value':1});}return true;" style="color: inherit; text-decoration: none;">info@allenpsychiatry.net</a>
                     </p>
                 </div>
             </div>
@@ -781,7 +784,7 @@
                     <ul>
                         <li>Reply "STOP" to any message</li>
                         <li>Call us at (801) 555-0123</li>
-                        <li>Email us at <a href="mailto:info@allenpsychiatry.net" onclick="if(typeof gtag!=='undefined'){gtag('event','email_click',{'event_category':'Conversion','event_label':'Email - Footer Link','value':1});}return true;" style="color: inherit; text-decoration: underline;">info@allenpsychiatry.net</a></li>
+                        <li>Email us at <a href="mailto:info@allenpsychiatry.net" onclick="if(typeof trackApEvent==='function'){trackApEvent('email_click',{'event_category':'Conversion','event_label':'Email - Footer Link','value':1});}return true;" style="color: inherit; text-decoration: underline;">info@allenpsychiatry.net</a></li>
                     </ul>
 
                     <h5>Contact Information</h5>
@@ -790,7 +793,7 @@
                     3311 North University Ave, Ste 275<br>
                     Provo, UT 84604<br>
                     Phone: (801) 555-0123<br>
-                    Email: <a href="mailto:info@allenpsychiatry.net" onclick="if(typeof gtag!=='undefined'){gtag('event','email_click',{'event_category':'Conversion','event_label':'Email - Footer Text','value':1});}return true;" style="color: inherit; text-decoration: underline;">info@allenpsychiatry.net</a></p>
+                    Email: <a href="mailto:info@allenpsychiatry.net" onclick="if(typeof trackApEvent==='function'){trackApEvent('email_click',{'event_category':'Conversion','event_label':'Email - Footer Text','value':1});}return true;" style="color: inherit; text-decoration: underline;">info@allenpsychiatry.net</a></p>
 
                     <p style="margin-top: 20px; padding: 15px; background: #f0f8ff; border-left: 4px solid var(--primary); border-radius: 4px;">
                         <strong>Note:</strong> This policy applies only to SMS communications. For our complete privacy policy regarding medical records and other information, please contact our office.
@@ -865,7 +868,7 @@
         
         // Update Google Consent Mode v2
         function updateConsentMode(granted) {
-            if (typeof gtag !== 'undefined') {
+            if (typeof gtag === 'function') {
                 gtag('consent', 'update', {
                     'analytics_storage': granted ? 'granted' : 'denied',
                     'ad_storage': granted ? 'granted' : 'denied'
@@ -896,8 +899,8 @@
             hideBanner();
             
             // Send consent event to GA4
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'cookie_consent_accepted', {
+            if (typeof trackApEvent === 'function') {
+                trackApEvent('cookie_consent_accepted', {
                     'event_category': 'Consent',
                     'event_label': 'User accepted cookies'
                 });
@@ -911,8 +914,8 @@
             hideBanner();
             
             // Send consent event to GA4 (anonymized)
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'cookie_consent_declined', {
+            if (typeof trackApEvent === 'function') {
+                trackApEvent('cookie_consent_declined', {
                     'event_category': 'Consent',
                     'event_label': 'User declined cookies'
                 });

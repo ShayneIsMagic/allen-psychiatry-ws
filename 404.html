@@ -8,6 +8,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="config.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKYXFGGJSP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LKYXFGGJSP');
+      gtag('config', 'GT-PBGV8JJ9');
+    </script>
+    <script src="analytics-events.js"></script>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/ap-new-color-logo.png">
@@ -25,7 +35,7 @@
                 </div>
                 <div class="header-actions">
                     <a href="https://pp-wfe-100.advancedmd.com/154986/account/logon">Patient Portal</a>
-                    <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn-small" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - 404 Header', 'value': 1});">Schedule Now</a>
+                    <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn-small" target="_blank" onclick="trackApEvent('schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - 404 Header', 'value': 1});">Schedule Now</a>
                 </div>
             </div>
         </div>
@@ -59,7 +69,7 @@
                 <p>We're sorry, but the page you're looking for doesn't exist or has been moved.</p>
                 <div class="cta-buttons">
                     <a href="index" class="btn">Return Home</a>
-                    <a href="tel:+13855041334" class="btn btn-secondary" onclick="gtag('event', 'phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - 404 Page', 'value': 1});">Call Us</a>
+                    <a href="tel:+13855041334" class="btn btn-secondary" onclick="trackApEvent('phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - 404 Page', 'value': 1});">Call Us</a>
                 </div>
             </div>
         </div>

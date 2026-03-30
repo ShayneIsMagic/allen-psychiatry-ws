@@ -68,7 +68,7 @@ function initializeScheduleModal() {
                     <p style="margin-top: 20px; font-weight: 600; color: var(--primary);">We look forward to seeing you!</p>
                 </div>
                 <div class="schedule-modal-footer">
-                    <button class="btn" onclick="proceedToSchedule(); gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Modal', 'value': 1});">Continue to Schedule</button>
+                    <button class="btn" onclick="proceedToSchedule(); trackApEvent('schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Modal', 'value': 1});">Continue to Schedule</button>
                     <button class="btn btn-outline" onclick="hideScheduleModal()">Close</button>
                 </div>
             </div>
@@ -102,35 +102,25 @@ function initializeScheduleModal() {
             // Show the modal
             showScheduleModal();
             
-            // Execute the original gtag tracking if it exists (CSP-safe method, no eval)
-            if (onclickAttr && typeof gtag !== 'undefined') {
+            if (onclickAttr && typeof trackApEvent === 'function') {
                 try {
-                    // Extract gtag parameters safely without eval
-                    // Format: gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': '...', 'value': 1})
-                    const gtagMatch = onclickAttr.match(/gtag\s*\(\s*['"]([^'"]+)['"]\s*,\s*['"]([^'"]+)['"]\s*,\s*({[^}]+})\s*\)/);
-                    if (gtagMatch) {
-                        const eventType = gtagMatch[1]; // 'event'
-                        const eventName = gtagMatch[2]; // 'schedule_appointment_click'
-                        const eventParamsStr = gtagMatch[3]; // '{'event_category': 'Conversion', ...}'
-                        
-                        // Parse the parameters object safely
+                    const teMatch = onclickAttr.match(/trackApEvent\s*\(\s*['"]([^'"]+)['"]\s*,\s*({[^}]+})\s*\)/);
+                    if (teMatch) {
+                        const eventName = teMatch[1];
+                        const eventParamsStr = teMatch[2];
                         let eventParams = {};
-                        // Extract parameters manually to avoid eval/JSON.parse issues
                         const categoryMatch = eventParamsStr.match(/'event_category'\s*:\s*'([^']+)'/);
                         const labelMatch = eventParamsStr.match(/'event_label'\s*:\s*'([^']+)'/);
                         const valueMatch = eventParamsStr.match(/'value'\s*:\s*(\d+)/);
-                        
                         if (categoryMatch) eventParams.event_category = categoryMatch[1];
                         if (labelMatch) eventParams.event_label = labelMatch[1];
                         if (valueMatch) eventParams.value = parseInt(valueMatch[1], 10);
-                        
-                        // Call gtag directly (CSP-safe, no eval)
-                        if (eventType && eventName) {
-                            gtag(eventType, eventName, eventParams);
+                        if (eventName) {
+                            trackApEvent(eventName, eventParams);
                         }
                     }
                 } catch (err) {
-                    // Silently fail gtag execution - don't break the modal
+                    // Silently fail - don't break the modal
                 }
             }
             

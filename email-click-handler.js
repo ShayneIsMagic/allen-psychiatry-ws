@@ -7,10 +7,9 @@
     // Track email clicks seamlessly
     function trackEmailClick(label) {
         // Fire tracking asynchronously - don't block mailto:
-        if (typeof gtag !== 'undefined') {
-            // Use setTimeout to ensure mailto: opens immediately
+        if (typeof trackApEvent === 'function') {
             setTimeout(function() {
-                gtag('event', 'email_click', {
+                trackApEvent('email_click', {
                     'event_category': 'Conversion',
                     'event_label': label || 'Email - Click',
                     'value': 1
