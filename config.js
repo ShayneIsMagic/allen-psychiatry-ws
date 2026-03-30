@@ -6,7 +6,10 @@
 const ANALYTICS_CONFIG = {
     // Google Analytics 4
     ga4: {
-        measurementId: 'G-LKYXFGGJSP', // Current GA4 ID
+        measurementId: 'G-LKYXFGGJSP',
+        // Google tag (gtag) — use with gtag('config', ...) alongside GA4
+        googleTagId: 'GT-PBGV8JJ9',
+        // In GA4 Admin, the property URL contains a357957755 / p492555456; confirm this stream’s Measurement ID matches Admin → Data streams → Web.
         enabled: true
     },
     
