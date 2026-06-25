@@ -1,33 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Online psychiatry throughout Utah. Accepting new patients. Secure video appointments from home. Full psychiatric evaluations, medication management, therapy. Convenient & private." />
-    <meta name="keywords" content="Allen Psychiatry, telepsychiatry Utah, online psychiatrist, telehealth psychiatry Utah, online mental health appointments, virtual psychiatric services, telehealth mental health, remote psychiatric care, online therapy Utah, virtual mental health care, telehealth ADHD treatment, telehealth anxiety treatment, telehealth depression treatment, telehealth PTSD treatment, online psychiatric evaluation, telehealth medication management, mental health counseling online, psychiatric consultation telehealth, mental wellness telehealth, behavioral health telehealth, compassionate mental health care, secure telehealth, convenient mental health care, mental health treatment telehealth, rural mental health Utah">
-    <title>Telehealth Psychiatry Utah | Online Mental Health</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    <meta
+      name="description"
+      content="Online psychiatry throughout Utah. Accepting new patients. Secure video appointments from home. Full psychiatric evaluations, medication management, therapy. Convenient & private."
     />
+    <meta
+      name="keywords"
+      content="Allen Psychiatry, telepsychiatry Utah, online psychiatrist, telehealth psychiatry Utah, online mental health appointments, virtual psychiatric services, telehealth mental health, remote psychiatric care, online therapy Utah, virtual mental health care, telehealth ADHD treatment, telehealth anxiety treatment, telehealth depression treatment, telehealth PTSD treatment, online psychiatric evaluation, telehealth medication management, mental health counseling online, psychiatric consultation telehealth, mental wellness telehealth, behavioral health telehealth, compassionate mental health care, secure telehealth, convenient mental health care, mental health treatment telehealth, rural mental health Utah"
+    />
+    <title>Telehealth Psychiatry Utah | Online Mental Health</title>
+    <link rel="font" href="assets/fonts/Roboto.zip" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="config.js"></script>
-    
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/ap-new-color-logo.png">
-    <link rel="apple-touch-icon" href="assets/ap-new-color-logo.png">
-    <link rel="shortcut icon" href="assets/ap-new-color-logo.png">
-    
+    <link rel="icon" type="image/png" href="assets/ap-new-color-logo.png" />
+    <link rel="apple-touch-icon" href="assets/ap-new-color-logo.png" />
+    <link rel="shortcut icon" href="assets/ap-new-color-logo.png" />
+
     <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKYXFGGJSP"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKYXFGGJSP"></script> -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-LKYXFGGJSP');
+      // window.dataLayer = window.dataLayer || [];
+      // function gtag(){dataLayer.push(arguments);}
+      // gtag('js', new Date());
+      // gtag('config', 'G-LKYXFGGJSP');
     </script>
   </head>
   <body>
@@ -36,13 +36,56 @@
       <div class="header-top">
         <div class="container">
           <div class="contact-info">
-            <div><a href="tel:+13855041334" onclick="gtag('event', 'phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Header', 'value': 1});" style="color: inherit; text-decoration: none;">(385) 504-1334</a></div>
+            <div>
+              <a
+                href="tel:+13855041334"
+                onclick="
+                  gtag('event', 'phone_call_click', {
+                    event_category: 'Conversion',
+                    event_label: 'Phone Call - Header',
+                    value: 1,
+                  })
+                "
+                style="color: inherit; text-decoration: none"
+                >(385) 504-1334</a
+              >
+            </div>
             <div>3311 North University Ave, Ste 275, Provo, UT 84604</div>
           </div>
           <div class="header-actions">
-            <a href="https://pp-wfe-100.advancedmd.com/154986/account/logon" target="_blank">Patient Portal</a>
-            <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn-small" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Telehealth', 'value': 1});">Schedule Now</a>
-            <a href="#sms-privacy" data-action="show-sms-modal" onclick="showSmsPrivacyModal(); return false;" style="color: white; text-decoration: none; font-size: 0.9em; margin-left: 10px;">📱 SMS Policy</a>
+            <a
+              href="https://pp-wfe-100.advancedmd.com/154986/account/logon"
+              target="_blank"
+              >Patient Portal</a
+            >
+            <a
+              href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+              class="btn-small"
+              target="_blank"
+              onclick="
+                gtag('event', 'schedule_appointment_click', {
+                  event_category: 'Conversion',
+                  event_label: 'Schedule Button - Telehealth',
+                  value: 1,
+                })
+              "
+              >Schedule Now</a
+            >
+            <a
+              href="#sms-privacy"
+              data-action="show-sms-modal"
+              onclick="
+                showSmsPrivacyModal();
+                return false;
+              "
+              style="
+                color: white;
+                text-decoration: none;
+                font-size: 0.9em;
+                margin-left: 10px;
+              "
+              >📱 SMS Policy</a
+            >
           </div>
         </div>
       </div>
@@ -51,9 +94,18 @@
           <div class="logo">
             <a href="/">
               <picture>
-                  <source srcset="assets/ap-new-color-logo.avif" type="image/avif">
-                  <source srcset="assets/ap-new-color-logo.webp" type="image/webp">
-                  <img src="assets/ap-new-color-logo.png" alt="Allen Psychiatry logo">
+                <source
+                  srcset="assets/ap-new-color-logo.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="assets/ap-new-color-logo.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="assets/ap-new-color-logo.png"
+                  alt="Allen Psychiatry logo"
+                />
               </picture>
             </a>
           </div>
@@ -61,142 +113,346 @@
             <ul class="nav-items">
               <li><a href="/">Home</a></li>
               <li class="dropdown">
-                  <a href="/#services" aria-haspopup="true" aria-expanded="false">Services</a>
-                  <ul class="dropdown-menu" role="menu">
-                      <li role="menuitem"><a href="/adhd">ADHD Testing & Treatment</a></li>
-                      <li role="menuitem"><a href="/anxiety">Anxiety Treatment</a></li>
-                      <li role="menuitem"><a href="/depression">Depression Treatment</a></li>
-                      <li role="menuitem"><a href="/ptsd">PTSD Treatment</a></li>
-                  </ul>
+                <a href="/#services" aria-haspopup="true" aria-expanded="false"
+                  >Services</a
+                >
+                <ul class="dropdown-menu" role="menu">
+                  <li role="menuitem">
+                    <a href="/adhd">ADHD Testing & Treatment</a>
+                  </li>
+                  <li role="menuitem">
+                    <a href="/anxiety">Anxiety Treatment</a>
+                  </li>
+                  <li role="menuitem">
+                    <a href="/depression">Depression Treatment</a>
+                  </li>
+                  <li role="menuitem"><a href="/ptsd">PTSD Treatment</a></li>
+                </ul>
               </li>
               <li><a href="/provo">Provo Offices</a></li>
               <li><a href="/rural">Rural Services</a></li>
               <li><a href="/about">About Us</a></li>
               <li><a href="/telehealth" class="active">TeleHealth</a></li>
-              <li><a href="https://pp-wfe-100.advancedmd.com/154986/account/logon" target="_blank">Patient Portal</a></li>
+              <li>
+                <a
+                  href="https://pp-wfe-100.advancedmd.com/154986/account/logon"
+                  target="_blank"
+                  >Patient Portal</a
+                >
+              </li>
             </ul>
           </nav>
-          <button class="hamburger-menu" aria-label="Toggle mobile menu" aria-expanded="false" type="button">
-            <i class="fa fa-bars" aria-hidden="true"></i>
+          <button
+            class="hamburger-menu"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+            type="button"
+          >
+            <img src="assets/icons/bars-solid-full.svg" alt="hamburger-menu" />
           </button>
         </div>
       </div>
     </header>
 
     <div class="breadcrumbs">
-        <div class="container">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><span>TeleHealth</span></li>
-            </ul>
-        </div>
+      <div class="container">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><span>TeleHealth</span></li>
+        </ul>
+      </div>
     </div>
 
     <main>
       <section class="service-hero">
         <picture>
-            <source srcset="assets/telehealth%20snowy-winter-landscape.avif" type="image/avif">
-            <source srcset="assets/telehealth%20snowy-winter-landscape.webp" type="image/webp">
-            <img src="assets/telehealth snowy-winter-landscape.jpg" alt="Secure telehealth psychiatry services and online mental health appointments for patients throughout Utah" class="hero-image">
+          <source
+            srcset="assets/telehealth-snowy-winter-landscape.avif"
+            type="image/avif"
+          />
+          <source
+            srcset="assets/telehealth-snowy-winter-landscape.webp"
+            type="image/webp"
+          />
+          <img
+            src="assets/telehealth-snowy-winter-landscape.jpg"
+            alt="Secure telehealth psychiatry services and online mental health appointments for patients throughout Utah"
+            class="hero-image"
+          />
         </picture>
         <div class="container">
           <h1>Telepsychiatry Throughout Utah | Online Psychiatric Care</h1>
-          <p style="font-size: 1.1em; font-weight: 600; color: var(--primary); margin-bottom: 10px;">✓ Accepting New Patients</p>
-          <p>Convenient and confidential online psychiatric care from anywhere in Utah</p>
-          <div class="hero-cta" style="margin-top: 30px;">
-            <a href="#" class="btn" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Telehealth Hero', 'value': 1}); showAppointmentClarification(); return false;">Schedule Appointment</a>
+          <p
+            style="
+              font-size: 1.1em;
+              font-weight: 600;
+              color: var(--primary);
+              margin-bottom: 10px;
+            "
+          >
+            ✓ Accepting New Patients
+          </p>
+          <p>
+            Convenient and confidential online psychiatric care from anywhere in
+            Utah
+          </p>
+          <div class="hero-cta" style="margin-top: 30px">
+            <a
+              href="#"
+              class="btn"
+              onclick="
+                gtag('event', 'schedule_appointment_click', {
+                  event_category: 'Conversion',
+                  event_label: 'Schedule Button - Telehealth Hero',
+                  value: 1,
+                });
+                showAppointmentClarification();
+                return false;
+              "
+              >Schedule Appointment</a
+            >
           </div>
         </div>
       </section>
 
       <section class="page-content">
         <div class="container">
-            <div class="service-content">
-                <div class="clinical-callout">
-                    <h4>Professional TeleHealth Services in Utah</h4>
-                    <p>At Allen Psychiatry, we understand that getting to an in-person appointment isn't always possible or convenient. Whether you're managing a busy farming schedule, caring for family, or simply prefer the privacy of your own home, our TeleHealth services bring expert psychiatric care directly to you.</p>
-                </div>
-
-                <h2>Mental Health Care That Fits Your Life</h2>
-                <p>Our TeleHealth platform provides the same high-quality mental health care you would receive in our Provo office, delivered through secure video technology that respects your schedule and privacy. We recognize the unique challenges faced by rural communities and busy professionals, and our virtual services bridge these barriers effectively.</p>
-
-                <div class="clinical-summary">
-                    <h3>TeleHealth at a Glance</h3>
-                    <ul>
-                        <li><strong>Platform:</strong> Secure, HIPAA-compliant video conferencing technology</li>
-                        <li><strong>Availability:</strong> Same appointment times as in-office visits</li>
-                        <li><strong>Services:</strong> Full range of psychiatric evaluations and treatments</li>
-                        <li><strong>Accessibility:</strong> Works on any device with camera and microphone</li>
-                    </ul>
-                    <div class="citation-note">
-                        <small>*All TeleHealth services meet or exceed in-office care standards</small>
-                    </div>
-                </div>
-
-                <div class="clinical-callout" style="background: var(--clinical-light-blue); border-left: 4px solid var(--primary); padding: 25px; margin: 30px 0; border-radius: var(--border-radius);">
-                    <h4 style="color: var(--primary); margin-top: 0;">TeleHealth Office Hours</h4>
-                    <ul style="margin: 15px 0; padding-left: 20px;">
-                        <li style="margin-bottom: 10px;"><strong>Monday, Wednesday, Thursday, Friday:</strong> 1:00 PM - 5:00 PM (in-person appointments; Telehealth available, but Tuesday is prioritized for Telehealth)</li>
-                        <li style="margin-bottom: 10px;"><strong>Tuesday:</strong> 3:00 PM - 6:00 PM (TeleHealth only)</li>
-                    </ul>
-                    <p style="margin-bottom: 0; font-size: 0.95em; color: var(--mid-gray);">To schedule a TeleHealth appointment, call or text us at <a href="tel:385-504-1334" style="color: var(--primary); font-weight: 600;">385-504-1334</a>.</p>
-                </div>
-
-                <h2>Our TeleHealth Services Include</h2>
-                <p>We offer comprehensive mental health services through our secure TeleHealth platform, ensuring you receive the same level of care as in-person visits.</p>
-                
-                <ul>
-                    <li><strong>Initial Psychiatric Evaluations:</strong> Comprehensive assessments to understand your mental health needs and develop personalized treatment plans</li>
-                    <li><strong>ADHD Assessments:</strong> Thorough evaluation and testing for attention deficit hyperactivity disorder</li>
-                    <li><strong>Medication Management Appointments:</strong> Expert guidance on psychiatric medications, dosage adjustments, and monitoring</li>
-                    <li><strong>Follow-up Consultations:</strong> Regular check-ins to track progress and adjust treatment as needed</li>
-                    <li><strong>Crisis Interventions:</strong> Immediate support for urgent mental health situations</li>
-                    <li><strong>Therapeutic Support Sessions:</strong> Ongoing therapy and counseling services</li>
-                </ul>
-
-                <h2>Getting Started with TeleHealth</h2>
-                <p>Our streamlined process makes it easy to begin your TeleHealth journey with Allen Psychiatry.</p>
-                
-                <ul>
-                    <li><strong>Schedule Your Appointment:</strong> Use our online scheduling system or call our office to book your TeleHealth session</li>
-                    <li><strong>Receive Your Secure Link:</strong> We'll send you a secure, private link via email with simple instructions</li>
-                    <li><strong>Connect and Begin Care:</strong> Click your link at the scheduled time on any device with a camera and microphone</li>
-                    <li><strong>Continue Your Journey:</strong> Follow-ups, medication management, and ongoing support are all available through our platform</li>
-                </ul>
-
-                <div class="clinical-callout">
-                    <h4>Technology Requirements</h4>
-                    <p>Our TeleHealth platform works on computers, tablets, and smartphones. You'll need a stable internet connection, a camera, and a microphone. We'll provide detailed setup instructions before your first appointment.</p>
-                </div>
-
-                <h2>Who Benefits from TeleHealth?</h2>
-                <p>TeleHealth services are ideal for various individuals and situations, providing convenient access to quality mental health care.</p>
-                
-                <ul>
-                    <li><strong>Rural Community Members:</strong> Farmers, ranchers, and families who face long travel distances to access mental health care</li>
-                    <li><strong>Busy Professionals & Parents:</strong> Those with demanding schedules who need flexible appointment options</li>
-                    <li><strong>Individuals Seeking Privacy:</strong> People who prefer the discretion of receiving care in the comfort of their own home</li>
-                    <li><strong>Those Needing Consistent Care:</strong> Patients requiring regular follow-ups without the barrier of travel time and costs</li>
-                    <li><strong>Individuals with Mobility Issues:</strong> Those who have difficulty traveling to in-person appointments</li>
-                    <li><strong>Weather-Dependent Scheduling:</strong> Patients in areas where weather can make travel difficult or dangerous</li>
-                </ul>
-
-                <div class="clinical-callout">
-                    <h4>Privacy and Security</h4>
-                    <p>Your privacy is our priority. Our TeleHealth platform uses enterprise-grade encryption and is fully HIPAA-compliant. All sessions are confidential and secure, meeting the same standards as in-office visits.</p>
-                </div>
+          <div class="service-content">
+            <div class="clinical-callout">
+              <h4>Professional TeleHealth Services in Utah</h4>
+              <p>
+                At Allen Psychiatry, we understand that getting to an in-person
+                appointment isn't always possible or convenient. Whether you're
+                managing a busy farming schedule, caring for family, or simply
+                prefer the privacy of your own home, our TeleHealth services
+                bring expert psychiatric care directly to you.
+              </p>
             </div>
+
+            <h2>Mental Health Care That Fits Your Life</h2>
+            <p>
+              Our TeleHealth platform provides the same high-quality mental
+              health care you would receive in our Provo office, delivered
+              through secure video technology that respects your schedule and
+              privacy. We recognize the unique challenges faced by rural
+              communities and busy professionals, and our virtual services
+              bridge these barriers effectively.
+            </p>
+
+            <div class="clinical-summary">
+              <h3>TeleHealth at a Glance</h3>
+              <ul>
+                <li>
+                  <strong>Platform:</strong> Secure, HIPAA-compliant video
+                  conferencing technology
+                </li>
+                <li>
+                  <strong>Availability:</strong> Same appointment times as
+                  in-office visits
+                </li>
+                <li>
+                  <strong>Services:</strong> Full range of psychiatric
+                  evaluations and treatments
+                </li>
+                <li>
+                  <strong>Accessibility:</strong> Works on any device with
+                  camera and microphone
+                </li>
+              </ul>
+              <div class="citation-note">
+                <small
+                  >*All TeleHealth services meet or exceed in-office care
+                  standards</small
+                >
+              </div>
+            </div>
+
+            <div
+              class="clinical-callout"
+              style="
+                background: var(--clinical-light-blue);
+                border-left: 4px solid var(--primary);
+                padding: 25px;
+                margin: 30px 0;
+                border-radius: var(--border-radius);
+              "
+            >
+              <h4 style="color: var(--primary); margin-top: 0">
+                TeleHealth Office Hours
+              </h4>
+              <ul style="margin: 15px 0; padding-left: 20px">
+                <li style="margin-bottom: 10px">
+                  <strong>Monday, Wednesday, Thursday, Friday:</strong> 1:00 PM
+                  - 5:00 PM (in-person appointments; Telehealth available, but
+                  Tuesday is prioritized for Telehealth)
+                </li>
+                <li style="margin-bottom: 10px">
+                  <strong>Tuesday:</strong> 3:00 PM - 6:00 PM (TeleHealth only)
+                </li>
+              </ul>
+              <p
+                style="
+                  margin-bottom: 0;
+                  font-size: 0.95em;
+                  color: var(--mid-gray);
+                "
+              >
+                To schedule a TeleHealth appointment, call or text us at
+                <a
+                  href="tel:385-504-1334"
+                  style="color: var(--primary); font-weight: 600"
+                  >385-504-1334</a
+                >.
+              </p>
+            </div>
+
+            <h2>Our TeleHealth Services Include</h2>
+            <p>
+              We offer comprehensive mental health services through our secure
+              TeleHealth platform, ensuring you receive the same level of care
+              as in-person visits.
+            </p>
+
+            <ul>
+              <li>
+                <strong>Initial Psychiatric Evaluations:</strong> Comprehensive
+                assessments to understand your mental health needs and develop
+                personalized treatment plans
+              </li>
+              <li>
+                <strong>ADHD Assessments:</strong> Thorough evaluation and
+                testing for attention deficit hyperactivity disorder
+              </li>
+              <li>
+                <strong>Medication Management Appointments:</strong> Expert
+                guidance on psychiatric medications, dosage adjustments, and
+                monitoring
+              </li>
+              <li>
+                <strong>Follow-up Consultations:</strong> Regular check-ins to
+                track progress and adjust treatment as needed
+              </li>
+              <li>
+                <strong>Crisis Interventions:</strong> Immediate support for
+                urgent mental health situations
+              </li>
+              <li>
+                <strong>Therapeutic Support Sessions:</strong> Ongoing therapy
+                and counseling services
+              </li>
+            </ul>
+
+            <h2>Getting Started with TeleHealth</h2>
+            <p>
+              Our streamlined process makes it easy to begin your TeleHealth
+              journey with Allen Psychiatry.
+            </p>
+
+            <ul>
+              <li>
+                <strong>Schedule Your Appointment:</strong> Use our online
+                scheduling system or call our office to book your TeleHealth
+                session
+              </li>
+              <li>
+                <strong>Receive Your Secure Link:</strong> We'll send you a
+                secure, private link via email with simple instructions
+              </li>
+              <li>
+                <strong>Connect and Begin Care:</strong> Click your link at the
+                scheduled time on any device with a camera and microphone
+              </li>
+              <li>
+                <strong>Continue Your Journey:</strong> Follow-ups, medication
+                management, and ongoing support are all available through our
+                platform
+              </li>
+            </ul>
+
+            <div class="clinical-callout">
+              <h4>Technology Requirements</h4>
+              <p>
+                Our TeleHealth platform works on computers, tablets, and
+                smartphones. You'll need a stable internet connection, a camera,
+                and a microphone. We'll provide detailed setup instructions
+                before your first appointment.
+              </p>
+            </div>
+
+            <h2>Who Benefits from TeleHealth?</h2>
+            <p>
+              TeleHealth services are ideal for various individuals and
+              situations, providing convenient access to quality mental health
+              care.
+            </p>
+
+            <ul>
+              <li>
+                <strong>Rural Community Members:</strong> Farmers, ranchers, and
+                families who face long travel distances to access mental health
+                care
+              </li>
+              <li>
+                <strong>Busy Professionals & Parents:</strong> Those with
+                demanding schedules who need flexible appointment options
+              </li>
+              <li>
+                <strong>Individuals Seeking Privacy:</strong> People who prefer
+                the discretion of receiving care in the comfort of their own
+                home
+              </li>
+              <li>
+                <strong>Those Needing Consistent Care:</strong> Patients
+                requiring regular follow-ups without the barrier of travel time
+                and costs
+              </li>
+              <li>
+                <strong>Individuals with Mobility Issues:</strong> Those who
+                have difficulty traveling to in-person appointments
+              </li>
+              <li>
+                <strong>Weather-Dependent Scheduling:</strong> Patients in areas
+                where weather can make travel difficult or dangerous
+              </li>
+            </ul>
+
+            <div class="clinical-callout">
+              <h4>Privacy and Security</h4>
+              <p>
+                Your privacy is our priority. Our TeleHealth platform uses
+                enterprise-grade encryption and is fully HIPAA-compliant. All
+                sessions are confidential and secure, meeting the same standards
+                as in-office visits.
+              </p>
+            </div>
+          </div>
         </div>
-    </section>
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-content">
-          <h2>Ready to Take Your First Step?</h2>
-          <p>If you're ready to begin your journey toward accessible mental health care, Dr. Allen is here to help. Schedule a consultation to learn more about how telehealth services can support you.</p>
-          <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Telehealth', 'value': 1});">Schedule an Appointment</a>
+      </section>
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Ready to Take Your First Step?</h2>
+            <p>
+              If you're ready to begin your journey toward accessible mental
+              health care, Dr. Allen is here to help. Schedule a consultation to
+              learn more about how telehealth services can support you.
+            </p>
+            <a
+              href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+              class="btn"
+              target="_blank"
+              onclick="
+                gtag('event', 'schedule_appointment_click', {
+                  event_category: 'Conversion',
+                  event_label: 'Schedule Button - Telehealth',
+                  value: 1,
+                })
+              "
+              >Schedule an Appointment</a
+            >
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </main>
 
     <!-- Footer -->
@@ -205,8 +461,13 @@
         <div class="footer-grid">
           <div class="footer-col">
             <h3>Allen Psychiatry</h3>
-            <p>Comprehensive psychiatric services in a warm, welcoming environment where patients feel heard and supported.</p>
-            <p style="margin-top: 20px; font-style: italic">Mental Health Matters</p>
+            <p>
+              Comprehensive psychiatric services in a warm, welcoming
+              environment where patients feel heard and supported.
+            </p>
+            <p style="margin-top: 20px; font-style: italic">
+              Mental Health Matters
+            </p>
           </div>
 
           <div class="footer-col">
@@ -228,53 +489,124 @@
               <li><a href="/about">About Us</a></li>
               <li><a href="/#services">Services</a></li>
               <li><a href="/provo">Provo Offices</a></li>
-              <li><a href="https://pp-wfe-100.advancedmd.com/154986/account/logon" target="_blank">Patient Portal</a></li>
-              <li><a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" target="_blank" onclick="gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Footer', 'value': 1});">Schedule Appointment</a></li>
+              <li>
+                <a
+                  href="https://pp-wfe-100.advancedmd.com/154986/account/logon"
+                  target="_blank"
+                  >Patient Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+                  target="_blank"
+                  onclick="
+                    gtag('event', 'schedule_appointment_click', {
+                      event_category: 'Conversion',
+                      event_label: 'Schedule Button - Footer',
+                      value: 1,
+                    })
+                  "
+                  >Schedule Appointment</a
+                >
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              </li>
             </ul>
           </div>
 
           <div class="footer-col footer-contact">
             <h3>Contact Us</h3>
             <p>
-              <strong>Address:</strong><br>
-              3311 North University Ave,<br>
-              Suite 275<br>
+              <strong>Address:</strong><br />
+              3311 North University Ave,<br />
+              Suite 275<br />
               Provo, UT 84604
             </p>
             <p>
-              <strong>Phone:</strong><br>
-              <a href="tel:+13855041334" onclick="gtag('event', 'phone_call_click', {'event_category': 'Conversion', 'event_label': 'Phone Call - Footer', 'value': 1});" style="color: inherit; text-decoration: none;">(385) 504-1334</a>
+              <strong>Phone:</strong><br />
+              <a
+                href="tel:+13855041334"
+                onclick="
+                  gtag('event', 'phone_call_click', {
+                    event_category: 'Conversion',
+                    event_label: 'Phone Call - Footer',
+                    value: 1,
+                  })
+                "
+                style="color: inherit; text-decoration: none"
+                >(385) 504-1334</a
+              >
             </p>
             <p>
-              <strong>Email:</strong><br>
-              <a href="mailto:info@allenpsychiatry.net" onclick="gtag('event', 'email_click', {'event_category': 'Conversion', 'event_label': 'Email - Footer', 'value': 1});" style="color: inherit; text-decoration: none;">info@allenpsychiatry.net</a>
+              <strong>Email:</strong><br />
+              <a
+                href="mailto:info@allenpsychiatry.net"
+                onclick="
+                  gtag('event', 'email_click', {
+                    event_category: 'Conversion',
+                    event_label: 'Email - Footer',
+                    value: 1,
+                  })
+                "
+                style="color: inherit; text-decoration: none"
+                >info@allenpsychiatry.net</a
+              >
             </p>
           </div>
         </div>
 
-                    <div class="footer-bottom">
-                <p>&copy; 2025 Allen Psychiatry. All Rights Reserved.</p>
-                <p style="font-size: 0.85em; font-style: italic; margin-top: 10px; color: #888;"><strong>IMPORTANT!</strong> All information presented in this website is intended for informational purposes only and not for the purpose of rendering medical advice. Statements made on this website have not been evaluated by the Food and Drug Administration. The information contained herein is not intended to diagnose, treat, cure or prevent any disease.</p>
-                <p style="margin-top: 20px; font-size: 1.1em; font-weight: 600;">
-                    <a href="#sms-privacy" style="color: var(--primary); text-decoration: underline; background: #f0f8ff; padding: 8px 12px; border-radius: 4px; display: inline-block;" onclick="showSmsPrivacyModal(); return false;">📱 SMS Privacy Policy</a>
-                </p>
-            </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Allen Psychiatry. All Rights Reserved.</p>
+          <p
+            style="
+              font-size: 0.85em;
+              font-style: italic;
+              margin-top: 10px;
+              color: #888;
+            "
+          >
+            <strong>IMPORTANT!</strong> All information presented in this
+            website is intended for informational purposes only and not for the
+            purpose of rendering medical advice. Statements made on this website
+            have not been evaluated by the Food and Drug Administration. The
+            information contained herein is not intended to diagnose, treat,
+            cure or prevent any disease.
+          </p>
+          <p style="margin-top: 20px; font-size: 1.1em; font-weight: 600">
+            <a
+              href="#sms-privacy"
+              style="
+                color: var(--primary);
+                text-decoration: underline;
+                background: #f0f8ff;
+                padding: 8px 12px;
+                border-radius: 4px;
+                display: inline-block;
+              "
+              onclick="
+                showSmsPrivacyModal();
+                return false;
+              "
+              >📱 SMS Privacy Policy</a
+            >
+          </p>
+        </div>
       </div>
     </footer>
 
     <!-- Back to Top Button -->
     <button id="back-to-top-btn" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
+      <i class="fas fa-chevron-up"></i>
     </button>
 
     <!-- Scripts -->
-        <script src="script.js"></script>
-            <script src="navigation.js"></script>
+    <script src="script.js"></script>
+    <script src="navigation.js"></script>
     <script src="telehealth-modal.js"></script>
     <script src="patient-portal-modal.js"></script>
     <script src="sms-modal-simple.js"></script>
     <script src="appointment-clarification-modal.js"></script>
     <script src="schedule-modal.js?v=20250115" defer></script>
     <script src="insurance-modal.js" defer></script>
-</body>
-</html> 
+  </body>
+</html>
