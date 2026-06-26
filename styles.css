@@ -3149,6 +3149,13 @@ footer::before {
   position: absolute;
   left: 0;
 }
+.insurance-section {
+  content: "✓";
+  color: var(--primary);
+  font-weight: bold;
+  position: relative;
+  left: 0;
+}
 
 /* Responsive adjustments for office info */
 @media (max-width: 768px) {
@@ -3874,9 +3881,9 @@ footer::before {
   margin-bottom: 10px;
 }
 /* Privacy policy page */
-.privacy-policy {
-  text-align: center;
+#privacy-policy {
   margin: auto;
+  padding: 60px;
 }
 
 /* About CTA Section */
