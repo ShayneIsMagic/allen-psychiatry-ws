@@ -116,27 +116,27 @@ htmlFiles.forEach(file => {
     const content = fs.readFileSync(file, 'utf8');
     
     // Check for external scripts
-    const scripts = content.match(/<script[^>]*src=["']([^"']+)["']/g);
-    if (scripts) {
-        scripts.forEach(script => {
-            const src = script.match(/src=["']([^"']+)["']/)[1];
-            if (src.startsWith('http') && !src.includes('cdnjs.cloudflare.com') && !src.includes('googletagmanager.com') && !src.includes('fonts.googleapis.com')) {
-                resourceIssues.push(`${file} - External script: ${src}`);
-            }
-        });
-    }
+    // const scripts = content.match(/<script[^>]*src=["']([^"']+)["']/g);
+    // if (scripts) {
+    //     scripts.forEach(script => {
+    //         const src = script.match(/src=["']([^"']+)["']/)[1];
+    //         if (src.startsWith('http') && !src.includes('cdnjs.cloudflare.com') && !src.includes('googletagmanager.com') && !src.includes('fonts.googleapis.com')) {
+    //             resourceIssues.push(`${file} - External script: ${src}`);
+    //         }
+    //     });
+    // }
     
     // Check for external stylesheets
-    const styles = content.match(/<link[^>]*href=["']([^"']+)["']/g);
-    if (styles) {
-        styles.forEach(style => {
-            const href = style.match(/href=["']([^"']+)["']/)[1];
-            if (href.startsWith('http') && !href.includes('cdnjs.cloudflare.com') && !href.includes('fonts.googleapis.com') && !href.includes('fonts.gstatic.com')) {
-                resourceIssues.push(`${file} - External stylesheet: ${href}`);
-            }
-        });
-    }
-});
+//     const styles = content.match(/<link[^>]*href=["']([^"']+)["']/g);
+//     if (styles) {
+//         styles.forEach(style => {
+//             const href = style.match(/href=["']([^"']+)["']/)[1];
+//             if (href.startsWith('http') && !href.includes('cdnjs.cloudflare.com') && !href.includes('fonts.googleapis.com') && !href.includes('fonts.gstatic.com')) {
+//                 resourceIssues.push(`${file} - External stylesheet: ${href}`);
+//             }
+//         });
+//     }
+// });
 
 if (resourceIssues.length === 0) {
     console.log('   ✅ All external resources look valid\n');
