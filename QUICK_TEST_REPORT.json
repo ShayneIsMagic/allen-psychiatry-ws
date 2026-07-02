@@ -1,0 +1,1713 @@
+{
+  "pages": [
+    {
+      "url": "https://allenpsychiatry.net/",
+      "status": 200,
+      "loadTime": 2454,
+      "consoleErrors": [],
+      "navigationLinks": [
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Now",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "TeleHealth",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Now",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "ADHD Testing & Treatment\n                        C",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment\n                        Evidence",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment\n                        Perso",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment\n                        Specialized",
+          "href": "/ptsd"
+        },
+        {
+          "text": "If you would like to learn more about Ketamine tre",
+          "href": "/ketamine-therapy"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "Ketamine Therapy",
+          "href": "/ketamine-therapy"
+        },
+        {
+          "text": "TeleHealth Services",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Visit Provo Office",
+          "href": "/provo"
+        },
+        {
+          "text": "Learn About Telehealth",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Schedule Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        }
+      ],
+      "brokenLinks": [],
+      "factCheckIssues": [
+        {
+          "type": "missing",
+          "name": "Individual results vary disclaimer"
+        }
+      ],
+      "timestamp": "2026-01-26T17:01:16.763Z"
+    },
+    {
+      "url": "https://allenpsychiatry.net/adhd",
+      "status": 200,
+      "loadTime": 1083,
+      "consoleErrors": [],
+      "navigationLinks": [
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Now",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "TeleHealth",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "book an appointment online",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "TeleHealth Services",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        }
+      ],
+      "brokenLinks": [],
+      "factCheckIssues": [
+        {
+          "type": "missing",
+          "name": "Dr. Allen mention"
+        },
+        {
+          "type": "missing",
+          "name": "Individual results vary disclaimer"
+        }
+      ],
+      "timestamp": "2026-01-26T17:01:21.417Z"
+    },
+    {
+      "url": "https://allenpsychiatry.net/anxiety",
+      "status": 200,
+      "loadTime": 970,
+      "consoleErrors": [],
+      "navigationLinks": [
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Now",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "TeleHealth",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "schedule an appointment online",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "telehealth appointments",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Schedule your appointment today",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "If you would like to learn more about Ketamine tre",
+          "href": "/ketamine-therapy"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "TeleHealth Services",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        }
+      ],
+      "brokenLinks": [],
+      "factCheckIssues": [
+        {
+          "type": "missing",
+          "name": "Individual results vary disclaimer"
+        }
+      ],
+      "timestamp": "2026-01-26T17:01:24.679Z"
+    },
+    {
+      "url": "https://allenpsychiatry.net/depression",
+      "status": 200,
+      "loadTime": 999,
+      "consoleErrors": [],
+      "navigationLinks": [
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Now",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "TeleHealth",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "schedule an appointment online",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "If you would like to learn more about Ketamine tre",
+          "href": "/ketamine-therapy"
+        },
+        {
+          "text": "Learn more about ketamine therapy",
+          "href": "/ketamine-therapy"
+        },
+        {
+          "text": "telehealth appointments",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Schedule your appointment today",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "TeleHealth Services",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        }
+      ],
+      "brokenLinks": [],
+      "factCheckIssues": [
+        {
+          "type": "missing",
+          "name": "Individual results vary disclaimer"
+        }
+      ],
+      "timestamp": "2026-01-26T17:01:27.833Z"
+    },
+    {
+      "url": "https://allenpsychiatry.net/ptsd",
+      "status": 200,
+      "loadTime": 981,
+      "consoleErrors": [],
+      "navigationLinks": [
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Now",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "TeleHealth",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "schedule an appointment online",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "If you would like to learn more about Ketamine tre",
+          "href": "/ketamine-therapy"
+        },
+        {
+          "text": "telehealth appointments",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Schedule your appointment today",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "TeleHealth Services",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        }
+      ],
+      "brokenLinks": [],
+      "factCheckIssues": [
+        {
+          "type": "missing",
+          "name": "Individual results vary disclaimer"
+        }
+      ],
+      "timestamp": "2026-01-26T17:01:31.017Z"
+    },
+    {
+      "url": "https://allenpsychiatry.net/ketamine-therapy",
+      "status": 200,
+      "loadTime": 1032,
+      "consoleErrors": [],
+      "navigationLinks": [
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Now",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "TeleHealth",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "schedule an appointment online",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "University of Florida 2025 Study",
+          "href": "https://news.ufl.edu/2025/07/new-hope-for-ptsd-sufferers/"
+        },
+        {
+          "text": "Nature: Neural changes with ketamine for PTSD (202",
+          "href": "https://www.nature.com/articles/s41386-023-01606-3"
+        },
+        {
+          "text": "PMC: Systematic Review & Meta-Analysis (2024)",
+          "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10979792/"
+        },
+        {
+          "text": "Journal of Clinical Psychiatry: Ketamine + Psychot",
+          "href": "https://www.psychiatrist.com/jcp/ketamine-plus-psychotherapy-for-ptsd/"
+        },
+        {
+          "text": "JAMA Psychiatry: Consensus Statement on Ketamine i",
+          "href": "https://jamanetwork.com/journals/jamapsychiatry/article-abstract/2605202"
+        },
+        {
+          "text": "Yale: RCT for Social Anxiety",
+          "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5729569/"
+        },
+        {
+          "text": "Frontiers: Meta-Analysis on Anxiety (2022)",
+          "href": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2022.1011103/full"
+        },
+        {
+          "text": "PMC: Systematic Review - Refractory Anxiety (2022)",
+          "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9540337/"
+        },
+        {
+          "text": "National Institute of Mental Health: Mental Health",
+          "href": "https://www.nimh.nih.gov/health/topics/mental-health-medications"
+        },
+        {
+          "text": "American Psychiatric Association: What Is Depressi",
+          "href": "https://www.psychiatry.org/patients-families/depression/what-is-depression"
+        },
+        {
+          "text": "Schedule a Consultation",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "ADHD Evaluation & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Telepsychiatry",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Schedule a Consultation",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "Ketamine Therapy",
+          "href": "/ketamine-therapy"
+        },
+        {
+          "text": "TeleHealth Services",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        }
+      ],
+      "brokenLinks": [],
+      "factCheckIssues": [
+        {
+          "type": "problematic",
+          "name": "Ketamine for ADHD (not supported)",
+          "count": 2
+        },
+        {
+          "type": "missing",
+          "name": "Dr. Allen mention"
+        },
+        {
+          "type": "missing",
+          "name": "Consultation mention"
+        }
+      ],
+      "timestamp": "2026-01-26T17:01:34.183Z"
+    },
+    {
+      "url": "https://allenpsychiatry.net/provo",
+      "status": 200,
+      "loadTime": 1200,
+      "consoleErrors": [],
+      "navigationLinks": [
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Now",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "TeleHealth",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule In-Person Visit",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "TeleHealth Services",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        }
+      ],
+      "brokenLinks": [],
+      "factCheckIssues": [
+        {
+          "type": "missing",
+          "name": "Individual results vary disclaimer"
+        }
+      ],
+      "timestamp": "2026-01-26T17:01:37.399Z"
+    },
+    {
+      "url": "https://allenpsychiatry.net/rural",
+      "status": 200,
+      "loadTime": 969,
+      "consoleErrors": [],
+      "navigationLinks": [
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Now",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "TeleHealth",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "TeleHealth Services",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        }
+      ],
+      "brokenLinks": [],
+      "factCheckIssues": [
+        {
+          "type": "missing",
+          "name": "Individual results vary disclaimer"
+        }
+      ],
+      "timestamp": "2026-01-26T17:01:40.779Z"
+    },
+    {
+      "url": "https://allenpsychiatry.net/telehealth",
+      "status": 200,
+      "loadTime": 1033,
+      "consoleErrors": [],
+      "navigationLinks": [
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Now",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "TeleHealth",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "TeleHealth Services",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        }
+      ],
+      "brokenLinks": [],
+      "factCheckIssues": [
+        {
+          "type": "missing",
+          "name": "Individual results vary disclaimer"
+        }
+      ],
+      "timestamp": "2026-01-26T17:01:43.932Z"
+    },
+    {
+      "url": "https://allenpsychiatry.net/about",
+      "status": 200,
+      "loadTime": 1008,
+      "consoleErrors": [],
+      "navigationLinks": [
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Now",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "TeleHealth",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Appointment with Dr. Allen",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "ADHD Testing & Treatment",
+          "href": "/adhd"
+        },
+        {
+          "text": "Anxiety Treatment",
+          "href": "/anxiety"
+        },
+        {
+          "text": "Depression Treatment",
+          "href": "/depression"
+        },
+        {
+          "text": "PTSD Treatment",
+          "href": "/ptsd"
+        },
+        {
+          "text": "TeleHealth Services",
+          "href": "/telehealth"
+        },
+        {
+          "text": "Rural Services",
+          "href": "/rural"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "Services",
+          "href": "/#services"
+        },
+        {
+          "text": "Provo Offices",
+          "href": "/provo"
+        },
+        {
+          "text": "Patient Portal",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/account/logon"
+        },
+        {
+          "text": "Schedule Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        },
+        {
+          "text": "Schedule an Appointment",
+          "href": "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients"
+        }
+      ],
+      "brokenLinks": [],
+      "factCheckIssues": [
+        {
+          "type": "missing",
+          "name": "Dr. Allen mention"
+        },
+        {
+          "type": "missing",
+          "name": "Consultation mention"
+        },
+        {
+          "type": "missing",
+          "name": "Individual results vary disclaimer"
+        }
+      ],
+      "timestamp": "2026-01-26T17:01:47.207Z"
+    }
+  ],
+  "navigation": [
+    {
+      "test": "Mobile hamburger menu",
+      "passed": true
+    },
+    {
+      "test": "Desktop Services dropdown hover",
+      "passed": true
+    }
+  ],
+  "consoleErrors": [],
+  "factCheck": [
+    {
+      "url": "https://allenpsychiatry.net/",
+      "issues": [
+        {
+          "type": "missing",
+          "name": "Individual results vary disclaimer"
+        }
+      ]
+    },
+    {
+      "url": "https://allenpsychiatry.net/adhd",
+      "issues": [
+        {
+          "type": "missing",
+          "name": "Dr. Allen mention"
+        },
+        {
+          "type": "missing",
+          "name": "Individual results vary disclaimer"
+        }
+      ]
+    },
+    {
+      "url": "https://allenpsychiatry.net/anxiety",
+      "issues": [
+        {
+          "type": "missing",
+          "name": "Individual results vary disclaimer"
+        }
+      ]
+    },
+    {
+      "url": "https://allenpsychiatry.net/depression",
+      "issues": [
+        {
+          "type": "missing",
+          "name": "Individual results vary disclaimer"
+        }
+      ]
+    },
+    {
+      "url": "https://allenpsychiatry.net/ptsd",
+      "issues": [
+        {
+          "type": "missing",
+          "name": "Individual results vary disclaimer"
+        }
+      ]
+    },
+    {
+      "url": "https://allenpsychiatry.net/ketamine-therapy",
+      "issues": [
+        {
+          "type": "problematic",
+          "name": "Ketamine for ADHD (not supported)",
+          "count": 2
+        },
+        {
+          "type": "missing",
+          "name": "Dr. Allen mention"
+        },
+        {
+          "type": "missing",
+          "name": "Consultation mention"
+        }
+      ]
+    },
+    {
+      "url": "https://allenpsychiatry.net/provo",
+      "issues": [
+        {
+          "type": "missing",
+          "name": "Individual results vary disclaimer"
+        }
+      ]
+    },
+    {
+      "url": "https://allenpsychiatry.net/rural",
+      "issues": [
+        {
+          "type": "missing",
+          "name": "Individual results vary disclaimer"
+        }
+      ]
+    },
+    {
+      "url": "https://allenpsychiatry.net/telehealth",
+      "issues": [
+        {
+          "type": "missing",
+          "name": "Individual results vary disclaimer"
+        }
+      ]
+    },
+    {
+      "url": "https://allenpsychiatry.net/about",
+      "issues": [
+        {
+          "type": "missing",
+          "name": "Dr. Allen mention"
+        },
+        {
+          "type": "missing",
+          "name": "Consultation mention"
+        },
+        {
+          "type": "missing",
+          "name": "Individual results vary disclaimer"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "totalPages": 10,
+    "workingPages": 10,
+    "brokenPages": 0,
+    "navigationIssues": 0,
+    "consoleErrors": 0,
+    "factCheckIssues": 10
+  }
+}

@@ -1,18 +1,18 @@
 // Simple SMS Privacy Modal functionality
 // This file handles the SMS Privacy Policy modal without inline JavaScript
 
-console.log('SMS Modal script loaded');
+// SMS Modal script loaded
 
 // Global function for showing the modal
 window.showSmsPrivacyModal = function() {
-    console.log('Opening SMS Privacy Modal');
+    // Opening SMS Privacy Modal
     const modal = document.getElementById('smsPrivacyModal');
     if (modal) {
         modal.style.display = 'flex';
         modal.classList.add('show');
-        console.log('Modal displayed');
+        // Modal displayed
     } else {
-        console.error('SMS Privacy Modal not found');
+        // SMS Privacy Modal not found
     }
 };
 
@@ -29,7 +29,7 @@ window.hideSmsPrivacyModal = function() {
 
 // Event listeners for modal functionality
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, setting up SMS modal listeners');
+    // DOM loaded, setting up SMS modal listeners
     
     // Close modal when clicking outside
     window.addEventListener('click', function(event) {
@@ -41,12 +41,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add direct click listeners to SMS Privacy Policy links
     const smsLinks = document.querySelectorAll('a[href="#sms-privacy"]');
-    console.log('Found SMS links:', smsLinks.length);
+    // Found SMS links
     
     smsLinks.forEach(function(link, index) {
-        console.log('Setting up link', index, ':', link);
+        // Setting up link
         link.addEventListener('click', function(event) {
-            console.log('SMS link clicked directly!');
+            // SMS link clicked directly
             event.preventDefault();
             showSmsPrivacyModal();
         });

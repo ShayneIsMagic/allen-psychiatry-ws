@@ -1,0 +1,145 @@
+{
+  "pages": [
+    {
+      "url": "https://allenpsychiatry.net/",
+      "status": "error",
+      "loadTime": 5255,
+      "consoleErrors": [],
+      "navigationLinks": [],
+      "brokenLinks": [],
+      "factCheckIssues": [],
+      "timestamp": "2026-01-26T16:45:42.157Z",
+      "error": "page.waitForTimeout is not a function"
+    },
+    {
+      "url": "https://allenpsychiatry.net/adhd",
+      "status": "error",
+      "loadTime": 1175,
+      "consoleErrors": [],
+      "navigationLinks": [],
+      "brokenLinks": [],
+      "factCheckIssues": [],
+      "timestamp": "2026-01-26T16:45:47.604Z",
+      "error": "page.waitForTimeout is not a function"
+    },
+    {
+      "url": "https://allenpsychiatry.net/anxiety",
+      "status": "error",
+      "loadTime": 1059,
+      "consoleErrors": [],
+      "navigationLinks": [],
+      "brokenLinks": [],
+      "factCheckIssues": [],
+      "timestamp": "2026-01-26T16:45:48.986Z",
+      "error": "page.waitForTimeout is not a function"
+    },
+    {
+      "url": "https://allenpsychiatry.net/depression",
+      "status": "error",
+      "loadTime": 1121,
+      "consoleErrors": [],
+      "navigationLinks": [],
+      "brokenLinks": [],
+      "factCheckIssues": [],
+      "timestamp": "2026-01-26T16:45:50.257Z",
+      "error": "page.waitForTimeout is not a function"
+    },
+    {
+      "url": "https://allenpsychiatry.net/ptsd",
+      "status": "error",
+      "loadTime": 1130,
+      "consoleErrors": [],
+      "navigationLinks": [],
+      "brokenLinks": [],
+      "factCheckIssues": [],
+      "timestamp": "2026-01-26T16:45:51.589Z",
+      "error": "page.waitForTimeout is not a function"
+    },
+    {
+      "url": "https://allenpsychiatry.net/ketamine-therapy",
+      "status": "error",
+      "loadTime": 1045,
+      "consoleErrors": [],
+      "navigationLinks": [],
+      "brokenLinks": [],
+      "factCheckIssues": [],
+      "timestamp": "2026-01-26T16:45:52.933Z",
+      "error": "page.waitForTimeout is not a function"
+    },
+    {
+      "url": "https://allenpsychiatry.net/provo",
+      "status": "error",
+      "loadTime": 1045,
+      "consoleErrors": [],
+      "navigationLinks": [],
+      "brokenLinks": [],
+      "factCheckIssues": [],
+      "timestamp": "2026-01-26T16:45:54.149Z",
+      "error": "page.waitForTimeout is not a function"
+    },
+    {
+      "url": "https://allenpsychiatry.net/rural",
+      "status": "error",
+      "loadTime": 1041,
+      "consoleErrors": [],
+      "navigationLinks": [],
+      "brokenLinks": [],
+      "factCheckIssues": [],
+      "timestamp": "2026-01-26T16:45:55.370Z",
+      "error": "page.waitForTimeout is not a function"
+    },
+    {
+      "url": "https://allenpsychiatry.net/telehealth",
+      "status": "error",
+      "loadTime": 1059,
+      "consoleErrors": [],
+      "navigationLinks": [],
+      "brokenLinks": [],
+      "factCheckIssues": [],
+      "timestamp": "2026-01-26T16:45:56.602Z",
+      "error": "page.waitForTimeout is not a function"
+    },
+    {
+      "url": "https://allenpsychiatry.net/about",
+      "status": "error",
+      "loadTime": 992,
+      "consoleErrors": [],
+      "navigationLinks": [],
+      "brokenLinks": [],
+      "factCheckIssues": [],
+      "timestamp": "2026-01-26T16:45:57.835Z",
+      "error": "page.waitForTimeout is not a function"
+    },
+    {
+      "url": "https://allenpsychiatry.net/404",
+      "status": "error",
+      "loadTime": 1229,
+      "consoleErrors": [],
+      "navigationLinks": [],
+      "brokenLinks": [],
+      "factCheckIssues": [],
+      "timestamp": "2026-01-26T16:45:59.003Z",
+      "error": "page.waitForTimeout is not a function"
+    }
+  ],
+  "navigation": [],
+  "consoleErrors": [],
+  "lighthouse": {
+    "error": "Cannot read properties of undefined (reading 'launch')"
+  },
+  "eslint": {
+    "errors": [],
+    "warnings": []
+  },
+  "factCheck": [],
+  "summary": {
+    "totalPages": 11,
+    "workingPages": 0,
+    "brokenPages": 11,
+    "navigationIssues": 0,
+    "consoleErrors": 0,
+    "lighthouseScore": 0,
+    "eslintErrors": 0,
+    "factCheckIssues": 0
+  }
+}

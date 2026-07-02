@@ -2,6 +2,35 @@
 // This file centralizes all external links and portal configurations
 // Update URLs here to change them across the entire website
 
+// Analytics & Search Tools Configuration
+const ANALYTICS_CONFIG = {
+    // Google Analytics 4
+    ga4: {
+        measurementId: 'G-LKYXFGGJSP', // Current GA4 ID
+        enabled: true
+    },
+    
+    // Google Search Console (verification meta tag)
+    // Add verification code from: https://search.google.com/search-console
+    googleSearchConsole: {
+        verification: '', // Add your verification code here
+        enabled: false // Set to true once verified
+    },
+    
+    // Bing Webmaster Tools (verification meta tag)
+    // Add verification code from: https://www.bing.com/webmasters
+    bingWebmaster: {
+        verification: '', // Add your verification code here
+        enabled: false // Set to true once verified
+    },
+    
+    // Google Business Profile
+    googleBusiness: {
+        profileId: '', // If needed
+        enabled: false
+    }
+};
+
 const ALLEN_PSYCHIATRY_CONFIG = {
     // Patient Portal Configuration
     patientPortal: {

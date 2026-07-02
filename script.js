@@ -1,60 +1,42 @@
-// Mobile menu toggle
-const hamburger = document.querySelector('.hamburger-menu');
-const nav = document.querySelector('.main-nav');
-const navItems = document.querySelector('.nav-items');
-
-hamburger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    hamburger.classList.toggle('active');
-});
-
-// Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
-        nav.classList.remove('active');
-        hamburger.classList.remove('active');
-    }
-});
+// Hamburger menu is handled in navigation.js - removed duplicate handler
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        // Skip if href is just "#" (invalid selector)
+        if (href === '#') {
+            return;
+        }
+        const target = document.querySelector(href);
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
-            // Close mobile menu after clicking a link
-            nav.classList.remove('active');
-            hamburger.classList.remove('active');
+            // Close mobile menu after clicking a link (handled by navigation.js)
+            const nav = document.querySelector('.main-nav');
+            const hamburger = document.querySelector('.hamburger-menu');
+            if (nav) nav.classList.remove('active');
+            if (hamburger) hamburger.classList.remove('active');
         }
     });
 });
 
-// Sticky header
+// Sticky header - hide header content on scroll, keep logo and hamburger
 const header = document.querySelector('header');
-let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
-    if (currentScroll <= 0) {
-        header.classList.remove('scroll-up');
-        return;
+
+    if (currentScroll <= 50) {
+        // At or near top - show full header
+        header.classList.remove('scrolled');
+    } else {
+        // Scrolled down - hide header content
+        header.classList.add('scrolled');
     }
-    
-    if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
-        // Scroll Down
-        header.classList.remove('scroll-up');
-        header.classList.add('scroll-down');
-    } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-        // Scroll Up
-        header.classList.remove('scroll-down');
-        header.classList.add('scroll-up');
-    }
-    lastScroll = currentScroll;
 });
 
 // Form validation
@@ -64,7 +46,7 @@ forms.forEach(form => {
         e.preventDefault();
         const formData = new FormData(form);
         const data = Object.fromEntries(formData);
-        
+
         // Basic validation
         let isValid = true;
         form.querySelectorAll('input[required], textarea[required]').forEach(field => {
@@ -75,10 +57,10 @@ forms.forEach(form => {
                 field.classList.remove('error');
             }
         });
-        
+
         if (isValid) {
             // Here you would typically send the data to your server
-            console.log('Form data:', data);
+            // Form data submitted
             form.reset();
             alert('Thank you for your message. We will get back to you soon!');
         }
@@ -100,54 +82,51 @@ document.head.appendChild(errorStyle);
 // Enhanced JavaScript for Allen Psychiatry Website
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded - checking elements...');
-    
-    // Debug: Check if elements exist
+    // DOM elements check
     const mainNav = document.querySelector('.main-nav');
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const aboutContent = document.querySelector('.about-content');
     const aboutInfo = document.querySelectorAll('.about-info');
-    
-    console.log('Main nav found:', !!mainNav);
-    console.log('Hamburger menu found:', !!hamburgerMenu);
-    console.log('About content found:', !!aboutContent);
-    console.log('About info elements found:', aboutInfo.length);
-    
+
     // Force display of navigation
     if (mainNav) {
         mainNav.style.display = 'block';
         mainNav.style.visibility = 'visible';
         mainNav.style.opacity = '1';
-        console.log('Forced main nav to display');
+        // Force main nav display
     }
-    
+
     // Force display of content
     if (aboutContent) {
         aboutContent.style.display = 'grid';
         aboutContent.style.visibility = 'visible';
         aboutContent.style.opacity = '1';
-        console.log('Forced about content to display');
+        // Force about content display
     }
-    
+
     aboutInfo.forEach((info, index) => {
         info.style.display = 'block';
         info.style.visibility = 'visible';
         info.style.opacity = '1';
-        console.log(`Forced about-info ${index} to display`);
+                // Force about-info display
     });
-    
+
     // Smooth scrolling for all anchor links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
+            // Skip if href is just "#" (invalid selector)
+            if (targetId === '#') {
+                return;
+            }
             const targetElement = document.querySelector(targetId);
-            
+
             if (targetElement) {
                 const headerHeight = document.querySelector('header').offsetHeight;
                 const targetPosition = targetElement.offsetTop - headerHeight;
-                
+
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
@@ -166,16 +145,18 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate-in');
-                console.log('Element animated in:', entry.target.className);
+                // Element animated in
             }
         });
     }, observerOptions);
 
-    // Observe elements for animation
+    // Observe elements for animation - EXCLUDE hero content
     const animateElements = document.querySelectorAll('.about-info, .service-card, .feature, .cta-content, .cta-section');
     animateElements.forEach(el => {
-        observer.observe(el);
-        console.log('Observing element for animation:', el.className);
+        // Skip if element is inside hero section
+        if (!el.closest('.hero') && !el.closest('.service-hero')) {
+            observer.observe(el);
+        }
     });
 
     // Special CTA animation observer
@@ -184,13 +165,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 const ctaSection = entry.target;
                 const ctaContent = ctaSection.querySelector('.cta-content');
-                
+
                 // Add animation classes
                 ctaSection.classList.add('animate-in');
                 if (ctaContent) {
                     ctaContent.classList.add('animate-in');
                 }
-                
+
                 // Force visibility
                 ctaSection.style.opacity = '1';
                 ctaSection.style.visibility = 'visible';
@@ -198,8 +179,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     ctaContent.style.opacity = '1';
                     ctaContent.style.visibility = 'visible';
                 }
-                
-                console.log('CTA section animated in');
+
+                // CTA section animated in
             }
         });
     }, {
@@ -211,75 +192,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const ctaSections = document.querySelectorAll('.cta-section');
     ctaSections.forEach(section => {
         ctaObserver.observe(section);
-        console.log('Observing CTA section for animation');
+        // Observing CTA section for animation
     });
 
-    // Enhanced mobile navigation
-    const navItems = document.querySelectorAll('.nav-items li');
+    // Hamburger menu is handled in navigation.js - removed duplicate handler
 
-    if (hamburgerMenu) {
-        hamburgerMenu.addEventListener('click', function() {
-            mainNav.classList.toggle('active');
-            this.classList.toggle('active');
-            
-            // Animate menu items
-            navItems.forEach((item, index) => {
-                if (mainNav.classList.contains('active')) {
-                    item.style.animationDelay = `${index * 0.1}s`;
-                    item.classList.add('slide-in');
-                } else {
-                    item.classList.remove('slide-in');
-                }
-            });
-        });
-    }
+    // Dropdown functionality removed - now handled by click in navigation.js for hamburger menu
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!hamburgerMenu.contains(e.target) && !mainNav.contains(e.target)) {
-            mainNav.classList.remove('active');
-            hamburgerMenu.classList.remove('active');
-            navItems.forEach(item => item.classList.remove('slide-in'));
-        }
-    });
-
-    // Enhanced dropdown functionality
-    const dropdowns = document.querySelectorAll('.dropdown');
-    dropdowns.forEach(dropdown => {
-        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-        
-        dropdown.addEventListener('mouseenter', function() {
-            this.classList.add('open');
-            if (dropdownMenu) {
-                dropdownMenu.style.display = 'block';
-                setTimeout(() => {
-                    dropdownMenu.style.opacity = '1';
-                    dropdownMenu.style.transform = 'translateY(0)';
-                }, 10);
-            }
-        });
-        
-        dropdown.addEventListener('mouseleave', function() {
-            this.classList.remove('open');
-            if (dropdownMenu) {
-                dropdownMenu.style.opacity = '0';
-                dropdownMenu.style.transform = 'translateY(-10px)';
-                setTimeout(() => {
-                    dropdownMenu.style.display = 'none';
-                }, 300);
-            }
-        });
-    });
-
-    // Parallax effect for service hero sections
-    const serviceHero = document.querySelector('.service-hero');
-    if (serviceHero) {
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            serviceHero.style.transform = `translateY(${rate}px)`;
-        });
-    }
+    // Parallax effect removed - was causing text twitching in hero sections
+    // If parallax is needed in future, apply only to background image, not entire hero element
 
     // Enhanced CTA button interactions
     const ctaButtons = document.querySelectorAll('.cta-section .btn');
@@ -288,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'scale(1.05) translateY(-2px)';
             this.style.boxShadow = '0 8px 25px rgba(51, 150, 188, 0.4)';
         });
-        
+
         button.addEventListener('mouseleave', function() {
             this.style.transform = 'scale(1) translateY(0)';
             this.style.boxShadow = '0 4px 10px rgba(51, 150, 188, 0.2)';
@@ -299,6 +220,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const revealElements = document.querySelectorAll('.about-info, .feature');
     const revealObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
+            // Skip hero content - no animations
+            if (entry.target.closest('.hero') || entry.target.closest('.service-hero')) {
+                return;
+            }
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
@@ -322,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-2px) scale(1.05)';
         });
-        
+
         link.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)';
         });
@@ -330,21 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Service page specific enhancements
     if (document.querySelector('.service-hero')) {
-        // Add floating animation to service hero content (disabled for telehealth page)
-        const heroContent = document.querySelector('.service-hero .container');
-        // Skip animation on telehealth page - check if we're on telehealth page
-        const isTelehealthPage = window.location.pathname.includes('telehealth') || 
-                                 document.querySelector('body').classList.contains('telehealth') ||
-                                 document.querySelector('h1')?.textContent.includes('TeleHealth');
-        
-        if (heroContent && !isTelehealthPage) {
-            setInterval(() => {
-                heroContent.style.transform = 'translateY(-5px)';
-                setTimeout(() => {
-                    heroContent.style.transform = 'translateY(0)';
-                }, 1000);
-            }, 3000);
-        }
+        // Floating animation removed - was causing text twitching on all pages
 
         // Enhanced list item animations
         const listItems = document.querySelectorAll('.about-info ul li');
@@ -352,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
             item.style.opacity = '0';
             item.style.transform = 'translateX(-20px)';
             item.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
-            
+
             const itemObserver = new IntersectionObserver(function(entries) {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -361,7 +272,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
             }, { threshold: 0.5 });
-            
+
             itemObserver.observe(item);
         });
     }
@@ -391,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function() {
         input.addEventListener('focus', function() {
             this.parentElement.classList.add('focused');
         });
-        
+
         input.addEventListener('blur', function() {
             if (!this.value) {
                 this.parentElement.classList.remove('focused');
@@ -424,17 +335,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Focus management for mobile menu
-    if (hamburgerMenu) {
-        hamburgerMenu.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                this.click();
-            }
-        });
-    }
+    // Focus management for mobile menu - handled in navigation.js
 
-    console.log('Allen Psychiatry enhanced JavaScript loaded successfully');
+    // Service Area Toggle - REMOVED: Now handled by service-areas-modal.js
+    // The button now opens a modal instead of toggling inline content
+
+    // Allen Psychiatry enhanced JavaScript loaded successfully
 });
 
 // Additional CSS animations for enhanced interactions
@@ -480,4 +386,4 @@ style.textContent = `
         transition: transform 0.2s ease;
     }
 `;
-document.head.appendChild(style); 
+document.head.appendChild(style);
