@@ -41,10 +41,13 @@ function initializeScheduleModal() {
         <div class="schedule-modal" id="scheduleModal" style="display: none !important; visibility: hidden !important; opacity: 0 !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 0 !important; height: 0 !important; overflow: hidden !important; pointer-events: none !important; z-index: 2000 !important;">
             <div class="schedule-modal-content">
                 <button class="modal-close-btn" onclick="hideScheduleModal()" aria-label="Close modal">&times;</button>
-                <h3>Visit Allen Psychiatry in Provo</h3>
+                <h3>Provo Office</h3>
                 <div class="schedule-modal-body">
-                    <p>We're excited to welcome you to our Provo office at Physicians Plaza (next to Utah Valley Hospital).</p>
-                    <p><strong>1055 North 300 West, Suite 308, Provo, Utah 84604</strong></p>
+                    <p>We're excited to welcome you to our Provo office for in-person psychiatric care.</p>
+                    <p><strong>Physicians Plaza</strong><br>
+                    1055 North 300 West, Suite 308<br>
+                    Provo, Utah 84604<br>
+                    (next to Utah Valley Hospital)</p>
                     <div class="schedule-hours">
                         <p><strong>Office Hours:</strong></p>
                         <ul>
