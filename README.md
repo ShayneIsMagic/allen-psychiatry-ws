@@ -104,4 +104,4 @@ Active documentation is in `docs/active/`:
 
 For any questions or support, please contact:
 - Phone: (385) 504-1334
-- Address: 3311 North University Ave, Ste 275, Provo, UT 84604
+- Address: Physicians Plaza, 1055 North 300 West, Suite 308, Provo, Utah 84604 (next to Utah Valley Hospital)

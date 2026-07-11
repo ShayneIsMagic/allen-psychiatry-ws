@@ -41,16 +41,10 @@ function initializeScheduleModal() {
         <div class="schedule-modal" id="scheduleModal" style="display: none !important; visibility: hidden !important; opacity: 0 !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 0 !important; height: 0 !important; overflow: hidden !important; pointer-events: none !important; z-index: 2000 !important;">
             <div class="schedule-modal-content">
                 <button class="modal-close-btn" onclick="hideScheduleModal()" aria-label="Close modal">&times;</button>
-                <h3>Allen Psychiatry Opens Second Provo Location!</h3>
+                <h3>Visit Allen Psychiatry in Provo</h3>
                 <div class="schedule-modal-body">
-                    <p>We're excited to announce that Allen Psychiatry has opened an additional location to better serve our patients.</p>
-                    <p><strong>Dr. Allen is now seeing patients at two convenient Provo locations:</strong></p>
-                    <ul class="schedule-locations">
-                        <li><strong>Physicians Plaza</strong> (next to Utah Valley Hospital)<br>
-                        1055 North 300 West, Suite 308, Provo, Utah 84604</li>
-                        <li><strong>Jamestown Square</strong><br>
-                        3311 N University Ave, Suite 275, Provo, Utah 84604</li>
-                    </ul>
+                    <p>We're excited to welcome you to our Provo office at Physicians Plaza (next to Utah Valley Hospital).</p>
+                    <p><strong>1055 North 300 West, Suite 308, Provo, Utah 84604</strong></p>
                     <div class="schedule-hours">
                         <p><strong>Office Hours:</strong></p>
                         <ul>
@@ -58,7 +52,7 @@ function initializeScheduleModal() {
                             <li>Tuesday – 3:00 PM to 6:00 PM (TeleHealth only)</li>
                         </ul>
                     </div>
-                    <p>To schedule an appointment at your preferred location, call or text us at <a href="tel:385-504-1334" style="color: var(--primary); font-weight: 600;">385-504-1334</a>.</p>
+                    <p>To schedule an appointment, call or text us at <a href="tel:385-504-1334" style="color: var(--primary); font-weight: 600;">385-504-1334</a>.</p>
                     <p>Visit us online at <a href="https://allenpsychiatry.net" style="color: var(--primary); font-weight: 600;">allenpsychiatry.net</a></p>
                     <div style="margin-top: 20px; padding: 15px; background: #f0f8ff; border-radius: 8px; border-left: 4px solid var(--primary);">
                         <p style="margin: 0 0 10px 0; font-weight: 600; color: var(--primary);">Insurance Information</p>

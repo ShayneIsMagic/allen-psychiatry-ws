@@ -94,7 +94,7 @@ $(date)
 ## Contact Information
 - Phone: (385) 504-1334
 - Email: info@allenpsychiatry.net
-- Address: 3311 North University Ave, Ste 275, Provo, UT 84604
+- Address: Physicians Plaza, 1055 North 300 West, Suite 308, Provo, Utah 84604 (next to Utah Valley Hospital)
 EOF
 
 # Create file list

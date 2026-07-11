@@ -53,7 +53,7 @@ const ALLEN_PSYCHIATRY_CONFIG = {
     contact: {
         phone: "(385) 504-1334",
         email: "info@allenpsychiatry.net",
-        address: "3311 North University Ave, Ste 275, Provo, UT 84604"
+        address: "Physicians Plaza, 1055 North 300 West, Suite 308, Provo, Utah 84604 (next to Utah Valley Hospital)"
     },
     
     // TeleHealth Configuration (for future expansion)
