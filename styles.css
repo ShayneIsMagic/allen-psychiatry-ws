@@ -2262,6 +2262,8 @@ footer {
 }
 
 footer::before {
+  pointer-events: none;
+  touch-action: none;
   content: "";
   position: absolute;
   top: 0;
