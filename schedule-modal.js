@@ -1,43 +1,48 @@
 // Schedule Appointment Modal Functionality
 
 // Global function to show schedule modal
-window.showScheduleModal = function() {
-    const modal = document.getElementById('scheduleModal');
-    if (modal) {
-        modal.classList.add('show');
-        modal.style.cssText = 'display: flex !important; visibility: visible !important; opacity: 1 !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; overflow: auto !important; pointer-events: auto !important; z-index: 2000 !important;';
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
-    }
+window.showScheduleModal = function () {
+  const modal = document.getElementById("scheduleModal");
+  if (modal) {
+    modal.classList.add("show");
+    modal.style.cssText =
+      "display: flex !important; visibility: visible !important; opacity: 1 !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; overflow: auto !important; pointer-events: auto !important; z-index: 2000 !important;";
+    document.body.style.overflow = "hidden"; // Prevent background scrolling
+  }
 };
 
 // Global function to hide schedule modal
-window.hideScheduleModal = function() {
-    const modal = document.getElementById('scheduleModal');
-    if (modal) {
-        modal.classList.remove('show');
-        modal.style.cssText = 'display: none !important; visibility: hidden !important; opacity: 0 !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 0 !important; height: 0 !important; overflow: hidden !important; pointer-events: none !important; z-index: 2000 !important;';
-        document.body.style.overflow = ''; // Restore scrolling
-    }
+window.hideScheduleModal = function () {
+  const modal = document.getElementById("scheduleModal");
+  if (modal) {
+    modal.classList.remove("show");
+    modal.style.cssText =
+      "display: none !important; visibility: hidden !important; opacity: 0 !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 0 !important; height: 0 !important; overflow: hidden !important; pointer-events: none !important; z-index: 2000 !important;";
+    document.body.style.overflow = ""; // Restore scrolling
+  }
 };
 
 // Function to proceed to scheduling (after showing modal)
-window.proceedToSchedule = function() {
-    hideScheduleModal();
-    // Small delay to allow modal to close smoothly
-    setTimeout(() => {
-        window.open('https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients', '_blank');
-    }, 300);
+window.proceedToSchedule = function () {
+  hideScheduleModal();
+  // Small delay to allow modal to close smoothly
+  setTimeout(() => {
+    window.open(
+      "https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients",
+      "_blank"
+    );
+  }, 300);
 };
 
 // Initialize modal when DOM is ready
 function initializeScheduleModal() {
-    // Check if modal already exists
-    if (document.getElementById('scheduleModal')) {
-        return;
-    }
-    
-    // Create modal HTML with inline styles to ensure it's hidden
-    const modalHTML = `
+  // Check if modal already exists
+  if (document.getElementById("scheduleModal")) {
+    return;
+  }
+
+  // Create modal HTML with inline styles to ensure it's hidden
+  const modalHTML = `
         <div class="schedule-modal" id="scheduleModal" style="display: none !important; visibility: hidden !important; opacity: 0 !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 0 !important; height: 0 !important; overflow: hidden !important; pointer-events: none !important; z-index: 2000 !important;">
             <div class="schedule-modal-content">
                 <button class="modal-close-btn" onclick="hideScheduleModal()" aria-label="Close modal">&times;</button>
@@ -65,116 +70,89 @@ function initializeScheduleModal() {
                     <p style="margin-top: 20px; font-weight: 600; color: var(--primary);">We look forward to seeing you!</p>
                 </div>
                 <div class="schedule-modal-footer">
-                    <button class="btn" onclick="proceedToSchedule(); gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Modal', 'value': 1});">Continue to Schedule</button>
+                    <button class="btn" onclick="proceedToSchedule();">Continue to Schedule</button>
                     <button class="btn btn-outline" onclick="hideScheduleModal()">Close</button>
                 </div>
             </div>
         </div>
     `;
-    
-    // Add modal to page (at end of body, standard for modals)
-    document.body.insertAdjacentHTML('beforeend', modalHTML);
-    
-    // Double-check it's hidden (redundant but ensures it)
-    const modal = document.getElementById('scheduleModal');
-    if (modal) {
-        modal.style.cssText = 'display: none !important; visibility: hidden !important; opacity: 0 !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 0 !important; height: 0 !important; overflow: hidden !important; pointer-events: none !important; z-index: 2000 !important;';
-    }
-    
-    // Use event delegation on document to catch ALL schedule link clicks
-    // This works even if links are added dynamically
-    document.addEventListener('click', function(e) {
-        const link = e.target.closest('a[href*="onlinescheduling"]');
-        if (!link) return;
-        
-        // Check if this link should show the modal
-        const onclickAttr = link.getAttribute('onclick');
-        const shouldShowModal = onclickAttr && onclickAttr.includes('schedule_appointment_click');
-        
-        if (shouldShowModal) {
-            e.preventDefault();
-            e.stopPropagation();
-            e.stopImmediatePropagation();
-            
-            // Show the modal
-            showScheduleModal();
-            
-            // Execute the original gtag tracking if it exists (CSP-safe method, no eval)
-            if (onclickAttr && typeof gtag !== 'undefined') {
-                try {
-                    // Extract gtag parameters safely without eval
-                    // Format: gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': '...', 'value': 1})
-                    const gtagMatch = onclickAttr.match(/gtag\s*\(\s*['"]([^'"]+)['"]\s*,\s*['"]([^'"]+)['"]\s*,\s*({[^}]+})\s*\)/);
-                    if (gtagMatch) {
-                        const eventType = gtagMatch[1]; // 'event'
-                        const eventName = gtagMatch[2]; // 'schedule_appointment_click'
-                        const eventParamsStr = gtagMatch[3]; // '{'event_category': 'Conversion', ...}'
-                        
-                        // Parse the parameters object safely
-                        let eventParams = {};
-                        // Extract parameters manually to avoid eval/JSON.parse issues
-                        const categoryMatch = eventParamsStr.match(/'event_category'\s*:\s*'([^']+)'/);
-                        const labelMatch = eventParamsStr.match(/'event_label'\s*:\s*'([^']+)'/);
-                        const valueMatch = eventParamsStr.match(/'value'\s*:\s*(\d+)/);
-                        
-                        if (categoryMatch) eventParams.event_category = categoryMatch[1];
-                        if (labelMatch) eventParams.event_label = labelMatch[1];
-                        if (valueMatch) eventParams.value = parseInt(valueMatch[1], 10);
-                        
-                        // Call gtag directly (CSP-safe, no eval)
-                        if (eventType && eventName) {
-                            gtag(eventType, eventName, eventParams);
-                        }
-                    }
-                } catch (err) {
-                    // Silently fail gtag execution - don't break the modal
-                }
-            }
-            
-            return false;
-        }
-    }, true); // Use capture phase to catch before other handlers
-    
-    // Close modal when clicking outside (reuse modal variable from above)
-    if (modal) {
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                hideScheduleModal();
-            }
-        });
-    }
-    
-    // Add escape key functionality
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            hideScheduleModal();
-        }
+
+  // Add modal to page (at end of body, standard for modals)
+  document.body.insertAdjacentHTML("beforeend", modalHTML);
+
+  // Double-check it's hidden (redundant but ensures it)
+  const modal = document.getElementById("scheduleModal");
+  if (modal) {
+    modal.style.cssText =
+      "display: none !important; visibility: hidden !important; opacity: 0 !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 0 !important; height: 0 !important; overflow: hidden !important; pointer-events: none !important; z-index: 2000 !important;";
+  }
+
+  // Use event delegation on document to catch ALL schedule link clicks
+  // This works even if links are added dynamically
+  document.addEventListener(
+    "click",
+    function (e) {
+      const link = e.target.closest('a[href*="onlinescheduling"]');
+      if (!link) return;
+
+      // Check if this link should show the modal
+      const onclickAttr = link.getAttribute("onclick");
+      const shouldShowModal =
+        onclickAttr && onclickAttr.includes("schedule_appointment_click");
+
+      if (shouldShowModal) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+
+        // Show the modal
+        showScheduleModal();
+
+        return false;
+      }
+    },
+    true
+  ); // Use capture phase to catch before other handlers
+
+  // Close modal when clicking outside (reuse modal variable from above)
+  if (modal) {
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        hideScheduleModal();
+      }
     });
+  }
+
+  // Add escape key functionality
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      hideScheduleModal();
+    }
+  });
 }
 
 // Wait for full page load to ensure all scripts have run
 function waitForPageLoad() {
-    if (document.readyState === 'complete') {
-        // Use setTimeout to ensure this runs after all other scripts
-        setTimeout(initializeScheduleModal, 100);
-    } else {
-        window.addEventListener('load', function() {
-            setTimeout(initializeScheduleModal, 100);
-        });
-    }
+  if (document.readyState === "complete") {
+    // Use setTimeout to ensure this runs after all other scripts
+    setTimeout(initializeScheduleModal, 100);
+  } else {
+    window.addEventListener("load", function () {
+      setTimeout(initializeScheduleModal, 100);
+    });
+  }
 }
 
 // Start waiting for page load
-if (document.readyState === 'loading') {
-    window.addEventListener('load', function() {
-        setTimeout(initializeScheduleModal, 100);
-    });
-} else if (document.readyState === 'interactive') {
-    window.addEventListener('load', function() {
-        setTimeout(initializeScheduleModal, 100);
-    });
-} else {
-    // Already loaded
+if (document.readyState === "loading") {
+  window.addEventListener("load", function () {
     setTimeout(initializeScheduleModal, 100);
+  });
+} else if (document.readyState === "interactive") {
+  window.addEventListener("load", function () {
+    setTimeout(initializeScheduleModal, 100);
+  });
+} else {
+  // Already loaded
+  setTimeout(initializeScheduleModal, 100);
 }
-
