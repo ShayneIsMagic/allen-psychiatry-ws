@@ -140,7 +140,7 @@ a:hover {
 
 .btn-outline {
   background: transparent;
-  color: var(--primary);
+  color: var(--light);
   border: 2px solid var(--primary);
   box-shadow: none;
 }
@@ -4114,6 +4114,12 @@ footer::before {
   color: var(--mid-gray);
   font-style: italic;
   font-size: 0.9rem;
+}
+
+.fa-chevron-up {
+  width: 30px;
+  height: 30px;
+  filter: invert();
 }
 
 /* Responsive fixes for clinical callout headings */
