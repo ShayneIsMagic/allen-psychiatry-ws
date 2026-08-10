@@ -3392,6 +3392,9 @@ footer::before {
 
   /* Touch-friendly buttons on mobile */
   .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 48px !important; /* Larger touch target on mobile */
     padding: 14px 28px !important;
     font-size: 1rem !important;
@@ -4120,6 +4123,10 @@ footer::before {
   width: 30px;
   height: 30px;
   filter: invert();
+}
+
+.pb-16 {
+  padding-bottom: 16px;
 }
 
 /* Responsive fixes for clinical callout headings */
