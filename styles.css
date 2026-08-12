@@ -140,7 +140,7 @@ a:hover {
 
 .btn-outline {
   background: transparent;
-  color: var(--primary);
+  color: var(--light);
   border: 2px solid var(--primary);
   box-shadow: none;
 }
@@ -2262,6 +2262,8 @@ footer {
 }
 
 footer::before {
+  pointer-events: none;
+  touch-action: none;
   content: "";
   position: absolute;
   top: 0;
@@ -3390,6 +3392,9 @@ footer::before {
 
   /* Touch-friendly buttons on mobile */
   .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 48px !important; /* Larger touch target on mobile */
     padding: 14px 28px !important;
     font-size: 1rem !important;
@@ -4112,6 +4117,16 @@ footer::before {
   color: var(--mid-gray);
   font-style: italic;
   font-size: 0.9rem;
+}
+
+.fa-chevron-up {
+  width: 30px;
+  height: 30px;
+  filter: invert();
+}
+
+.pb-16 {
+  padding-bottom: 16px;
 }
 
 /* Responsive fixes for clinical callout headings */
