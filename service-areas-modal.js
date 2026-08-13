@@ -1,34 +1,34 @@
 // Service Areas Modal
 // Displays service areas with highlighting for in-person (Provo) vs telehealth
 
-window.showServiceAreasModal = function() {
-    const modal = document.getElementById('serviceAreasModal');
-    if (modal) {
-        modal.classList.add('show');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
-    }
+window.showServiceAreasModal = function () {
+  const modal = document.getElementById("serviceAreasModal");
+  if (modal) {
+    modal.classList.add("show");
+    document.body.style.overflow = "hidden"; // Prevent background scrolling
+  }
 };
 
-window.hideServiceAreasModal = function() {
-    const modal = document.getElementById('serviceAreasModal');
-    if (modal) {
-        modal.classList.remove('show');
-        document.body.style.overflow = ''; // Restore scrolling
-    }
+window.hideServiceAreasModal = function () {
+  const modal = document.getElementById("serviceAreasModal");
+  if (modal) {
+    modal.classList.remove("show");
+    document.body.style.overflow = ""; // Restore scrolling
+  }
 };
 
 // Initialize modal when DOM is ready
 function initializeServiceAreasModal() {
-    // Check if modal already exists
-    if (document.getElementById('serviceAreasModal')) {
-        return;
-    }
+  // Check if modal already exists
+  if (document.getElementById("serviceAreasModal")) {
+    return;
+  }
 
-    // Create modal structure
-    const modal = document.createElement('div');
-    modal.id = 'serviceAreasModal';
-    modal.className = 'service-areas-modal';
-    modal.innerHTML = `
+  // Create modal structure
+  const modal = document.createElement("div");
+  modal.id = "serviceAreasModal";
+  modal.className = "service-areas-modal";
+  modal.innerHTML = `
         <div class="service-areas-modal-content">
             <button class="modal-close-btn" onclick="hideServiceAreasModal();" aria-label="Close modal">
                 <i class="fa fa-times" aria-hidden="true"></i>
@@ -115,35 +115,34 @@ function initializeServiceAreasModal() {
                     <p><strong>Looking for psychiatric services in your area?</strong></p>
                     <p>Whether you're in Provo, Orem, Lehi, Spanish Fork, American Fork, Springville, or any rural Utah community, we're here to help. Our Provo office is easily accessible, and we offer telehealth appointments for your convenience.</p>
                     <div class="service-areas-buttons">
-                        <a href="/provo" class="btn btn-secondary" onclick="hideServiceAreasModal(); gtag('event', 'service_area_click', {'event_category': 'Navigation', 'event_label': 'Provo Office - Service Areas Modal', 'value': 1});">Visit Provo Office</a>
-                        <a href="/telehealth" class="btn btn-secondary" onclick="hideServiceAreasModal(); gtag('event', 'service_area_click', {'event_category': 'Navigation', 'event_label': 'Telehealth - Service Areas Modal', 'value': 1});">Learn About Telehealth</a>
-                        <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn" target="_blank" onclick="hideServiceAreasModal(); gtag('event', 'schedule_appointment_click', {'event_category': 'Conversion', 'event_label': 'Schedule Button - Service Areas Modal', 'value': 1});">Schedule Appointment</a>
+                        <a href="/provo" class="btn btn-secondary" onclick="hideServiceAreasModal();">Visit Provo Office</a>
+                        <a href="/telehealth" class="btn btn-secondary" onclick="hideServiceAreasModal();">Learn About Telehealth</a>
+                        <a href="https://pp-wfe-100.advancedmd.com/154986/onlinescheduling/v2/patients" class="btn" target="_blank" onclick="hideServiceAreasModal();">Schedule Appointment</a>
                     </div>
                 </div>
             </div>
         </div>
     `;
-    document.body.appendChild(modal);
+  document.body.appendChild(modal);
 
-    // Close modal when clicking outside
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            hideServiceAreasModal();
-        }
-    });
+  // Close modal when clicking outside
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      hideServiceAreasModal();
+    }
+  });
 
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.classList.contains('show')) {
-            hideServiceAreasModal();
-        }
-    });
+  // Close modal with Escape key
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && modal.classList.contains("show")) {
+      hideServiceAreasModal();
+    }
+  });
 }
 
 // Initialize when DOM is ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeServiceAreasModal);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initializeServiceAreasModal);
 } else {
-    initializeServiceAreasModal();
+  initializeServiceAreasModal();
 }
-
