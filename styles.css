@@ -3064,6 +3064,155 @@ footer::before {
   font-style: italic;
   color: var(--mid-gray);
   margin-top: 15px;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.hours-regular {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin: 0 0 8px;
+  padding-bottom: 0;
+  border-bottom: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--clinical-text);
+}
+
+.hours-regular span {
+  color: var(--primary);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.hours-closed span {
+  color: #5c6770;
+  font-weight: 600;
+}
+
+.hours-divider {
+  border: 0;
+  border-top: 1px solid #e4e7eb;
+  margin: 16px 0 18px;
+}
+
+.holiday-hours-heading {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0 0 12px;
+}
+
+.holiday-hours {
+  display: block;
+}
+
+.holiday-column {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px 18px 10px;
+  border-top: 3px solid #c5cdd4;
+}
+
+.holiday-other {
+  margin: 14px 0 0;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--mid-gray);
+  line-height: 1.5;
+}
+
+.holiday-groups {
+  list-style: none;
+  padding: 16px 18px 6px;
+  margin: 0;
+  background: #fff;
+  border-radius: 8px;
+  border-top: 3px solid #c5cdd4;
+}
+
+.holiday-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.holiday-groups li,
+.holiday-column li,
+.schedule-hours .holiday-column li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  font-size: 0.98rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  padding-left: 0;
+  position: static;
+}
+
+.holiday-groups li span,
+.schedule-hours .holiday-groups li span {
+  color: var(--mid-gray);
+  font-weight: 400;
+}
+
+.holiday-groups li:before,
+.schedule-hours .holiday-groups li:before {
+  content: none;
+}
+
+.schedule-hours .holiday-groups {
+  padding: 16px 18px 6px;
+  margin: 0;
+  background: #fff;
+}
+
+.schedule-hours .hours-regular,
+.schedule-hours .holiday-hours-heading,
+.schedule-hours .hours-note {
+  font-weight: 500;
+}
+
+.schedule-hours .holiday-hours-heading {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.schedule-hours .holiday-other {
+  color: var(--mid-gray);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.schedule-hours .hours-regular,
+.schedule-hours .hours-closed span {
+  color: var(--clinical-text);
+}
+
+.schedule-hours .hours-regular span {
+  color: var(--primary);
+}
+
+.schedule-hours .hours-closed span {
+  color: #5c6770;
+}
+
+.schedule-hours .hours-note {
+  margin-top: 14px;
+  color: var(--mid-gray);
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .hours-regular {
+    font-size: 1.05rem;
+  }
 }
 
 /* Office Information Section - Clean Layout */

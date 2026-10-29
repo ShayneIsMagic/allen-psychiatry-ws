@@ -54,11 +54,21 @@ function initializeScheduleModal() {
                     Provo, Utah 84604<br>
                     (next to Utah Valley Hospital)</p>
                     <div class="schedule-hours">
-                        <p><strong>Office Hours:</strong></p>
-                        <ul>
-                            <li>Monday, Wednesday, Thursday, Friday – 1:00 PM to 5:00 PM (in-person appointments; Telehealth available, but Tuesday is prioritized for Telehealth)</li>
-                            <li>Tuesday – 3:00 PM to 6:00 PM (TeleHealth only)</li>
+                        <p><strong>Office Hours</strong></p>
+                        <p class="hours-regular"><strong>Monday – Friday:</strong> <span>9:00 AM – 5:00 PM</span></p>
+                        <p class="hours-regular hours-closed"><strong>Saturday – Sunday:</strong> <span>Closed</span></p>
+                        <hr class="hours-divider">
+                        <p class="holiday-hours-heading">Holiday Closures</p>
+                        <ul class="holiday-groups">
+                            <li><strong>New Year's:</strong> <span>New Year's Eve &amp; New Year's Day</span></li>
+                            <li><strong>Memorial Day</strong></li>
+                            <li><strong>Independence Day</strong> <span>(July 4th)</span></li>
+                            <li><strong>Labor Day</strong></li>
+                            <li><strong>Thanksgiving:</strong> <span>Thanksgiving Day &amp; the day after</span></li>
+                            <li><strong>Christmas:</strong> <span>December 23rd through Christmas Day</span></li>
                         </ul>
+                        <p class="holiday-other"><strong>All other holidays observe standard business hours.</strong></p>
+                        <p class="hours-note">If we close for additional days around any holiday, we'll send an update with the specific dates.</p>
                     </div>
                     <p>To schedule an appointment, call or text us at <a href="tel:385-504-1334" style="color: var(--primary); font-weight: 600;">385-504-1334</a>.</p>
                     <p>Visit us online at <a href="https://allenpsychiatry.net" style="color: var(--primary); font-weight: 600;">allenpsychiatry.net</a></p>
